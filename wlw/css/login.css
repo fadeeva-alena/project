@@ -1,0 +1,32 @@
+/* Login Layout */
+
+#login-container { 
+width:300px;
+margin:50px auto 0 auto;
+background-color:#fff
+}
+div.login-content {
+margin:0 auto;
+width:300px;
+padding:0;
+text-align:left;
+background-color:#fff;
+border:3px solid #ccc;
+}
+div.login-content div.login-content-main { padding:4px 14px 20px 14px; }
+.login-logo { text-align:center }
+#login-container label { font-weight:bold }
+#login-container input.text-field { width:266px; margin:2px 0 10px 0; }
+.login-button { float:right; display:inline }
+#login-indicator { float:left; display:inline; height:36px; font-size:12px; font-weight:bold }
+#login-indicator-msg { width:160px; float:left; display:inline; }
+div.login-content .login-msg-process {
+	height:28px;
+	background:url(../images/indicator-lite.gif) no-repeat left;
+	text-indent:3em;
+	padding-top:8px;	
+	color:#2834AA;	
+}
+div.login-content .login-msg-valid { padding-top:8px; color:#2834AA; }
+div.login-content .login-msg-error { padding-top:8px; color:#FF0000; }
+#login-credit { text-align:center; }

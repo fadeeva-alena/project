@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20111212T123222Z
+DESCRIPTION:
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Abend</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>2012</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Feiern</div><div style=float:left;margin-left:4px;>&nbsp;<img src=http://manimano.ch/wlw/images/5.png width=30px height=30px alt="Feiern"  title="Feiern"></div></td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>3ho  Waldmannstrasse 8  8001 Zürich</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>2 CHF
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Andrea Abiassi<br/>  </td>
+ </tr></table> 
+
+
+DTEND:20111220T180000Z
+DTSTART:20111210T180000Z
+DTSTAMP:20111210T022347Z
+LAST-MODIFIED:19700101T120000Z
+LOCATION:3ho  Waldmannstrasse 8  8001 Zürich
+SUMMARY;LANGUAGE=De:111111111111111111111sd
+ORGANIZER;CN="David Schläepfer":mailto:dsc@d-s-c.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20111212T123222uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Abend</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>2012</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Feiern</div><div style=float:left;margin-left:4px;>&nbsp;<img src=http://manimano.ch/wlw/images/5.png width=30px height=30px alt="Feiern"  title="Feiern"></div></td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>3ho  Waldmannstrasse 8  8001 Zürich</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>2 CHF
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Andrea Abiassi<br/>  </td>
+ </tr></table>\n\n\n\n</BODY>\n</HTML>\n

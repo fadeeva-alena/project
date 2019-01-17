@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>site_mode</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+</head>
+<body style="background-color:white">
+<script type="text/javascript" src="include/jquery.js"></script>
+{literal}
+<style> 
+table {  border-collapse: collapse} 
+td { 
+ padding: 5px; 
+ margin: 0px; 
+ border-width: 1px; 
+ border-style: solid; 
+ border-color: #000000; 
+}
+@media print {a.pdf {display:none}}
+
+</style> 
+{/literal}
+{include_if_exists file="include/header.php"}
+{doevent name="PrintOnLoad"}
+	
+	
+<h1>site_mode</h1>
+
+
+<table align='center' width='95%' border='0' cellpadding=3 cellspacing=2>
+<tr>
+<!--{if $column1show}-->
+		<td><b>Status</b></td>
+	<td><b>Message</b></td>
+	<td><b>Mode</b></td>
+	<td><b>ID</b></td>
+<!--{/if}-->	
+</tr>
+{foreach from=$rowinfo item=row}
+<tr valign=top>
+
+
+
+
+<td>
+{$row.1Status_value}
+</td>
+<td>
+{$row.1Message_value}
+</td>
+<td>
+{$row.1Mode_value}
+</td>
+<td>
+{$row.1ID_value}
+</td>
+
+</tr>
+{/foreach}
+<!-- totals row -->
+</table>
+{include_if_exists file="include/footer.php"}
+
+
+</body>
+
+</html>

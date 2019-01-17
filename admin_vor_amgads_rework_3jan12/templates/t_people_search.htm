@@ -1,0 +1,1063 @@
+<html>
+<head>
+<title>t_people: Advanced search page</title>
+</head>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+{$includes}
+<body bgcolor=white {$onload}>
+{include_if_exists file="include/header.php"}
+<!-- search form -->
+<form method="POST" 
+action="t_people_list.php" 
+name="editform" {if $noAJAX} onkeydown="OnKeyDown(event);" {/if} >
+	<input type="hidden" id="a" name="a" value="advsearch">
+
+{doevent name="SearchOnLoad"}
+	
+<table CELLPADDING=4 CELLSPACING=1 align='center' width='750'>
+<tr valign=center class=blackshade>
+<td colspan=5 class=tableheader>
+
+<table width=100% CELLSPACING=0 CELLPADDING=3><tr>
+<td width=200 class=tableheader>t_people</td>
+<td align=center class=tableheader>
+Advanced search</td>
+<td width=200 class=tableheader>&nbsp;</td>
+</tr></table>
+
+</td></tr>
+
+<tr><td colspan=5 align=center valign=middle class=header2>
+<span class=fieldname>Search for: </span>
+<input type="radio" name="type" value="and" {$all_checked}>All conditions
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="type" value="or" {$any_checked}>Any condition
+</div>
+</td></tr>
+<tr valign=center class=blackshade>
+<td align=center valign=middle>&nbsp;</td><td width=30 align=center valign=middle class=fieldname>NOT</td>
+<td colspan=3 align=center valign=middle>&nbsp; </td></tr>
+
+		
+<tr class=shade>
+	<td class=editshade_b>people_id
+	<input type="Hidden" name="asearchfield[]" value="people_id"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_people_id" {$not_people_id}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_people_id}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="people_id" value=$value_people_id mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_people_id">
+	{build_edit_control field="people_id" second=true value=$value1_people_id mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>institution
+	<input type="Hidden" name="asearchfield[]" value="institution"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_institution" {$not_institution}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_institution}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="institution" value=$value_institution mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_institution">
+	{build_edit_control field="institution" second=true value=$value1_institution mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>prof_provider
+	<input type="Hidden" name="asearchfield[]" value="prof_provider"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_prof_provider" {$not_prof_provider}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_prof_provider}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="prof_provider" value=$value_prof_provider mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_prof_provider">
+	{build_edit_control field="prof_provider" second=true value=$value1_prof_provider mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>firstname
+	<input type="Hidden" name="asearchfield[]" value="firstname"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_firstname" {$not_firstname}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_firstname}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="firstname" value=$value_firstname mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_firstname">
+	{build_edit_control field="firstname" second=true value=$value1_firstname mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>lastname
+	<input type="Hidden" name="asearchfield[]" value="lastname"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_lastname" {$not_lastname}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_lastname}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="lastname" value=$value_lastname mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_lastname">
+	{build_edit_control field="lastname" second=true value=$value1_lastname mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>image_path
+	<input type="Hidden" name="asearchfield[]" value="image_path"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_image_path" {$not_image_path}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_image_path}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="image_path" value=$value_image_path mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_image_path">
+	{build_edit_control field="image_path" second=true value=$value1_image_path mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>street
+	<input type="Hidden" name="asearchfield[]" value="street"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_street" {$not_street}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_street}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="street" value=$value_street mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_street">
+	{build_edit_control field="street" second=true value=$value1_street mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>house_nr
+	<input type="Hidden" name="asearchfield[]" value="house_nr"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_house_nr" {$not_house_nr}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_house_nr}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="house_nr" value=$value_house_nr mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_house_nr">
+	{build_edit_control field="house_nr" second=true value=$value1_house_nr mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>zip
+	<input type="Hidden" name="asearchfield[]" value="zip"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_zip" {$not_zip}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_zip}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="zip" value=$value_zip mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_zip">
+	{build_edit_control field="zip" second=true value=$value1_zip mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>location
+	<input type="Hidden" name="asearchfield[]" value="location"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_location" {$not_location}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_location}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="location" value=$value_location mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_location">
+	{build_edit_control field="location" second=true value=$value1_location mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>locationarea
+	<input type="Hidden" name="asearchfield[]" value="locationarea"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_locationarea" {$not_locationarea}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_locationarea}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="locationarea" value=$value_locationarea mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_locationarea">
+	{build_edit_control field="locationarea" second=true value=$value1_locationarea mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>tel_p
+	<input type="Hidden" name="asearchfield[]" value="tel_p"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_tel_p" {$not_tel_p}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_tel_p}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="tel_p" value=$value_tel_p mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_tel_p">
+	{build_edit_control field="tel_p" second=true value=$value1_tel_p mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>tel_m
+	<input type="Hidden" name="asearchfield[]" value="tel_m"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_tel_m" {$not_tel_m}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_tel_m}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="tel_m" value=$value_tel_m mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_tel_m">
+	{build_edit_control field="tel_m" second=true value=$value1_tel_m mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>email
+	<input type="Hidden" name="asearchfield[]" value="email"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_email" {$not_email}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_email}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="email" value=$value_email mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_email">
+	{build_edit_control field="email" second=true value=$value1_email mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>username
+	<input type="Hidden" name="asearchfield[]" value="username"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_username" {$not_username}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_username}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="username" value=$value_username mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_username">
+	{build_edit_control field="username" second=true value=$value1_username mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>password
+	<input type="Hidden" name="asearchfield[]" value="password"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_password" {$not_password}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_password}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="password" value=$value_password mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_password">
+	{build_edit_control field="password" second=true value=$value1_password mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>picture
+	<input type="Hidden" name="asearchfield[]" value="picture"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_picture" {$not_picture}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_picture}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="picture" value=$value_picture mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_picture">
+	{build_edit_control field="picture" second=true value=$value1_picture mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>gender
+	<input type="Hidden" name="asearchfield[]" value="gender"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_gender" {$not_gender}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_gender}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="gender" value=$value_gender mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_gender">
+	{build_edit_control field="gender" second=true value=$value1_gender mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>adminstatus
+	<input type="Hidden" name="asearchfield[]" value="adminstatus"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_adminstatus" {$not_adminstatus}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_adminstatus}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="adminstatus" value=$value_adminstatus mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_adminstatus">
+	{build_edit_control field="adminstatus" second=true value=$value1_adminstatus mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>birthdate
+	<input type="Hidden" name="asearchfield[]" value="birthdate"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_birthdate" {$not_birthdate}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_birthdate}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="birthdate" value=$value_birthdate mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_birthdate">
+	{build_edit_control field="birthdate" second=true value=$value1_birthdate mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>enabled
+	<input type="Hidden" name="asearchfield[]" value="enabled"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_enabled" {$not_enabled}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_enabled}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="enabled" value=$value_enabled mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_enabled">
+	{build_edit_control field="enabled" second=true value=$value1_enabled mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>temp_sched_from
+	<input type="Hidden" name="asearchfield[]" value="temp_sched_from"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_temp_sched_from" {$not_temp_sched_from}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_temp_sched_from}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="temp_sched_from" value=$value_temp_sched_from mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_temp_sched_from">
+	{build_edit_control field="temp_sched_from" second=true value=$value1_temp_sched_from mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>temp_sched_to
+	<input type="Hidden" name="asearchfield[]" value="temp_sched_to"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_temp_sched_to" {$not_temp_sched_to}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_temp_sched_to}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="temp_sched_to" value=$value_temp_sched_to mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_temp_sched_to">
+	{build_edit_control field="temp_sched_to" second=true value=$value1_temp_sched_to mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>joiningdate
+	<input type="Hidden" name="asearchfield[]" value="joiningdate"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_joiningdate" {$not_joiningdate}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_joiningdate}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="joiningdate" value=$value_joiningdate mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_joiningdate">
+	{build_edit_control field="joiningdate" second=true value=$value1_joiningdate mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>coord_accuracy
+	<input type="Hidden" name="asearchfield[]" value="coord_accuracy"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_coord_accuracy" {$not_coord_accuracy}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_coord_accuracy}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="coord_accuracy" value=$value_coord_accuracy mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_coord_accuracy">
+	{build_edit_control field="coord_accuracy" second=true value=$value1_coord_accuracy mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>monday
+	<input type="Hidden" name="asearchfield[]" value="monday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_monday" {$not_monday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_monday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="monday" value=$value_monday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_monday">
+	{build_edit_control field="monday" second=true value=$value1_monday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>tuesday
+	<input type="Hidden" name="asearchfield[]" value="tuesday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_tuesday" {$not_tuesday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_tuesday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="tuesday" value=$value_tuesday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_tuesday">
+	{build_edit_control field="tuesday" second=true value=$value1_tuesday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>wednesday
+	<input type="Hidden" name="asearchfield[]" value="wednesday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_wednesday" {$not_wednesday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_wednesday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="wednesday" value=$value_wednesday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_wednesday">
+	{build_edit_control field="wednesday" second=true value=$value1_wednesday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>thursday
+	<input type="Hidden" name="asearchfield[]" value="thursday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_thursday" {$not_thursday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_thursday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="thursday" value=$value_thursday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_thursday">
+	{build_edit_control field="thursday" second=true value=$value1_thursday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>friday
+	<input type="Hidden" name="asearchfield[]" value="friday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_friday" {$not_friday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_friday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="friday" value=$value_friday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_friday">
+	{build_edit_control field="friday" second=true value=$value1_friday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>saturday
+	<input type="Hidden" name="asearchfield[]" value="saturday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_saturday" {$not_saturday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_saturday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="saturday" value=$value_saturday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_saturday">
+	{build_edit_control field="saturday" second=true value=$value1_saturday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>sunday
+	<input type="Hidden" name="asearchfield[]" value="sunday"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_sunday" {$not_sunday}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_sunday}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="sunday" value=$value_sunday mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_sunday">
+	{build_edit_control field="sunday" second=true value=$value1_sunday mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>monday_t
+	<input type="Hidden" name="asearchfield[]" value="monday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_monday_t" {$not_monday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_monday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="monday_t" value=$value_monday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_monday_t">
+	{build_edit_control field="monday_t" second=true value=$value1_monday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>tuesday_t
+	<input type="Hidden" name="asearchfield[]" value="tuesday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_tuesday_t" {$not_tuesday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_tuesday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="tuesday_t" value=$value_tuesday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_tuesday_t">
+	{build_edit_control field="tuesday_t" second=true value=$value1_tuesday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>wednesday_t
+	<input type="Hidden" name="asearchfield[]" value="wednesday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_wednesday_t" {$not_wednesday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_wednesday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="wednesday_t" value=$value_wednesday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_wednesday_t">
+	{build_edit_control field="wednesday_t" second=true value=$value1_wednesday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>thursday_t
+	<input type="Hidden" name="asearchfield[]" value="thursday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_thursday_t" {$not_thursday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_thursday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="thursday_t" value=$value_thursday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_thursday_t">
+	{build_edit_control field="thursday_t" second=true value=$value1_thursday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>friday_t
+	<input type="Hidden" name="asearchfield[]" value="friday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_friday_t" {$not_friday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_friday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="friday_t" value=$value_friday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_friday_t">
+	{build_edit_control field="friday_t" second=true value=$value1_friday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>saturday_t
+	<input type="Hidden" name="asearchfield[]" value="saturday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_saturday_t" {$not_saturday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_saturday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="saturday_t" value=$value_saturday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_saturday_t">
+	{build_edit_control field="saturday_t" second=true value=$value1_saturday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>sunday_t
+	<input type="Hidden" name="asearchfield[]" value="sunday_t"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_sunday_t" {$not_sunday_t}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_sunday_t}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="sunday_t" value=$value_sunday_t mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_sunday_t">
+	{build_edit_control field="sunday_t" second=true value=$value1_sunday_t mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>preferred_contact_by
+	<input type="Hidden" name="asearchfield[]" value="preferred_contact_by"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_preferred_contact_by" {$not_preferred_contact_by}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_preferred_contact_by}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="preferred_contact_by" value=$value_preferred_contact_by mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_preferred_contact_by">
+	{build_edit_control field="preferred_contact_by" second=true value=$value1_preferred_contact_by mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>date_last_adress_change
+	<input type="Hidden" name="asearchfield[]" value="date_last_adress_change"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_date_last_adress_change" {$not_date_last_adress_change}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_date_last_adress_change}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="date_last_adress_change" value=$value_date_last_adress_change mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_date_last_adress_change">
+	{build_edit_control field="date_last_adress_change" second=true value=$value1_date_last_adress_change mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>map_in
+	<input type="Hidden" name="asearchfield[]" value="map_in"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_map_in" {$not_map_in}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_map_in}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="map_in" value=$value_map_in mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_map_in">
+	{build_edit_control field="map_in" second=true value=$value1_map_in mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>IconPath
+	<input type="Hidden" name="asearchfield[]" value="IconPath"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_IconPath" {$not_IconPath}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_IconPath}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="IconPath" value=$value_IconPath mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_IconPath">
+	{build_edit_control field="IconPath" second=true value=$value1_IconPath mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>note
+	<input type="Hidden" name="asearchfield[]" value="note"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_note" {$not_note}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_note}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="note" value=$value_note mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_note">
+	{build_edit_control field="note" second=true value=$value1_note mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>price_per_hour
+	<input type="Hidden" name="asearchfield[]" value="price_per_hour"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_price_per_hour" {$not_price_per_hour}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_price_per_hour}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="price_per_hour" value=$value_price_per_hour mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_price_per_hour">
+	{build_edit_control field="price_per_hour" second=true value=$value1_price_per_hour mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>psych_time_loose_tight
+	<input type="Hidden" name="asearchfield[]" value="psych_time_loose_tight"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_psych_time_loose_tight" {$not_psych_time_loose_tight}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_psych_time_loose_tight}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="psych_time_loose_tight" value=$value_psych_time_loose_tight mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_psych_time_loose_tight">
+	{build_edit_control field="psych_time_loose_tight" second=true value=$value1_psych_time_loose_tight mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>psych_exact_creativ
+	<input type="Hidden" name="asearchfield[]" value="psych_exact_creativ"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_psych_exact_creativ" {$not_psych_exact_creativ}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_psych_exact_creativ}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="psych_exact_creativ" value=$value_psych_exact_creativ mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_psych_exact_creativ">
+	{build_edit_control field="psych_exact_creativ" second=true value=$value1_psych_exact_creativ mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>psych_heart_thing
+	<input type="Hidden" name="asearchfield[]" value="psych_heart_thing"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_psych_heart_thing" {$not_psych_heart_thing}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_psych_heart_thing}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="psych_heart_thing" value=$value_psych_heart_thing mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_psych_heart_thing">
+	{build_edit_control field="psych_heart_thing" second=true value=$value1_psych_heart_thing mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>psych_easy_security
+	<input type="Hidden" name="asearchfield[]" value="psych_easy_security"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_psych_easy_security" {$not_psych_easy_security}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_psych_easy_security}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="psych_easy_security" value=$value_psych_easy_security mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_psych_easy_security">
+	{build_edit_control field="psych_easy_security" second=true value=$value1_psych_easy_security mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>psych_conflict_take_leave
+	<input type="Hidden" name="asearchfield[]" value="psych_conflict_take_leave"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_psych_conflict_take_leave" {$not_psych_conflict_take_leave}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_psych_conflict_take_leave}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="psych_conflict_take_leave" value=$value_psych_conflict_take_leave mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_psych_conflict_take_leave">
+	{build_edit_control field="psych_conflict_take_leave" second=true value=$value1_psych_conflict_take_leave mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>longitude
+	<input type="Hidden" name="asearchfield[]" value="longitude"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_longitude" {$not_longitude}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_longitude}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="longitude" value=$value_longitude mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_longitude">
+	{build_edit_control field="longitude" second=true value=$value1_longitude mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>latitude
+	<input type="Hidden" name="asearchfield[]" value="latitude"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_latitude" {$not_latitude}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_latitude}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="latitude" value=$value_latitude mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_latitude">
+	{build_edit_control field="latitude" second=true value=$value1_latitude mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Agree
+	<input type="Hidden" name="asearchfield[]" value="Agree"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Agree" {$not_Agree}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Agree}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Agree" value=$value_Agree mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Agree">
+	{build_edit_control field="Agree" second=true value=$value1_Agree mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Sign_date
+	<input type="Hidden" name="asearchfield[]" value="Sign_date"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Sign_date" {$not_Sign_date}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Sign_date}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Sign_date" value=$value_Sign_date mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Sign_date">
+	{build_edit_control field="Sign_date" second=true value=$value1_Sign_date mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Active
+	<input type="Hidden" name="asearchfield[]" value="Active"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Active" {$not_Active}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Active}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Active" value=$value_Active mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Active">
+	{build_edit_control field="Active" second=true value=$value1_Active mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Acode
+	<input type="Hidden" name="asearchfield[]" value="Acode"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Acode" {$not_Acode}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Acode}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Acode" value=$value_Acode mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Acode">
+	{build_edit_control field="Acode" second=true value=$value1_Acode mode="search"}
+	</span></td>
+	
+	
+</tr>
+
+<tr class=tableheader><td colspan=5 align=center>
+<span class=buttonborder><input type=button class=button name="SearchButton" value="Search"
+onClick="javascript:document.forms.editform.submit();"></span>
+<span class=buttonborder><input class=button type=button value="Reset" onclick="return ResetControls();"></span>
+<span class=buttonborder><input type=button class=button value="Back to list" onClick="javascript: document.forms.editform.a.value='return'; document.forms.editform.submit();"></span>
+</td></tr>
+</table>
+
+</form>
+{include_if_exists file="include/footer.php"}
+{$linkdata}
+
+</body>
+</html>

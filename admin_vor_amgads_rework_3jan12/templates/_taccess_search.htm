@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>taccess: Advanced search page</title>
+</head>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+{$includes}
+<body bgcolor=white {$onload}>
+{include_if_exists file="include/header.php"}
+<!-- search form -->
+<form method="POST" 
+action="_taccess_list.php" 
+name="editform" {if $noAJAX} onkeydown="OnKeyDown(event);" {/if} >
+	<input type="hidden" id="a" name="a" value="advsearch">
+
+{doevent name="SearchOnLoad"}
+	
+<table CELLPADDING=4 CELLSPACING=1 align='center' width='750'>
+<tr valign=center class=blackshade>
+<td colspan=5 class=tableheader>
+
+<table width=100% CELLSPACING=0 CELLPADDING=3><tr>
+<td width=200 class=tableheader>taccess</td>
+<td align=center class=tableheader>
+Advanced search</td>
+<td width=200 class=tableheader>&nbsp;</td>
+</tr></table>
+
+</td></tr>
+
+<tr><td colspan=5 align=center valign=middle class=header2>
+<span class=fieldname>Search for: </span>
+<input type="radio" name="type" value="and" {$all_checked}>All conditions
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="type" value="or" {$any_checked}>Any condition
+</div>
+</td></tr>
+<tr valign=center class=blackshade>
+<td align=center valign=middle>&nbsp;</td><td width=30 align=center valign=middle class=fieldname>NOT</td>
+<td colspan=3 align=center valign=middle>&nbsp; </td></tr>
+
+		
+<tr class=shade>
+	<td class=editshade_b>Country
+	<input type="Hidden" name="asearchfield[]" value="Country"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Country" {$not_Country}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Country}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Country" value=$value_Country mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Country">
+	{build_edit_control field="Country" second=true value=$value1_Country mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Zip
+	<input type="Hidden" name="asearchfield[]" value="Zip"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Zip" {$not_Zip}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Zip}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Zip" value=$value_Zip mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Zip">
+	{build_edit_control field="Zip" second=true value=$value1_Zip mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Location
+	<input type="Hidden" name="asearchfield[]" value="Location"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Location" {$not_Location}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Location}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Location" value=$value_Location mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Location">
+	{build_edit_control field="Location" second=true value=$value1_Location mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Start
+	<input type="Hidden" name="asearchfield[]" value="Start"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Start" {$not_Start}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Start}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Start" value=$value_Start mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Start">
+	{build_edit_control field="Start" second=true value=$value1_Start mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>End
+	<input type="Hidden" name="asearchfield[]" value="End"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_End" {$not_End}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_End}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="End" value=$value_End mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_End">
+	{build_edit_control field="End" second=true value=$value1_End mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Note
+	<input type="Hidden" name="asearchfield[]" value="Note"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Note" {$not_Note}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Note}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Note" value=$value_Note mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Note">
+	{build_edit_control field="Note" second=true value=$value1_Note mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>ID
+	<input type="Hidden" name="asearchfield[]" value="ID"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_ID" {$not_ID}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_ID}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="ID" value=$value_ID mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_ID">
+	{build_edit_control field="ID" second=true value=$value1_ID mode="search"}
+	</span></td>
+	
+	
+</tr>
+
+<tr class=tableheader><td colspan=5 align=center>
+<span class=buttonborder><input type=button class=button name="SearchButton" value="Search"
+onClick="javascript:document.forms.editform.submit();"></span>
+<span class=buttonborder><input class=button type=button value="Reset" onclick="return ResetControls();"></span>
+<span class=buttonborder><input type=button class=button value="Back to list" onClick="javascript: document.forms.editform.a.value='return'; document.forms.editform.submit();"></span>
+</td></tr>
+</table>
+
+</form>
+{include_if_exists file="include/footer.php"}
+{$linkdata}
+
+</body>
+</html>

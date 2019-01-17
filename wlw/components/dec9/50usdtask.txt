@@ -1,0 +1,107 @@
+[12/8/2011 1:33:10 AM] David Schlaepfer: hi ken
+leaders-grid: that works again. very nice. thanks.
+[12/8/2011 1:33:17 AM] David Schlaepfer: when trying to get the events of a leader, i get this:
+[12/8/2011 1:33:18 AM] *** David Schlaepfer sent IMG_07122011_183329.png ***
+[12/8/2011 1:34:30 AM] David Schlaepfer: the popup to view an event from events-grid works now - regarding size.
+it has some issues iwth the äüö, please take care of that.
+[12/8/2011 1:34:58 AM] *** David Schlaepfer sent IMG_07122011_183509.png ***
+[12/8/2011 1:35:04 AM] David Schlaepfer: and hide empty fields. there
+[12/8/2011 1:50:33 AM] David Schlaepfer: regarding vcs-files (ical):
+when i doubleclick this file (see attachment), it does open as outlook-cal-entry to be saved, when outlook is installed. 
+there is no way (that i found) to import it with doubleclick into google-cal. i do not know about others.
+so, upon clicking the "copy to calendar (In den Kalender kopieren)", i would offer 2 options: download immediate (Outlook, etc) (Herunterladen (Outlook, etc.) and send date by mail (Termin per Email senden (Google Cal)) [as attachment there - googlemail offers to use this date immediatly].
+when send by email, and its in the outside-cal, where we dont know our people, ask for an emailadress. use same validity-testing as when entering an email-adress.
+when inside the app, use the email, that is stored. 
+create a field in the database, where i can enter a header and a body (html able).
+that should do it.
+[12/8/2011 1:51:01 AM] *** David Schlaepfer sent test_date.ics ***
+[12/8/2011 1:56:30 AM] *** David Schlaepfer sent rich_test_date.ics ***
+[12/8/2011 3:06:45 AM] David Schlaepfer: and please use the new form (3) for EDITs of existing events as well.
+[12/8/2011 6:29:11 AM] Ken de Guzman: i'll continue working on this later night in our time sir.
+[12/8/2011 6:29:18 AM] Ken de Guzman: i'll prepare to work now sir
+[12/8/2011 6:29:19 AM] Ken de Guzman: thanks
+[12/8/2011 6:32:09 AM] David Schlaepfer: Take care. Fine for me
+[12/8/2011 8:04:04 PM] Ken de Guzman: hi sir, just to confirm, where can i put the link to download the vcs files? is it on the calendar description/details
+[12/8/2011 8:04:22 PM] Ken de Guzman: or it is on view on the events grid?
+[12/8/2011 8:36:40 PM] David Schlaepfer: it will be on calendar-details, right of any couple/single date (startdate/enddeate, link)
+[12/8/2011 8:39:47 PM | Edited 8:39:49 PM] Ken de Guzman: you mean sir,if we have 10 dates there 10 links for download and email?
+[12/8/2011 8:40:03 PM] Ken de Guzman: or just two links for one event?
+[12/8/2011 8:49:37 PM] Ken de Guzman: still there sir?
+[12/8/2011 8:49:49 PM] Ken de Guzman: need the confirmation sir because i'm doing it now
+[12/8/2011 8:51:22 PM] David Schlaepfer: i guess, a normal user would decide for one event. or maybe 2, maybe all.
+so, offering all is  a good thing.
+but also offering one is needed.
+i attach you a picture, where i show, where i would imagine them to be.
+[12/8/2011 8:53:47 PM] Ken de Guzman: so 1 link only for one event right?
+[12/8/2011 8:54:09 PM] *** David Schlaepfer sent IMG_08122011_135420.png ***
+[12/8/2011 8:54:21 PM] David Schlaepfer: yes, and there, where the title is (start, end), a link to get them all at once.
+[12/8/2011 8:54:47 PM] Ken de Guzman: ok i will put the link below the details of the events
+[12/8/2011 8:58:18 PM] David Schlaepfer: one link for one date of an event.
+and if the event has 5 dates, its 6 links: one for each date (5) and one for all of them.
+[12/8/2011 8:58:42 PM] David Schlaepfer: and when its only one date, you choose, the link for "all" is not shown, you just show the link right of the start/enddate.
+[12/8/2011 8:59:45 PM] Ken de Guzman: oh, i thought it was only one link for an event
+[12/8/2011 9:01:08 PM] Ken de Guzman: there are many scenarios here sir
+[12/8/2011 9:01:44 PM] Ken de Guzman: we have date range here right
+[12/8/2011 9:01:50 PM] Ken de Guzman: how you should handle those
+[12/8/2011 9:04:19 PM] Ken de Guzman: leaders events popup error ->> DONE
+[12/8/2011 9:04:53 PM] Ken de Guzman: events view popup trouble and if it has no value do not display --->> DONE
+[12/8/2011 9:05:15 PM] Ken de Guzman: the remaining task is b) which is the most work to do.
+[12/8/2011 9:07:30 PM] Ken de Guzman: before start this task, please answer first the questions i sent to you sir.
+[12/8/2011 9:07:31 PM] Ken de Guzman: thanks
+[12/8/2011 9:08:14 PM] Ken de Guzman: i don't want to start it with dependencies from you sir because i don't want to redo this because it will take long hours to do this
+[12/8/2011 9:08:45 PM] Ken de Guzman: this item has difficulties and will take analysis on this
+[12/8/2011 9:11:55 PM] David Schlaepfer: start/end: 
+in the ics-file, you have a line: dtend, where the enddate resides, for example here:
+[12/8/2011 9:11:59 PM] David Schlaepfer: DTEND;VALUE=DATE:20120107
+[12/8/2011 9:12:12 PM] David Schlaepfer: and you have a line where the startdate resides, for examle here:
+DTSTART;VALUE=DATE:20111226
+[12/8/2011 9:12:43 PM] Ken de Guzman: how about the time?
+[12/8/2011 9:14:00 PM] David Schlaepfer: with times, it looks like this:
+[12/8/2011 9:14:01 PM] David Schlaepfer: DTEND;TZID="Mitteleuropäische Zeit":20111227T184500
+DTSTAMP:20111208T131327Z
+DTSTART;TZID="Mitteleuropäische Zeit":20111227T184500
+[12/8/2011 9:14:20 PM] David Schlaepfer: you can create any test-date in outlook, open the date, save-as-ics and see, what it does.
+[12/8/2011 9:14:55 PM] Ken de Guzman: what if no start and end time?
+[12/8/2011 9:15:13 PM] David Schlaepfer: then leave it, as in the first example
+[12/8/2011 9:15:17 PM] David Schlaepfer: [Thursday, December 08, 2011 9:12 PM] David Schlaepfer: 
+
+<<< DTEND;VALUE=DATE:20120107
+and you have a line where the startdate resides, for examle here:
+DTSTART;VALUE=DATE:20111226
+[12/8/2011 9:16:46 PM] Ken de Guzman: ok how about if you select all in download the events?
+[12/8/2011 9:16:54 PM] Ken de Guzman: how i should handle this?
+[12/8/2011 9:17:27 PM] David Schlaepfer: you can put more than one event in one ics. there are ics's, that cover all holidays.
+[12/8/2011 9:19:09 PM] David Schlaepfer: look here: http://www.mozilla.org/projects/calendar/caldata/AlbanianHolidays.ics
+they have manyblocks, each block starts with begin:vevent and ends with END:VEVENT
+[12/8/2011 9:19:19 PM] David Schlaepfer: its similar to xml
+[12/8/2011 9:27:34 PM] Ken de Guzman: oh, i looks like i have plenty of work to do here sir.
+[12/8/2011 9:27:46 PM] Ken de Guzman: today is not enough to finish this task alone
+[12/8/2011 9:28:15 PM] Ken de Guzman: its not only downloading but sending email also with an attachment
+[12/8/2011 9:28:24 PM] David Schlaepfer: we dont need so many fields. we dont need the repetitions either.
+[12/8/2011 9:28:29 PM] David Schlaepfer: yes, thats right.
+[12/8/2011 9:29:39 PM] David Schlaepfer: we need start/end-date/time.
+title.
+description, with the links.
+location.
+and a last line , sth. like courtesy of spiritwings.ch, configurable in the languages-table.
+[12/8/2011 9:31:20 PM] David Schlaepfer: i will upgrad the $ for that.
+[12/8/2011 9:32:34 PM] Ken de Guzman: thanks. how much will you upgrade sir?
+[12/8/2011 9:33:42 PM] David Schlaepfer: did you upload the changes? i dont see any changes?
+[12/8/2011 9:34:21 PM] David Schlaepfer: i will upgrade from 150$ to 200$ for this block.
+[12/8/2011 9:41:05 PM | Edited 9:57:20 PM] Ken de Guzman: uploaded already sir. is it possible to request the remaining 24$ in 150 and the 50$ will be upon the completion of the task sir?
+[12/8/2011 9:57:39 PM] Ken de Guzman: please let me know if it is ok to you sir
+[12/8/2011 9:57:40 PM] Ken de Guzman: thanks
+[12/8/2011 9:59:29 PM] David Schlaepfer: thats ok with me
+[12/8/2011 10:00:41 PM] Ken de Guzman: ok thanks sir
+[12/8/2011 10:17:12 PM] *** David Schlaepfer sent events_grid_view_shows_small_area_only.mp4 ***
+[12/8/2011 10:17:17 PM] *** David Schlaepfer sent events_grid_view_shows_small_area_only.mp4 ***
+[12/8/2011 10:17:50 PM] David Schlaepfer: the leaders>show_events is good now. thanks.
+the view_only popup from eventsgrid not quite yet.
+[12/8/2011 10:22:36 PM] Ken de Guzman: the popup is loading sir. it will show the events popup
+[12/8/2011 10:23:49 PM] David Schlaepfer: in chrome i get this. not in ie0
+[12/8/2011 10:27:39 PM] Ken de Guzman: ok checking sir
+[12/8/2011 10:58:31 PM] Ken de Guzman: will continue working tomorrow sir. will include the events grid view popup in ie9 on my list
+[12/8/2011 10:58:32 PM] Ken de Guzman: thanks
+[12/8/2011 10:59:45 PM] David Schlaepfer: thanks, ken!
+[12/8/2011 10:59:55 PM] Ken de Guzman: your welcome sir, thanks again sir
+[12/8/2011 10:59:57 PM] Ken de Guzman: bye for now

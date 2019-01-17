@@ -1,0 +1,43 @@
+<edit_controls>
+	<jscode>{$linkdata}</jscode>
+	<control 
+	field="Country">
+	    <nobr>
+	{build_edit_control field="Country" value=$value_Country mode="inline_add" id=$id}
+	    <font color="red">*</font>
+	</nobr>
+	</control>
+	<control 
+	field="Zip">
+	    <nobr>
+	{build_edit_control field="Zip" value=$value_Zip mode="inline_add" id=$id}
+	    <font color="red">*</font>
+	</nobr>
+	</control>
+	<control 
+	field="Location">
+	    <nobr>
+	{build_edit_control field="Location" value=$value_Location mode="inline_add" id=$id}
+	    <font color="red">*</font>
+	</nobr>
+	</control>
+	<control 
+	field="Start">
+	    <nobr>
+	{build_edit_control field="Start" value=$value_Start mode="inline_add" id=$id}
+	    <font color="red">*</font>
+	</nobr>
+	</control>
+	<control 
+	field="End">
+	    <nobr>
+	{build_edit_control field="End" value=$value_End mode="inline_add" id=$id}
+	    <font color="red">*</font>
+	</nobr>
+	</control>
+	<control 
+	field="Note">
+		{build_edit_control field="Note" value=$value_Note mode="inline_add" id=$id}
+		</control>
+	<message status="{$status}">{$message}</message>
+</edit_controls>

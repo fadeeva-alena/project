@@ -1,0 +1,1 @@
+<?php echo $this->config()->get('aboutUs') ?>

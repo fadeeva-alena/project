@@ -1,0 +1,14 @@
+A) again.
+we need a log function, that does these things:
+add log-functions, create t_log, where you log: logins, with date/time, id and ip
+logouts with date/time
+adds and edits: provider_id, event_id, date/time, operation (add/del/edit)
+new providers
+add (only for admins) a link on top (area of our team, calendar and so forth, rightmost), to get the log grid on screen.  add filters for actions, people, dates ----->>> DONE
+B) please for admins, show the grid of cooworkers, so i can see specially, how many itmes they added (last 2 calcluated fields)
+C) NEW also show aboutus-link on login-page --->>> DONE
+NEW give the quality-icons hoover-text, according to the language.. - same terms as in add-edit-event-quality-selector ---->>> DONE
+D) 
+maint: maint:  the popups in calendar-view-details: please let them be popups, small, with one button to close, which is activated, which is also std for return and cancel, and suppress all empty fields on this page. ---->>> DONE
+maint: on event_add_edit, the helptext for timestart is on the left. this is clever, but confusing. please also put it to the right (where it will be on top of the helptext for the "end" ---->>> done
+maint: bani-singen, 30.okt: location not found: error., freude der kraft: auch. umlaut ---->>>

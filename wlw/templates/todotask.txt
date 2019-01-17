@@ -1,0 +1,31 @@
+Hi Sir,
+
+Here are my updates sir:
+
+f) translators may access translation-table. And only this. For r/w, but not delete (as we had it). -->> DONE
+
+user_r may see everything, except admin-areas (is reduced standard now) -->> DONE
+
+user_w may see and write everything, except admin-areas (is standard now) -->> DONE
+
+admin: may see and write everything, as is standard for admin now. -->> DONE
+
+event_reservations: providers with this set to on, can use the events-reservations. Others can not.
+but do not suppress the switch, just leave it not operational and add a helptext there: “if you want to use reservations, you need to upgrade your plan” – with a link to a new “plan”-page, which can be empty for the moment, except with a helptext. Point me, where i can edit this in the database.
+set this in the moment to standard=1 / on for everybody and also as standard for new created records.
+in order to switch this off or on, one has to open the “plan”-page as well, offer a link there. -->> DONE
+
+event_bookholding: will be 0 in the moment for all users, set this in the standard of a new record as well. . We will add later functionality, so they can print an overview over the participants of selected events or selected timeframes.
+in order to switch this off or on, one has to open the “plan”-page as well, offer a link there. --->> DONE
+
+session_reservations: set this to 1 for everybody and also to the newly created records. --->> DONE
+in order to switch this off or on, one has to open the “plan”-page as well, offer a link there. 
+
+session_bookholding: set this to 0 for everybody and also for newly created records. --->> DONE
+in order to switch this off or on, one has to open the “plan”-page as well, offer a link there. 
+we will create code and management to make bookholding for all sessions with overviews who booked, cancelled or rescheduled late and so forth. 
+
+Please let me know sir your feedback. Let me know also if this is enough to request the balance payment for this.
+
+thanks,
+Ken

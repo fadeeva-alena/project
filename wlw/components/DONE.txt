@@ -1,0 +1,53 @@
+DONE TASK: 
+b new  "use new topbar (at least outside), ------>>>> DONE
+
+e ADD  "please also accept jpeg as extension. ----->>> DONE
+
+And please also translate the errormsg regarding filetypes.  ----->>> DONE
+
+please check in opera: the helptext for images coolides with the button (leader_add_edit)" ---->>> DONE
+
+f NEW  right now, we have 2 scrollbars: one for the browser itself, and one for the grid. Please let it be only one. (for all grids) ---->>> DONE
+
+in t_leader_grid: please move the count_events-col (2nd last) to the last position ---->>> DONE
+
+c new  "please remember the search and filter options of a grid while editing an item, right now i edit an item, then the sortoptions and filter are deleted, when i return tot he grid --->>> DONE,  i can only retain the filter not the sort options sir.
+
+Allow a picture to be drag-and-dropped or copied (copy/paste) --->>> it is not possible in the current settings sir. it only allows you to pick not a drag and dropped.
+
+h maint  reduce size of pics in all grids to 30% --->>> DONE, it can be set in the database
+
+When sorting, ist always first sorted smallest first. Please let it always first ort bbiggest first (regarding the numbers in t_leaders-grid)" --->>> DONE, sort it by the counts in leaders grid.
+
+i maint  the calculation of events/dates in t_provider_grid is broken: i have for my differnet logins always the same amounts, and stephan maurer has 0 - he has a few hundreds. --- >>> DONE sir.
+
+
+m maint  in dropdown location in addedit_event, we need 2 fields more: street ,   zip, location (now airyoga has two (different) entries, which are not discernible
+
+and in all loggedin space: please move tab our_team, calendar and and log to the far right, in this order: log (3rd from right), calendar: 2nd from right and our_team: rightmost."
+
+n maint  swf not playing in few browsers
+
+
+
+-----------------------
+b) thanks- designer will have to rework thi s one too.. it was meant to increase the contrast btw logo and background.. but i dont see a difference.
+e) thanks .. i cant check.. showing the last page / next from page 1/ in translation-grid loops endlessly. please check. --->>> DONE
+helptext opera: please check again. i dont see a difference. --->> DONE, please refresh the page.
+f) 2 scrollbars: fine, except on leader_grid. also on leadergrid: please swith th titles of the columns as well, right now you have image" on top of the numbers. ---->>> DONE
+
+to keep the sortoptions would be very helpful - at least while a record is edited and saved or added and saved. how can you do that? --->>> i can't customize the plugins of flexigrid sir. I only used that but the retaining the sorting in the grid will not be possible here sir.
+
+Pictures drag and drop: ok. how can you make it possible? --->>> don't know it, I will search for this but not sure about this.
+
+h) pictures size: i dont see a difference. please check this again. need this in all grids.
+sorting is weired: i get this sequence: 7,7,19,12,23, 20, 18,16.. this is not up nor down sorted. please sort falling, biggest first.--->> DONE, i checked it on ff, chrome, opera and it is working.
+
+and this also persists: when you open providers_grid, you see my profile manytimes - this is not wrong, i have mrdavid_i, mrdavid_f and so forth. but what i know for sure, that i do not have the same amount of events entered on each account..  also stephan maurer has a count of 0. his count is around 800, actually. ---->>>> DONE
+
+m) dont see a difference. please check. --->>> DONE
+d) you will do later, right?
+k) will do later, right? --->>> DONE
+l) dito
+o) will provide a little later
+g) can you investigate a little? if they dont do it immediate, normally, they dont do it anymore.. but this is a more needed informationpart..

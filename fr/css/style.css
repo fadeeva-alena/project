@@ -1,0 +1,297 @@
+@charset "utf-8";
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+label{
+	font-size: 0.9em;
+	color:#04617b;
+}
+iframe{
+background: #ffffff;
+}
+.lpi {
+width:150px;
+}
+.all #container {
+	width: 1000px;
+	background: #FFFFFF;
+	margin: 0 auto; 
+	border: 1px solid #000000;
+	text-align: left; 
+}
+.header {
+	background: url(images/header.jpg) 0 0 no-repeat; 
+	height: 200px;
+	padding: 0 10px 0 20px;
+}
+.header h1 {margin: 0;padding: 1px 0;font-size: 3.6em;}
+.header h4 {color: #04617b;}
+.header #regbtn{	margin: 85px 0 0 0;font-size: 1.4em; width:160px; color: #04617b;}
+.header #loginbtn{margin:85px 0 0 0;font-size: 1.4em;width:160px; color: #04617b;}
+.header #helpbtn{margin:85px 0 0 0;font-size: 1.4em; position:relative; width:160px; left:470px; color: #04617b;}
+.header #logoutbtn{margin:24px 0 0 304px;font-size: 1.4em;width:160px; color: #04617b;}
+.header #maindatbtn{margin:24px 0 0 0;font-size: 1.4em;width:160px; color: #04617b;}
+.header #suchebtn{margin:24px 0 0 0;font-size: 1.4em;width:160px; color: #04617b;}
+.header #helpbtn2{margin:24px 0 0 0;font-size: 1.4em; width:160px; color: #04617b;}
+
+.mainContent {
+	border: 1px solid white;
+	background: #6593cf;
+}
+.content {
+	margin: 20px;
+	min-height: 640px;
+	border: 1px solid white;
+	background: #6593cf;
+}
+.content h1{font-size: 2em;color: #04617b;margin: 0;	background: #5c83b4;}
+.content #col1{background: #5c83b4; margin: 15px 0 0 50px; width: 150px;height:40px; float:left}
+.content #col2{background: #5c83b4; margin: 15px 50px 0 0; width: 680px;height:40px;float:right}
+.content object{position:relative;top:15px; width: 600px; height: 450px;}
+.content #login{font-size: 2em; color: #04617b; margin: 25px 0 0 25px}
+.content table{color: #04617b; margin: 10px 0 0 50px;}
+.content #loginbtn{margin:15px 0 0 0;font-size: 1.4em;width:160px;height:40px; color: #04617b;}
+.content #lostlog{width:180px;}
+.content #lostpas{width:180px;}
+#lostlogin{position:relative; top: -140px; left: 600px;height:150px; width:320px; background: #ffffff; color:#04617b;display:none}
+#lostpassword {position:relative; top: -140px; left: 600px;height:150px; width:320px; background: #ffffff; color:#04617b;display:none}
+#lbltext{
+	font-size: 0.8em;
+	color:#ffffff;
+	font-weight: bold;
+	margin-left: 90px;
+	margin-top:65px;
+	position: absolute;
+	z-index:20;
+}
+#lbltext2{
+	font-size: 0.8em;
+	color:#ffffff;
+	font-weight: bold;
+	margin-left: 95px;
+	margin-top:45px;
+	position: absolute;
+	z-index:20;
+}
+#lbltext3{
+	font-size: 0.6em;
+	color:#ffffff;
+	font-weight: bold;
+	margin-left: 95px;
+	margin-top:45px;
+	position: absolute;
+	z-index:20;
+}
+#td4text{
+	font-size: 0.8em;
+	color:#ffffff;
+	margin-left: 140px;
+	margin-top:-275px;
+	position: absolute;
+	height: 200px;
+	width: 110px;
+	z-index:20;
+}
+#slidertext1{
+	font-size: 0.8em;
+	color:#ffffff;
+	font-weight: bold;
+	padding-left:50px;
+	padding-top:10px;
+	height: 60px;
+	width:200px;
+	float:left;
+}
+#slidertext2{
+	font-size: 0.8em;
+	color:#ffffff;
+	font-weight: bold;
+	padding-left:30px;
+	padding-top:10px;
+	height: 60px;
+	width:260px;
+	float:left;
+}
+#sliderframe{
+	float:left;	
+}
+#slider{
+	margin-left:50px;
+	width:900px;
+	height:80px;
+	float:left;	
+}
+#nextbtn{
+	margin:24px 0 0 50px;
+	font-size: 1em;
+	width:340px; 
+	height:36px;
+}
+#finishbtn{
+	margin:4px 0 0 50px;
+	font-size: 2em;
+	width:350px; 
+	height:50px;
+	color: #04617b;
+	font-weight: bold;
+}
+#searchbtn{
+	font-size: 2em;
+	width:150px; 
+	height:50px;
+	color: #04617b;
+	font-weight: bold;
+	margin-top:20px;
+}
+#title{
+	font-size: 2em; 
+	color: #04617b; 
+	margin-left:20px;
+}
+#maintext{
+	font-size: 0.8em;
+	color:#ffffff;
+	margin-left:15px;
+	margin-right:5px;
+}
+#formsearch1{
+	font-size: 0.8em;
+	background-color:#b6e8ff;
+	width:560px;
+	height:60px;
+	padding-top:1px;
+}
+}
+#formsearch2{
+	font-size: 0.8em;
+	
+	width:560px;
+	height:60px;
+	padding-top:1px;
+}
+#smal{
+	font-size: 0.8em;
+	color:#04617b;
+}
+#kinder{
+width:250px;
+background-color:#b6e8ff;
+}
+#kinder2{
+width:200px;
+background-color:#b6e8ff;
+}
+#tblnm{
+	margin: 0;
+}
+#hummer_red, #haushalt_red, #student_red,#office_red, #mom_red, #shopping_red {display:none}
+#garden_red, #transport_red, #ear_red, #cleaning_red, #dog_red, #ferien_red {display:none}
+#mom_blue, #transport_blue,#student_blue {position:relative; z-index:10}
+#img1 {position:relative;float:left;z-index:10}
+#chckbx1{position:relative; width:90px; height:60px; font-size: 0.8em; float:right; background: #ffffff;z-index:10}
+#chckbx2{
+	position:relative;
+	width:95px;
+	height:60px;
+	font-size: 0.8em;
+	float:right;
+	background: #ffffff;
+	z-index:10
+}
+#whiteback{position:absolute; margin-left: 50px; height:20px; width:60px; background: #ffffff;z-index:0}
+#whiteback2{position:absolute; margin-left: 50px; height:20px; width:161px; background: #ffffff;z-index:0}
+#li4 {
+	margin-top: 18px;
+	width: 350px;
+	float:left;
+}
+#Firma{
+	width: 220px;
+	margin-left:50px;
+	background-color:#b6e8ff;
+}
+#Vorname{
+	width: 150px;
+	margin-left:25px;
+	background-color:#b6e8ff;
+}
+#Nachname{
+	width: 150px;
+	margin-left:8px;
+	background-color:#b6e8ff;
+}
+#Gechleht{
+	width: 155px;
+	margin-left:11px;
+	background-color:#b6e8ff;
+}
+#Geb-datum{
+	width: 150px;
+	background-color:#b6e8ff;
+}
+#Bild{
+	margin-left:62px;
+}
+#strasse{
+	width: 180px;
+	margin-left:11px;
+	background-color:#b6e8ff;
+}
+#Nr{
+	width: 30px;
+	background-color:#b6e8ff;
+}
+#plz{
+	width: 50px;
+	margin-left:30px;
+	background-color:#b6e8ff;
+}
+#ort{
+	width: 160px;
+	background-color:#b6e8ff;
+}
+#Tel{
+	width: 150px;
+	margin-left:46px;
+	background-color:#b6e8ff;
+}
+#handy{
+	width: 150px;
+	margin-left:36px;
+	background-color:#b6e8ff;
+}
+#email{
+	width: 150px;
+	margin-left:40px;
+	background-color:#b6e8ff;
+}
+#vorzugs{
+	width: 150px;
+	margin-left:9px;
+	background-color:#b6e8ff;
+}
+#benutzername{
+	width: 150px;
+	margin-left:45px;
+	background-color:#b6e8ff;
+}
+#passwort{
+	width: 150px;
+	margin-left:15px;
+	background-color:#b6e8ff;
+}
+#stundenlohn{
+	width: 50px;
+	margin-left:53px;
+	background-color:#b6e8ff;
+}
+#bemerkung{
+	width: 398px;
+	margin-left:3px;
+	background-color:#b6e8ff;
+}

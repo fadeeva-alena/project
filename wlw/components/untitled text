@@ -1,0 +1,42 @@
+n)      What is needed in the provider (form and database) is a field, that notes the days in advance, that create a penalty, when moved or cancelled, and how much this penalty is, in %, the fields names are: „Kulanzfrist für Absagen:“ (suggest: 3) (helptext: „Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.“
+and the 2nd: „Fälliger Prozentsatz (%):“ (suggest 80). (helptext: „Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet“.
+Please put those 2 fiels them under a title (stating: for sessions/bookings)„Sessionbuchungen über den Kalender“
+
+ALTER TABLE  `t_provider` ADD  `reservation_days_advance_cancel` VARCHAR( 10 ) NULL AFTER  `handle_feedback_mails` ,
+ADD  `penalty` VARCHAR( 10 ) NULL AFTER  `reservation_days_advance_cancel`
+
+INSERT INTO `wu_db`.`t_field_names` (`id`, `fieldname`, `fieldname_de`, `fieldname_eng`, `fieldname_fr`, `fieldname_it`, `helptext_de`, `helptext_eng`, `helptext_fr`, `helptext_it`, `table`) VALUES ('729', 'Reservation Days Advance', 'Reservation Days Advance', 'Reservation Days Advance', 'Reservation Days Advance', 'Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.', 'Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.', 'Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.', 'Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.', 'Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.', '11');
+
+INSERT INTO `wu_db`.`t_field_names` (`id`, `fieldname`, `fieldname_de`, `fieldname_eng`, `fieldname_fr`, `fieldname_it`, `helptext_de`, `helptext_eng`, `helptext_fr`, `helptext_it`, `table`) VALUES ('730', 'Penalty', 'Fälliger Prozentsatz (%)', 'Penalty', 'Penalty', 'Penalty', 'Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet', 'Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet', 'Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet', 'Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet', '11');
+
+
+e) then, please write these items bold:
+first line (liebe/r)  --->> DONE
+last line before footer: Ihr Spiritwings-Team --->> DONE
+
+h) on this page (my-calendar-resrevation-test) i have a strange issue (ie9): i can move an event, but after 2secs it jumps back. And when this happens, the hoovers’s stay, please see pic below. ------------------------ NOT YET DONE
+
+i) Please in the edit-area: move the duration-edit-field one line up, so its right from its title – i shortended the text, so it can work. -->> DONE
+
+j) when i create a new event, the vat-chooser is set to yes, but the value is not visible, only when i switch to no, and then to yes again. Please let the amount-line be visible as well. --->> DONE
+
+k) We need a button to cancel the add-operation, the title would be „Abbrechen“ --->> DONE
+
+l) When i click an event to get the popup, that contains the cancellation option, please change the format like this:
+right now we have: date time start – date time end.
+please switch to: date (our format) then starttime (only hours:mins, no seconds) then „-„ then endtime (only hours:mins, no seconds)
+and: after the line:
+put the title: Stornieren (bold)
+below this the rest (reason-field and cancel-button). -->> DONE
+
+m) Also here: please put all the popups very near, the session, that it was called from. On small screens or large browsers, the popup is not visible otherwise. -->> DONE
+
+n) What is needed in the provider (form and database) is a field, that notes the days in advance, that create a penalty, when moved or cancelled, and how much this penalty is, in %, the fields names are: „Kulanzfrist für Absagen:“ (suggest: 3) (helptext: „Wenn ein Storno oder eine Verschiebung später eintritt, dann wird ein gewisser Teil des Betrags fällig.“
+and the 2nd: „Fälliger Prozentsatz (%):“ (suggest 80). (helptext: „Falls die Kulanzfrist für eine Absage/Verschiebung unterschritten ist, wird dieser Prozentsatz geschuldet“. -->> DONE
+
+o) The name from the booker should only be visible in the view from the provider. --> DONE
+and for other users: they should only see grey blocks (wheter this is blocked times by the provider or wheter its reservations from another user – i should not know, when you have your sessions). -->> DONE
+
+p) In the moment i still can move sessions to overlap. -->> DONE
+
+q) I have different newlines / br / shift-enters in the descritiption of a special massage: -->> This part can't be done in this plugin sir.

@@ -1,0 +1,186 @@
+@import url(http://fonts.googleapis.com/css?family=Lora|Oswald);
+@import url(http://fonts.googleapis.com/css?family=Norican);
+@import url(http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext);
+body{
+	background-color: #6593cf;
+	color: #333;
+    font-family: Arial;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.navbar-toggle .icon-bar{
+	background-color: #6593cf;
+}
+.toph{
+	background-color: rgba(255, 255, 0, 1);
+}
+.topImage{
+	position: relative;
+	background: url('../../images/header.jpg') no-repeat 0 0, url('../../images/header-logo.jpg') no-repeat 100% 0;
+	background-size: contain;
+	max-height: 150px;
+}
+.light {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	/* z-index: 1; */
+}
+.header{
+	background-color: rgba(255, 255, 0, 1);
+}
+.logo {
+    /* left: 10px; */
+    /* position: absolute; */
+	/* top: 0px; */
+	margin: 0;
+}
+.logo a {
+	font-size: 80px;
+}
+/* @media only screen and (max-width: 320px) { */
+@media only screen and (max-width: 500px) {
+	.logo a {
+		font-size: 50px;
+	}		
+}
+
+.logo a{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	/* font-size: 80px; */
+	font-weight: bold;
+	color: #0000FF;
+}
+.logo a:hover{
+	text-decoration: none;
+	color: #6593cf;
+}
+.logo .logo-title,.logo-title:hover {
+    color: #FF0000;
+}
+.welcome {
+    left: 10px;
+    position: relative;
+    top: 45px;
+    color:gray;
+}
+.main-nav {
+    font-family: Arial;
+    font-size:13px;
+    text-align: center;
+}
+.main-nav li{
+	line-height: 1;
+    padding-top: 17px;
+}
+.main-nav .nav li:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.main-nav li.active{
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	background-color: rgb(240, 63, 70);
+	color:white;
+}
+.main-nav li.active a{
+	color:white;
+}
+.main-nav li a,.main-nav li{
+	color: #6593cf;
+	font-weight: lighter;
+}
+.main-nav li a{
+	font-family: Arial,sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	padding: 15px 12px;
+}
+.main-nav li a:hover,.main-nav li:hover{
+	background-color: rgb(240, 63, 70);
+	color:white;
+}
+
+/* Style Page Index */
+#contentIndex{
+	margin:50px 0;
+	border:5px solid white;
+	border-radius: 3px;
+	padding: 20px 10px;
+}
+#contentIndex > h1 {
+    background: #5c83b4;
+    color: white;
+    font-family: Arial;
+    margin: 0 0 20px;
+    padding: 5px;
+    text-align: center;
+}
+#contentIndex #title{text-align: left;}
+#contentIndex .col {
+    background: none repeat scroll 0 0 #5c83b4;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#Form1 label{
+	font-size: 20px;
+	font-family: Arial;
+}
+#Form1 li, #Form1 li a{
+	font-family: 'Lato',Arial; 
+	color:#23527c !important;
+	font-size: 15px;
+}
+
+#form1, #form1 label {
+	color: #23527c;
+}
+
+#form1 input {
+	margin: 5px 0;
+}
+
+#form3 p, #form3 #lbltext2, #form3 #lbltext3, #form3 #lbltext {
+	color: #23527c;	
+}
+#form4 p, #form4 #lbltext2, #form4 #lbltext3, #form4 #lbltext {
+	color: #23527c;	
+}
+#form5 p, #form5 #lbltext2, #form5 #lbltext3, #form5 #lbltext {
+	color: #23527c;	
+}
+#slider, #slidertext1, #slidertext2 {
+	color: #23527c;		
+}
+#form6, #form6 p {
+	color: #23527c;	
+}
+
+.paragraph,.paragraph2,.paragraph3 {
+	/* color: white; */
+	color: #23527c;	
+    text-align: justify;
+}
+input#abschickenbtn {
+	width: 100%;
+	margin-top: 10px;
+	padding: 5px;
+	color: white;
+}
+a{
+	color: navy;
+}
+.textColor-1{
+	color: #23527c;	
+}
+.nsearch {
+	color: #23527c;	
+}
+#Form1 .passd label {
+	/* color: #333; */
+    font-family: Arial;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: lighter;
+}

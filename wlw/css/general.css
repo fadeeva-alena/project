@@ -1,0 +1,57 @@
+/* General Style */
+
+body {
+margin:0;
+padding:0;
+color: #000;
+font-family: Arial, Helvetica, sans-serif;
+font-size:11px;
+
+background:white url(../templates/spiritwings_BLUE_bg2.jpg) scroll repeat-x 163px 163px;
+}html{ background:white url(../images/background.jpg) fixed repeat-x;  } 
+
+.widthfix{margin:0px;padding:0px;width:138px;word-wrap:break-word;border:0px solid red;white-space:normal;}
+
+h1 { font-size: 18px; color:#00356E }
+h2 { font-size: 16px }
+p { font-size: 1em }
+a { color:#0074FF; text-decoration:none }
+a:hover { color:#0074FF; text-decoration:underline }
+a:visited { color:#0074FF; text-decoration:none }
+a:visited:hover { color:#0074FF; text-decoration:underline }
+
+.clr { clear: both; overflow:hidden; height:0; }
+.align-right { text-align:right; }
+.wide100 { width:100%; }
+.wide90 { width:90%; }
+.wide85 { width:85%; }
+.wide80 { width:80%; }
+.wide75 { width:75%; }
+.wide70 { width:70%; }
+.wide65 { width:65%; }
+.wide60 { width:60%; }
+.default-height { height:400px }
+input.check { border: none; }
+a.fake-link, a.fake-link:hover { cursor:default; text-decoration:none; }
+
+#system-message { background-color: #E7E7E7; border-top: 3px solid #CCCCCC; border-bottom: 3px solid #CCCCCC; margin-bottom: 10px; padding: 0;}
+#system-message .info { background: #E7E7E7 url(../images/notice-info.png) 10px center no-repeat; padding: 10px;}
+#system-message .alert { background: #E7E7E7 url(../images/notice-alert.png) 10px center no-repeat; padding: 10px;}
+#system-message .message { color: #004080; font-weight: bold; text-indent: 36px; }
+
+/*Grid*/
+.ico-action { margin-right:5px }
+
+/* Lightbox - Overide Style */
+#lightbox-nav-btnPrev, #lightbox-nav-btnNext { width: 0 !important; }
+
+table.record-listing { width:100%; border-collapse:collapse; margin:14px auto 10px auto; border-bottom:#999 1px solid; }
+table.record-listing th { background-color:#ccc; padding:4px; text-align:left; }
+table.record-listing td { padding:2px 4px; text-align:left; }
+table.record-listing td.numeric, table.record-listing th.numeric { text-align:right; }
+table.record-listing tfoot { border-top:#999 1px solid; }
+
+/* Superfish Menu Overwrides */
+.sf-menu li.nav-std-width a { padding-left: 1.8em; padding-right: 1.8em; }
+.sf-menu li li a { width:10em; }
+.sf-menu li ul { width:12.1em; }

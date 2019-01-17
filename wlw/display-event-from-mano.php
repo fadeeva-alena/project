@@ -1,0 +1,1 @@
+<iframe width="470px" height="400px" src="http://manimano.ch/wlw/display-event.php?events_id=3277&titlecolor=000000&bgcolor=FFFFFF&titlebgcolor=CCCCCC&tablegrid=CCCCCC" frameborder="0" allowfullscreen  style="overflow-x:hidden;"></iframe>

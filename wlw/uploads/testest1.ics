@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20120131T195100Z
+DESCRIPTION:ics header
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px" colspan=2><b>party - Aura Soma</b></td></tr><tr>
+ <td width="150px"><label for="short_desc"><b>shortdesc:</b></td><td>testestest1</td></tr><tr>
+ <td width="150px"><b>description:</b></td><td>testestestestestest1</td></tr><tr>
+ <td width="150px"><b><label for="location">location: </label></b></td><td>Antikenmuseum <br>St. Alban-Graben 5<br>4010 Basel</td></tr><tr>
+ <td width="150px"><label for="price"><b>price:</b> </label></td><td>15 EUR
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>leader:</b> </label></td>
+ <td> Jannette Abbott<br/>Spirit of Touch Pratibha und Kareem </td>
+ </tr></td></tr></table> 
+
+ics footer
+TZID:CET
+TZNAME:CET
+DTEND;TZID=CET:20120131
+DTSTART;TZID=CET:20120131T000000
+DTSTAMP;TZID=CET:20120131T193623
+LAST-MODIFIED;TZID=CET:19700101T010000
+LOCATION:Antikenmuseum , St. Alban-Graben 5, , 4010 Basel
+SUMMARY;LANGUAGE=Eng:testest1
+ORGANIZER;CN="Spiritwings Team":mailto:kontakt@spiritwings.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20120131T195100uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\nics header\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px" colspan=2><b>party - Aura Soma</b></td></tr><tr>
+ <td width="150px"><label for="short_desc"><b>shortdesc:</b></td><td>testestest1</td></tr><tr>
+ <td width="150px"><b>description:</b></td><td>testestestestestest1</td></tr><tr>
+ <td width="150px"><b><label for="location">location: </label></b></td><td>Antikenmuseum <br>St. Alban-Graben 5<br>4010 Basel</td></tr><tr>
+ <td width="150px"><label for="price"><b>price:</b> </label></td><td>15 EUR
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>leader:</b> </label></td>
+ <td> Jannette Abbott<br/>Spirit of Touch Pratibha und Kareem </td>
+ </tr></td></tr></table>\n\nics footer\n\n</BODY>\n</HTML>\n

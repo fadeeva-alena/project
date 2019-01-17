@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body { font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+#regform tr.white{ background-color:#ffffff;}
+#regform tr.grey{ background-color:#CCCCCC;}
+#regform tr.yellow{ background-color:#FFFF00;}
+#regform tr.blue{ background-color:#3399FF;}
+
+input { float:left; vertical-align:bottom;;}
+
+</style>
+
+</head>
+<body>
+
+<div style=" padding:1em; border:2px solid #666; width:640px; height:inherit; float:left; margin:20px; margin-right:0px; border:2px solid #E5E5E5; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; background-color:#bdd8f4;" >
+<h2 style="font-weight:normal; float:left; font-size:24px; padding:20px;">6) Angebotstypen und Preise</h2> <div style="float:right; padding:1em; font-size:18px; color:#666"><table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="21" align="center">1</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">2</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">3</td>
+    <td width="10" align="center" valign="middle">&raquo;</td>
+    <td width="21" align="center">4</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">5</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center"><div style=" width:21px; height:21px;background-image:url(nummark.png);">6</div></td>
+	<td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">7</td>
+  </tr>
+  </table></div>
+<hr width="600" style="clear:both;" />
+<h5 style="color:#666;padding-left:20px; padding-right:20px;">Hier kannst Du das richtige Angebotsprofil für Dich einstellen, was Du alles machen kannst. 
+Das kannst Du später auch ändern. 
+Eine Kündigung des Abos ist jeweils auf Quartalsende möglich.</h5>
+<br />
+<form id="myform" name="Deine_Grunddaten" action="" enctype="application/x-www-form-urlencoded" method="post">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="2"  class="blue" id="regform">
+  <tr class="blue">
+    <td height="25">Bezeichnung</td>
+    <td>Ausdruck Tagesplan</td>
+    <td>Sitzungen Verwalten </td>
+    <td>Seminaren<br />
+      verwalten </td>
+    <td>Monatliche Liste Klienten u. Sitzungen </td>
+    <td>Rechnungen Ausdrucken </td>
+    <td>Zahlungseingänge </td>
+    <td> Preis/Monat</td>
+  </tr>
+    <tr class="grey" onclick="changebg(this,'grey')">
+    <td height="25">Einfach</td>
+    <td><input name="checkbox" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox2" type="checkbox" value="checkbox"  checked="checked" /></td>
+    <td><input type="checkbox" name="checkbox3" value="checkbox" /></td>
+    <td><input type="checkbox" name="checkbox4" value="checkbox" /></td>
+    <td><input type="checkbox" name="checkbox5" value="checkbox" /></td>
+    <td><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td>1 Fr.</td>
+  </tr>
+  <tr class="white" onclick="changebg(this,'white')">
+    <td height="25">Einfach mit Seminaren</td>
+    <td class="grey"><input name="checkbox" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox2" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox3" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input type="checkbox" name="checkbox4" value="checkbox" /></td>
+    <td class="grey"><input type="checkbox" name="checkbox5" value="checkbox" /></td>
+    <td class="grey"><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td class="grey">2 Fr.</td>
+  </tr>
+  <tr class="grey" onclick="changebg(this,'grey')">
+    <td height="25">Fortgeschritten</td>
+    <td><input name="checkbox" type="checkbox" value="checkbox"  checked="checked" /></td>
+    <td><input name="checkbox2" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input type="checkbox" name="checkbox3" value="checkbox" /></td>
+    <td><input name="checkbox4" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox5" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td>3 Fr.</td>
+  </tr>
+  <tr class="white" onclick="changebg(this,'white')">
+    <td height="25">Fortgeschritten mit Seminaren</td>
+    <td class="grey"><input name="checkbox" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td class="grey"><input name="checkbox2" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox3" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox4" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input type="checkbox" name="checkbox5" value="checkbox" checked="checked" /></td>
+    <td class="grey"><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td class="grey">4 Fr.</td>
+  </tr>
+  <tr class="grey" onclick="changebg(this,'grey')">
+    <td height="25">Professionell</td>
+    <td><input name="checkbox" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox22" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td><input type="checkbox" name="checkbox3" value="checkbox" /></td>
+    <td><input name="checkbox4" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td><input name="checkbox5" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td>5 Fr.</td>
+  </tr>
+  <tr class="white" onclick="changebg(this,'white')">
+    <td height="25">Professionell - mit Seminaren</td>
+    <td class="grey"><input name="checkbox" type="checkbox" value="checkbox"  checked="checked" /></td>
+    <td class="grey"><input name="checkbox2" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td class="grey"><input name="checkbox3" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td class="grey"><input name="checkbox4" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td class="grey"><input name="checkbox5" type="checkbox" value="checkbox" checked="checked"  /></td>
+    <td class="grey"><input type="checkbox" name="checkbox6" value="checkbox" /></td>
+    <td class="grey">6 Fr.</td>
+  </tr>
+  <tr class="grey" onclick="changebg(this,'grey')">
+    <td height="25">Professionell +</td>
+    <td><input name="checkbox8" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox2" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input type="checkbox" name="checkbox3" value="checkbox" /></td>
+    <td><input name="checkbox4" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox5" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td><input name="checkbox6" type="checkbox" value="checkbox" checked="checked" /></td>
+    <td>7 Fr.</td>
+  </tr>
+  <tr class="white" onclick="changebg(this,'white')">
+    <td height="25">Professionell + mit Seminaren</td>
+    <td class="grey"><input name="checkbox8" type="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox2" type="checkbox" checked="checked"  /></td>
+    <td class="grey"><input type="checkbox" name="checkbox3" checked="checked" /></td>
+    <td class="grey"><input name="checkbox4" type="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox5" type="checkbox" checked="checked" /></td>
+    <td class="grey"><input name="checkbox6" type="checkbox" checked="checked" /></td>
+    <td class="grey">8 Fr.</td>
+  </tr>
+</table>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="25">Zahlungsmethode:</td>
+    <td><select name="select2">
+      <option>-Zahlungsmethode-</option>
+    </select>    </td>
+    <td>Ablaufdatum:</td>
+    <td><input name="textfield" type="text" size="15" /></td>
+  </tr>
+  <tr>
+    <td height="25">Kreditkartennr:</td>
+    <td><input name="textfield3" type="text" size="20" /></td>
+    <td>CCV-Code:</td>
+    <td><input name="textfield2" type="text" size="15" /></td>
+  </tr>
+  <tr>
+    <td height="25">Name wie auf der Kreditkarte</td>
+    <td><input name="textfield32" type="text" size="20" /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25" colspan="4" align="center"><input type="submit" name="Submit" value=" Speichern und weiter zu den Geschäftsbedingungen "  style="width:400px;"/></td>
+    </tr>
+</table>
+
+</form>
+
+
+</div>
+
+<script>
+function changebg(obj,classname){
+	if(obj.className == "white"||obj.className == "grey"){
+		obj.className="yellow";
+	}else{
+		obj.className=classname;
+	}
+}
+</script>
+
+</body>
+</html>

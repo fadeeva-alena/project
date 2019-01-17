@@ -1,0 +1,15 @@
+<?php
+$upload_dir = PATH_UPLOADS;
+
+$upload_result = "";
+$diag_result = "";
+$is_diag_failed = false;
+
+// Upload directory diagnosis
+if ( !is_dir($upload_dir) ) {
+	$diag_result .= "The directory <b>($upload_dir)</b> doesn't exist.<br />";
+	$is_diag_failed = true;
+}
+
+if ( (!is_writeable($upload_dir)) && (is_dir($upload_dir)) ) {
+	$d

@@ -1,0 +1,1032 @@
+<html>
+<head>
+<title>t_people</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+</head>
+<body topmargin=5 bgcolor=white {$onload}>
+{$includes}
+
+{include_if_exists file="include/header.php"}
+
+<form name="frmSearch" method="GET" action="t_people_list.php">
+<input type="Hidden" name="a" value="search">
+<input type="Hidden" name="value" value="1">
+<input type="Hidden" name="SearchFor" value="">
+<input type="Hidden" name="SearchOption" value="">
+<input type="Hidden" name="SearchField" value="">
+</form>
+<table width=99% align=center border=0 cellpadding=0 cellspacing=0><tr><td>
+
+<table class="navigation" cellspacing="0" cellpadding="3" width=100% border=0>
+
+<tr>
+<td align=left><font style="FONT-FAMILY: Verdana, Arial;">Logged as</font>&nbsp;<b>{$userid}</b>&nbsp;
+<a href="login.php?a=logout" >Log out</a>
+
+
+</td>
+
+<td align=right>
+
+&nbsp;&nbsp;&nbsp;
+<a href="t_people_search.php">Advanced search</a>	
+
+
+{if $rowsfound}
+
+
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="t_people_export.php">Export results</a>
+
+
+
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="t_people_print.php">Printer-friendly version</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="t_people_print.php?all=1">Print all pages</a>
+
+
+{/if}
+
+
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="t_people_import.php">Import</a>
+
+
+
+
+<!--language-->
+
+
+</tr>
+</table>
+
+<br>
+<table class="main_table_border" cellspacing="0" cellpadding="0" border=0>
+<tr>
+<td class=body2 width=10px>&nbsp;</td>
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+
+</tr>
+<tr>
+<td class=body2 width=10px>&nbsp;</td>
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="_site_mode_list.php">site_mode</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="t_log_list.php">t_log</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="_t_search_list.php">t_search</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu>
+	<a class=menu_db href="t_people_list.php">t_people</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_select.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="t_skills_list.php">t_skills</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="t_needs_list.php">t_needs</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+
+		<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu2>
+	<a class=menu_db href="_taccess_list.php">taccess</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_unselect.gif" border=0></td>
+
+</tr></table>
+
+
+<table border=0 cellpadding=0 cellspacing=0 class=main_table_border2 width=100%><tr><td>
+
+<table class="main_table_border" cellspacing="0" cellpadding="0" width=100% border=0>
+
+
+<tr>
+    <td height="35" valign=middle align=center style="padding-top:2px;">
+<b>Search for </b> &nbsp;&nbsp;&nbsp;
+<select id="ctlSearchField">
+<option value="">Any field</option>
+<option value="people_id" {$search_people_id}>people_id</option>
+<option value="institution" {$search_institution}>institution</option>
+<option value="prof_provider" {$search_prof_provider}>prof_provider</option>
+<option value="firstname" {$search_firstname}>firstname</option>
+<option value="lastname" {$search_lastname}>lastname</option>
+<option value="image_path" {$search_image_path}>image_path</option>
+<option value="street" {$search_street}>street</option>
+<option value="house_nr" {$search_house_nr}>house_nr</option>
+<option value="zip" {$search_zip}>zip</option>
+<option value="location" {$search_location}>location</option>
+<option value="locationarea" {$search_locationarea}>locationarea</option>
+<option value="tel_p" {$search_tel_p}>tel_p</option>
+<option value="tel_m" {$search_tel_m}>tel_m</option>
+<option value="email" {$search_email}>email</option>
+<option value="username" {$search_username}>username</option>
+<option value="password" {$search_password}>password</option>
+<option value="picture" {$search_picture}>picture</option>
+<option value="gender" {$search_gender}>gender</option>
+<option value="adminstatus" {$search_adminstatus}>adminstatus</option>
+<option value="birthdate" {$search_birthdate}>birthdate</option>
+<option value="enabled" {$search_enabled}>enabled</option>
+<option value="temp_sched_from" {$search_temp_sched_from}>temp_sched_from</option>
+<option value="temp_sched_to" {$search_temp_sched_to}>temp_sched_to</option>
+<option value="joiningdate" {$search_joiningdate}>joiningdate</option>
+<option value="coord_accuracy" {$search_coord_accuracy}>coord_accuracy</option>
+<option value="monday" {$search_monday}>monday</option>
+<option value="tuesday" {$search_tuesday}>tuesday</option>
+<option value="wednesday" {$search_wednesday}>wednesday</option>
+<option value="thursday" {$search_thursday}>thursday</option>
+<option value="friday" {$search_friday}>friday</option>
+<option value="saturday" {$search_saturday}>saturday</option>
+<option value="sunday" {$search_sunday}>sunday</option>
+<option value="monday_t" {$search_monday_t}>monday_t</option>
+<option value="tuesday_t" {$search_tuesday_t}>tuesday_t</option>
+<option value="wednesday_t" {$search_wednesday_t}>wednesday_t</option>
+<option value="thursday_t" {$search_thursday_t}>thursday_t</option>
+<option value="friday_t" {$search_friday_t}>friday_t</option>
+<option value="saturday_t" {$search_saturday_t}>saturday_t</option>
+<option value="sunday_t" {$search_sunday_t}>sunday_t</option>
+<option value="preferred_contact_by" {$search_preferred_contact_by}>preferred_contact_by</option>
+<option value="date_last_adress_change" {$search_date_last_adress_change}>date_last_adress_change</option>
+<option value="map_in" {$search_map_in}>map_in</option>
+<option value="IconPath" {$search_IconPath}>IconPath</option>
+<option value="note" {$search_note}>note</option>
+<option value="price_per_hour" {$search_price_per_hour}>price_per_hour</option>
+<option value="psych_time_loose_tight" {$search_psych_time_loose_tight}>psych_time_loose_tight</option>
+<option value="psych_exact_creativ" {$search_psych_exact_creativ}>psych_exact_creativ</option>
+<option value="psych_heart_thing" {$search_psych_heart_thing}>psych_heart_thing</option>
+<option value="psych_easy_security" {$search_psych_easy_security}>psych_easy_security</option>
+<option value="psych_conflict_take_leave" {$search_psych_conflict_take_leave}>psych_conflict_take_leave</option>
+<option value="longitude" {$search_longitude}>longitude</option>
+<option value="latitude" {$search_latitude}>latitude</option>
+<option value="Agree" {$search_Agree}>Agree</option>
+<option value="Sign_date" {$search_Sign_date}>Sign_date</option>
+<option value="Active" {$search_Active}>Active</option>
+<option value="Acode" {$search_Acode}>Acode</option>
+</select>
+&nbsp;
+<select id="ctlSearchOption">
+<option value="Contains" {$search_contains_option_selected}>Contains</option>
+<option value="Equals" {$search_equals_option_selected}>Equals</option>
+<option value="Starts with ..." {$search_startswith_option_selected}>Starts with ...</option>
+<option value="More than ..." {$search_more_option_selected}>More than ...</option>
+<option value="Less than ..." {$search_less_option_selected}>Less than ...</option>
+<option value="Equal or more than ..." {$search_equalormore_option_selected}>Equal or more than ...</option>
+<option value="Equal or less than ..." {$search_equalorless_option_selected}>Equal or less than ...</option>
+<option value="Empty" {$search_empty_option_selected}>Empty</option>
+</select>
+&nbsp;
+<input type=text size=20  autocomplete="off" onkeydown="return listenEvent(event,this,'ordinary');" onkeyup="searchSuggest(event,this,'ordinary');"  name="ctlSearchFor" id="ctlSearchFor" {$search_searchfor}>
+&nbsp;
+<span class=buttonborder><input type=button class="button" value="Search"
+onClick="javascript: RunSearch();"></span>
+&nbsp;		
+<span class=buttonborder><input type=button class=button value="Show all" 
+onClick="javascript: frmSearch.a.value = 'showall'; frmSearch.submit();"></span>
+
+
+&nbsp;&nbsp;&nbsp;
+Details found: {$records_found}&nbsp;
+Page {$page} of {$maxpages}
+
+
+&nbsp;&nbsp;&nbsp;Records Per Page:
+<select 
+onChange="javascript: document.location='t_people_list.php?pagesize='+this.options[this.selectedIndex].value;">
+<option value="10" {$rpp10_selected}>10</option>
+<option value="20" {$rpp20_selected}>20</option>
+<option value="30" {$rpp30_selected}>30</option>
+<option value="50" {$rpp50_selected}>50</option>
+<option value="100" {$rpp100_selected}>100</option>
+<option value="500" {$rpp500_selected}>500</option>
+</select>
+</strong></td>
+
+</tr>
+
+
+<tr>
+    <td colspan=2>
+<table width="100%" cellpadding=0 cellspacing=0>
+<tr><td class=body2 align=center style="padding:8px;">
+
+<span style="white-space:nowrap;">
+	   
+ 
+
+{if $display_grid}
+
+<span name="record_controls">
+
+
+	 
+
+
+<span class=buttonborder><input class=button type=button value="Export selected" onclick="var c=0; if(frmAdmin.elements['selection[]'].length==undefined && frmAdmin.elements['selection[]'].checked) c=1; else for (i=0;i<frmAdmin.elements['selection[]'].length;++i) if (frmAdmin.elements['selection[]'][i].checked) c=1;  if(c==0) return true; frmAdmin.action='t_people_export.php';frmAdmin.target='_blank';frmAdmin.submit(); frmAdmin.action='t_people_list.php'; frmAdmin.target='_self';"></span>
+
+
+
+<span class=buttonborder><input class=button type=button value="Print selected" onclick="var c=0; if(frmAdmin.elements['selection[]'].length==undefined && frmAdmin.elements['selection[]'].checked) c=1; else for (i=0;i<frmAdmin.elements['selection[]'].length;++i) if (frmAdmin.elements['selection[]'][i].checked) c=1;  if(c==0) return true; frmAdmin.action='t_people_print.php';frmAdmin.target='_blank';frmAdmin.submit(); frmAdmin.action='t_people_list.php'; frmAdmin.target='_self';"></span>
+
+</span>
+{/if}
+</span>
+</td></tr>
+
+{if $display_grid}
+
+<tr><td class=body2 colspan=2><div id="usermessage" class="message"></div></td></tr>
+<tr><td colspan=2>
+
+<!-- delete form -->
+<form method="POST" action="t_people_list.php" name="frmAdmin">
+	<input type=hidden id="a" name="a" value="delete">
+<table name="maintable" class="data" align="center" width="100%" border="0" cellpadding=3 cellspacing=0>
+<!-- table header -->
+<tr class="blackshade" valign="top">
+
+{if $column1show}
+
+
+
+
+<td width=50 align="center" class="headerlist"><img src="images/icon_view.gif"></td>
+
+
+<td width=50 align="center" class="headerlist">
+<input type=checkbox onClick = "var i; /*this.checked=!this.checked; */
+if ((typeof frmAdmin.elements['selection[]'].length)=='undefined')
+	frmAdmin.elements['selection[]'].checked=this.checked;
+else
+for (i=0;i<frmAdmin.elements['selection[]'].length;++i) 
+	frmAdmin.elements['selection[]'][i].checked=this.checked;">
+</td>
+
+
+
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_people_id}people%5Fid">
+people_id</a>
+</td>
+<td>{$order_image_people_id}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_institution}institution">
+institution</a>
+</td>
+<td>{$order_image_institution}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_prof_provider}prof%5Fprovider">
+prof_provider</a>
+</td>
+<td>{$order_image_prof_provider}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_firstname}firstname">
+firstname</a>
+</td>
+<td>{$order_image_firstname}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_lastname}lastname">
+lastname</a>
+</td>
+<td>{$order_image_lastname}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_image_path}image%5Fpath">
+image_path</a>
+</td>
+<td>{$order_image_image_path}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_street}street">
+street</a>
+</td>
+<td>{$order_image_street}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_house_nr}house%5Fnr">
+house_nr</a>
+</td>
+<td>{$order_image_house_nr}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_zip}zip">
+zip</a>
+</td>
+<td>{$order_image_zip}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_location}location">
+location</a>
+</td>
+<td>{$order_image_location}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_locationarea}locationarea">
+locationarea</a>
+</td>
+<td>{$order_image_locationarea}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_tel_p}tel%5Fp">
+tel_p</a>
+</td>
+<td>{$order_image_tel_p}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_tel_m}tel%5Fm">
+tel_m</a>
+</td>
+<td>{$order_image_tel_m}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_email}email">
+email</a>
+</td>
+<td>{$order_image_email}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_username}username">
+username</a>
+</td>
+<td>{$order_image_username}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_password}password">
+password</a>
+</td>
+<td>{$order_image_password}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_picture}picture">
+picture</a>
+</td>
+<td>{$order_image_picture}</td>
+</table>
+</td>
+<td class="headerlist">picture_2</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_gender}gender">
+gender</a>
+</td>
+<td>{$order_image_gender}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_adminstatus}adminstatus">
+adminstatus</a>
+</td>
+<td>{$order_image_adminstatus}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_birthdate}birthdate">
+birthdate</a>
+</td>
+<td>{$order_image_birthdate}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_enabled}enabled">
+enabled</a>
+</td>
+<td>{$order_image_enabled}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_temp_sched_from}temp%5Fsched%5Ffrom">
+temp_sched_from</a>
+</td>
+<td>{$order_image_temp_sched_from}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_temp_sched_to}temp%5Fsched%5Fto">
+temp_sched_to</a>
+</td>
+<td>{$order_image_temp_sched_to}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_joiningdate}joiningdate">
+joiningdate</a>
+</td>
+<td>{$order_image_joiningdate}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_coord_accuracy}coord%5Faccuracy">
+coord_accuracy</a>
+</td>
+<td>{$order_image_coord_accuracy}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_monday}monday">
+monday</a>
+</td>
+<td>{$order_image_monday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_tuesday}tuesday">
+tuesday</a>
+</td>
+<td>{$order_image_tuesday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_wednesday}wednesday">
+wednesday</a>
+</td>
+<td>{$order_image_wednesday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_thursday}thursday">
+thursday</a>
+</td>
+<td>{$order_image_thursday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_friday}friday">
+friday</a>
+</td>
+<td>{$order_image_friday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_saturday}saturday">
+saturday</a>
+</td>
+<td>{$order_image_saturday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_sunday}sunday">
+sunday</a>
+</td>
+<td>{$order_image_sunday}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_monday_t}monday%5Ft">
+monday_t</a>
+</td>
+<td>{$order_image_monday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_tuesday_t}tuesday%5Ft">
+tuesday_t</a>
+</td>
+<td>{$order_image_tuesday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_wednesday_t}wednesday%5Ft">
+wednesday_t</a>
+</td>
+<td>{$order_image_wednesday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_thursday_t}thursday%5Ft">
+thursday_t</a>
+</td>
+<td>{$order_image_thursday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_friday_t}friday%5Ft">
+friday_t</a>
+</td>
+<td>{$order_image_friday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_saturday_t}saturday%5Ft">
+saturday_t</a>
+</td>
+<td>{$order_image_saturday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_sunday_t}sunday%5Ft">
+sunday_t</a>
+</td>
+<td>{$order_image_sunday_t}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_preferred_contact_by}preferred%5Fcontact%5Fby">
+preferred_contact_by</a>
+</td>
+<td>{$order_image_preferred_contact_by}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_date_last_adress_change}date%5Flast%5Fadress%5Fchange">
+date_last_adress_change</a>
+</td>
+<td>{$order_image_date_last_adress_change}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_map_in}map%5Fin">
+map_in</a>
+</td>
+<td>{$order_image_map_in}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_IconPath}IconPath">
+IconPath</a>
+</td>
+<td>{$order_image_IconPath}</td>
+</table>
+</td>
+<td class="headerlist">Icon</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_note}note">
+note</a>
+</td>
+<td>{$order_image_note}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_price_per_hour}price%5Fper%5Fhour">
+price_per_hour</a>
+</td>
+<td>{$order_image_price_per_hour}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_psych_time_loose_tight}psych%5Ftime%5Floose%5Ftight">
+psych_time_loose_tight</a>
+</td>
+<td>{$order_image_psych_time_loose_tight}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_psych_exact_creativ}psych%5Fexact%5Fcreativ">
+psych_exact_creativ</a>
+</td>
+<td>{$order_image_psych_exact_creativ}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_psych_heart_thing}psych%5Fheart%5Fthing">
+psych_heart_thing</a>
+</td>
+<td>{$order_image_psych_heart_thing}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_psych_easy_security}psych%5Feasy%5Fsecurity">
+psych_easy_security</a>
+</td>
+<td>{$order_image_psych_easy_security}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_psych_conflict_take_leave}psych%5Fconflict%5Ftake%5Fleave">
+psych_conflict_take_leave</a>
+</td>
+<td>{$order_image_psych_conflict_take_leave}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_longitude}longitude">
+longitude</a>
+</td>
+<td>{$order_image_longitude}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_latitude}latitude">
+latitude</a>
+</td>
+<td>{$order_image_latitude}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_Agree}Agree">
+Agree</a>
+</td>
+<td>{$order_image_Agree}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_Sign_date}Sign%5Fdate">
+Sign_date</a>
+</td>
+<td>{$order_image_Sign_date}</td>
+</table>
+</td>
+<td class="headerlist"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_Active}Active">
+Active</a>
+</td>
+<td>{$order_image_Active}</td>
+</table>
+</td>
+<td class="headerlist_right"><table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>
+<a class="tablelinks" 
+href="t_people_list.php?orderby={$order_dir_Acode}Acode">
+Acode</a>
+</td>
+<td>{$order_image_Acode}</td>
+</table>
+</td>
+{/if}
+</tr>
+
+
+
+<!-- table data -->
+<!--{foreach from=$rowinfo item=row}-->
+
+
+<tr valign="top"
+{$row.shadeclass} 
+onmouseover="this.className = 'rowselected';" onmouseout="this.className = '{$row.shadeclassname}';"
+{$row.rowstyle}
+> 
+
+
+
+
+
+
+
+<td align="center" valign=middle class=borderbody>
+<a class="tablelinks" href="t_people_view.php?{$row.1editlink}" >
+View</a>
+</td>
+
+
+<td align="center" valign=middle class=borderbody>
+
+<input type=checkbox name="selection[]" value="{$row.1keyblock}" id="check{$row.1recno}">
+
+</td>
+
+
+
+
+
+<td align=center valign=middle class=borderbody {$row.1people_id_style}>
+{$row.1people_id_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1institution_style}>
+{$row.1institution_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1prof_provider_style}>
+{$row.1prof_provider_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1firstname_style}>
+{$row.1firstname_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1lastname_style}>
+{$row.1lastname_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1image_path_style}>
+{$row.1image_path_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1street_style}>
+{$row.1street_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1house_nr_style}>
+{$row.1house_nr_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1zip_style}>
+{$row.1zip_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1location_style}>
+{$row.1location_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1locationarea_style}>
+{$row.1locationarea_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1tel_p_style}>
+{$row.1tel_p_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1tel_m_style}>
+{$row.1tel_m_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1email_style}>
+{$row.1email_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1username_style}>
+{$row.1username_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1password_style}>
+{$row.1password_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1picture_style}>
+{$row.1picture_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1picture_2_style}>
+{$row.1picture_2_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1gender_style}>
+{$row.1gender_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1adminstatus_style}>
+{$row.1adminstatus_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1birthdate_style}>
+{$row.1birthdate_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1enabled_style}>
+{$row.1enabled_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1temp_sched_from_style}>
+{$row.1temp_sched_from_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1temp_sched_to_style}>
+{$row.1temp_sched_to_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1joiningdate_style}>
+{$row.1joiningdate_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1coord_accuracy_style}>
+{$row.1coord_accuracy_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1monday_style}>
+{$row.1monday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1tuesday_style}>
+{$row.1tuesday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1wednesday_style}>
+{$row.1wednesday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1thursday_style}>
+{$row.1thursday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1friday_style}>
+{$row.1friday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1saturday_style}>
+{$row.1saturday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1sunday_style}>
+{$row.1sunday_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1monday_t_style}>
+{$row.1monday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1tuesday_t_style}>
+{$row.1tuesday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1wednesday_t_style}>
+{$row.1wednesday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1thursday_t_style}>
+{$row.1thursday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1friday_t_style}>
+{$row.1friday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1saturday_t_style}>
+{$row.1saturday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1sunday_t_style}>
+{$row.1sunday_t_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1preferred_contact_by_style}>
+{$row.1preferred_contact_by_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1date_last_adress_change_style}>
+{$row.1date_last_adress_change_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1map_in_style}>
+{$row.1map_in_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1IconPath_style}>
+{$row.1IconPath_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1Icon_style}>
+{$row.1Icon_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1note_style}>
+{$row.1note_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1price_per_hour_style}>
+{$row.1price_per_hour_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1psych_time_loose_tight_style}>
+{$row.1psych_time_loose_tight_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1psych_exact_creativ_style}>
+{$row.1psych_exact_creativ_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1psych_heart_thing_style}>
+{$row.1psych_heart_thing_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1psych_easy_security_style}>
+{$row.1psych_easy_security_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1psych_conflict_take_leave_style}>
+{$row.1psych_conflict_take_leave_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1longitude_style}>
+{$row.1longitude_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1latitude_style}>
+{$row.1latitude_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1Agree_style}>
+{$row.1Agree_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1Sign_date_style}>
+{$row.1Sign_date_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1Active_style}>
+{$row.1Active_value}
+</td>
+<td align=center valign=middle class=borderbody {$row.1Acode_style}>
+{$row.1Acode_value}
+</td>
+
+
+</tr>
+<!--{/foreach}-->
+	
+
+
+</table>
+</form> 
+
+
+</td>
+</tr>	
+
+{if $maxpages>1}
+<tr>
+<td height=30px colspan=2 align="center">{$pagination}</td>
+</tr>
+{/if} 
+{/if} <!-- display_grid -->
+{if $message!=""}
+<tr name=notfound_message>
+<td height=30px colspan=2 align="center">
+<b>{$message}</b>
+</td>
+</tr>
+{/if} 
+
+</table>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+{doevent name="ListOnLoad"}
+
+{include_if_exists file="include/footer.php"}
+{$linkdata}
+</body>
+</html>
+

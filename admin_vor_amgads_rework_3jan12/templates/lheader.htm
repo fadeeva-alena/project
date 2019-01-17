@@ -1,0 +1,315 @@
+<html>
+<head>
+<title>##@TABLE.strCaption h##</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+</head>
+<body topmargin=5 bgcolor=white {$onload}>
+{$includes}
+
+{include_if_exists file="include/header.##@ext##"}
+
+<form name="frmSearch" method="GET" action="##@TABLE.strShortTableName h##_list.##@ext##">
+<input type="Hidden" name="a" value="search">
+<input type="Hidden" name="value" value="1">
+<input type="Hidden" name="SearchFor" value="">
+<input type="Hidden" name="SearchOption" value="">
+<input type="Hidden" name="SearchField" value="">
+</form>
+<table width=99% align=center border=0 cellpadding=0 cellspacing=0><tr><td>
+##if @TABLE.arrMasterTables[bDisplayInfo].len##
+{include file="$showmasterfile"}
+##endif##
+##if @TABLE.arrMasterTables.len##
+{if $mastertable!=""}
+<p align=center><a href="{$mastertable_short}_list.##@ext##?a=return" class="tablelinks"><b>##message BACK_TO_MASTER##</b></a></p>
+{/if}
+##endif##
+
+<table class="navigation" cellspacing="0" cellpadding="3" width=100% border=0>
+
+<tr>
+##if @BUILDER.bCreateLoginPage##
+<td align=left><font style="FONT-FAMILY: Verdana, Arial;">##message LOGGED_AS ##</font>&nbsp;<b>{$userid}</b>&nbsp;
+<a href="login.##@ext##?a=logout" >##message LOG_OUT##</a>
+
+##if @BUILDER.bDynamicPermissions##
+##if !IsAdminTable(@TABLE)##
+{if $admin}
+&nbsp;&nbsp;&nbsp;
+<a href="admin_rights_list.##@ext##">##message AA_ADMINAREA##</a></td>
+{/if}
+##else##
+&nbsp;&nbsp;&nbsp;
+<a href="{$url}">##message AA_EXIT_ADMINAREA##</a>
+##endif##
+##endif##
+
+##if @BUILDER.Registration.bChangePwdPage && @BUILDER.nLoginMethod == SECURITY_TABLE##
+##if @BUILDER.bGuestLogin## {if $guest==0} ##endif##
+&nbsp;&nbsp;&nbsp;
+<a href="changepwd.##@ext##" >##message CHANGE_PASSWORD ##</a>
+##if @BUILDER.bGuestLogin## {/if} ##endif##
+##endif##
+</td>
+##endif##
+
+<td align=right>
+##if Fields[bAdvancedSearch=1].len##
+##if GroupSecurity## {if $allow_search} ##endif##
+&nbsp;&nbsp;&nbsp;
+<a href="##@TABLE.strShortTableName h##_search.##@ext##">##message ADVANCED_SEARCH##</a>	
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+{if $rowsfound}
+
+##if @TABLE.bExportTo || @TABLE.bPrinterFriendly##
+##if GroupSecurity## {if $allow_export} ##endif##
+##if @TABLE.bExportTo##
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="##@TABLE.strShortTableName h##_export.##@ext##">##message EXPORT_RESULTS##</a>
+##endif##
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+##if @TABLE.bExportTo || @TABLE.bPrinterFriendly##
+##if GroupSecurity## {if $allow_export} ##endif##
+##if @TABLE.bPrinterFriendly##
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="##@TABLE.strShortTableName h##_print.##@ext##">##message PRINTER_FRIENDLY##</a>
+##if @TABLE.bPrintAll##
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a target="_blank" href="##@TABLE.strShortTableName h##_print.##@ext##?all=1">##message PRINT_ALL_PAGES##</a>
+##endif##
+##endif##
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+{/if}
+
+##if @TABLE.bImport##
+##if GroupSecurity## {if $allow_import} ##endif##
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="##@TABLE.strShortTableName h##_import.##@ext##">##message IMPORT##</a>
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+
+
+<!--language-->
+##if @BUILDER.arrLanguages.len>1##
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<!-- language selector -->
+<b>##message LANGUAGE ##:</b>&nbsp;&nbsp;
+	<select name=lang onchange="javascript: window.location='##@TABLE.strShortTableName hs##_list.##@ext##?language='+this.options[this.selectedIndex].value">
+	##foreach @BUILDER.arrLanguages as @lang##
+		<option value="##@lang h##" {if $language=="##@lang##"} selected {/if}>##@lang h##</option>
+	##endfor##
+	</select>
+</td>
+##endif##
+
+
+</tr>
+</table>
+
+##if (CreateMenu) || IsAdminTable(@TABLE)##
+<br>
+<table class="main_table_border" cellspacing="0" cellpadding="0" border=0>
+<tr>
+<td class=body2 width=10px>&nbsp;</td>
+##if !IsAdminTable(@TABLE) || !@BUILDER.m_bDynamicPermissions##
+##foreach @BUILDER.Tables as @t filter @t.bMenuItem order @t.nMenuOrder##
+##if GroupSecurity##{if $allow_##@t.strShortTableName##}##endif##
+	<td width=1px class=border_menu></td>
+	<td class=border_menu>&nbsp;</td>
+	<td class=border_menu width=1px></td>
+	<td class=body2 width=11px></td>
+##if GroupSecurity##{/if}##endif##
+##endfor##
+</tr>
+<tr>
+<td class=body2 width=10px>&nbsp;</td>
+##foreach @BUILDER.Tables as @t filter @t.bMenuItem order @t.nMenuOrder##
+##if GroupSecurity##{if $allow_##@t.strShortTableName##}##endif##
+	##if @t.bList##
+	<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##2##endif##>
+	<a class=menu_db href="##@t.strShortTableName##_list.##@ext##">##@t.strCaption h##</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##un##endif##select.gif" border=0></td>
+	##elseif @t.bAdd##
+	<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##2##endif##>
+    <a class=menu_db href="##@t.strShortTableName##_add.##@ext##">##@t.strCaption h##</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##un##endif##select.gif" border=0></td>
+	##elseif @t.nType==titREPORT##
+	<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##2##endif##>
+    <a class=menu_db href="##@t.strShortTableName##_report.##@ext##">##@t.strCaption h##</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##un##endif##select.gif" border=0></td>
+	##elseif @t.nType==titCHART##	
+	<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##2##endif##>
+    <a class=menu_db href="##@t.strShortTableName##_chart.##@ext##">##@t.strCaption h##</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##un##endif##select.gif" border=0></td>
+	##endif##
+##if GroupSecurity##{/if}##endif##
+##endfor##
+##else##
+##foreach @BUILDER.Tables as @t filter IsAdminTable(@t)##
+	<td width=1px class=border_menu_left></td>
+	<td class=td_border_menu##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##2##endif##>
+	<a class=menu_db href="##@t.strShortTableName##_list.##@ext##">
+##if @t.strDataSourceTable=="admin_users"##
+##message AA_ADDEDIT_USERS##
+##elseif @t.strDataSourceTable=="admin_members"##
+##message AA_ASSIGN_USERS##
+##elseif @t.strDataSourceTable=="admin_rights"##
+##message AA_PERMISSIONS##
+##endif##
+</a></td>
+	<td class=body2 colspan=2>
+	<img src="include/img/menu_blue_##if @t.strDataSourceTable!=@TABLE.strDataSourceTable##un##endif##select.gif" border=0></td>
+##endfor##
+##endif##
+</tr></table>
+##endif##
+
+
+<table border=0 cellpadding=0 cellspacing=0 class=main_table_border2 width=100%><tr><td>
+
+<table class="main_table_border" cellspacing="0" cellpadding="0" width=100% border=0>
+##if GroupSecurity## {if $allow_search} ##endif##
+
+##if Fields[bSearch=1].len##
+<tr>
+    <td height="35" valign=middle align=center style="padding-top:2px;">
+<b>##message SEARCH_FOR## </b> &nbsp;&nbsp;&nbsp;
+<select id="ctlSearchField">
+<option value="">##message ANY_FIELD##</option>
+##foreach Fields as @f filter @f.bSearch order @f.nAdvSearchPageOrder##
+<option value="##@f.strName h##" {$search_##@f.strName g##}>##@f.strLabel h##</option>
+##endfor##
+</select>
+&nbsp;
+<select id="ctlSearchOption">
+<option value="Contains" {$search_contains_option_selected}>##message CONTAINS##</option>
+<option value="Equals" {$search_equals_option_selected}>##message EQUALS##</option>
+<option value="Starts with ..." {$search_startswith_option_selected}>##message STARTS_WITH##</option>
+<option value="More than ..." {$search_more_option_selected}>##message MORE_THAN##</option>
+<option value="Less than ..." {$search_less_option_selected}>##message LESS_THAN##</option>
+<option value="Equal or more than ..." {$search_equalormore_option_selected}>##message EQUAL_OR_MORE##</option>
+<option value="Equal or less than ..." {$search_equalorless_option_selected}>##message EQUAL_OR_LESS##</option>
+<option value="Empty" {$search_empty_option_selected}>##message EMPTY##</option>
+</select>
+&nbsp;
+<input type=text size=20 ##if @TABLE.bSearchSuggest## autocomplete="off" onkeydown="return listenEvent(event,this,'ordinary');" onkeyup="searchSuggest(event,this,'ordinary');" ##else## onkeydown="e=event; if(!e) e = window.event; if (e.keyCode != 13) return true; e.cancel = true; RunSearch(); return false;" ##endif## name="ctlSearchFor" id="ctlSearchFor" {$search_searchfor}>
+&nbsp;
+<span class=buttonborder><input type=button class="button" value="##message SEARCH##"
+onClick="javascript: RunSearch();"></span>
+&nbsp;		
+<span class=buttonborder><input type=button class=button value="##message SHOW_ALL##" 
+onClick="javascript: frmSearch.a.value = 'showall'; frmSearch.submit();"></span>
+
+##endif##
+
+&nbsp;&nbsp;&nbsp;
+##message DETAILS_FOUND##: {$records_found}&nbsp;
+##message PAGE1## {$page} ##message PAGE2## {$maxpages}
+
+
+&nbsp;&nbsp;&nbsp;##message RECORDS_PP##:
+<select 
+onChange="javascript: document.location='##@TABLE.strShortTableName h##_list.##@ext##?pagesize='+this.options[this.selectedIndex].value;">
+<option value="10" {$rpp10_selected}>10</option>
+<option value="20" {$rpp20_selected}>20</option>
+<option value="30" {$rpp30_selected}>30</option>
+<option value="50" {$rpp50_selected}>50</option>
+<option value="100" {$rpp100_selected}>100</option>
+<option value="500" {$rpp500_selected}>500</option>
+</select>
+</strong></td>
+
+</tr>
+##if GroupSecurity## {/if}  ##endif##
+
+<tr>
+    <td colspan=2>
+<table width="100%" cellpadding=0 cellspacing=0>
+<tr><td class=body2 align=center style="padding:8px;">
+
+<span style="white-space:nowrap;">
+##if @TABLE.bAdd##
+##if GroupSecurity## {if $allow_add} ##endif##
+ <!-- Add new record -->
+<span class=buttonborder><input class=button type=button value="##message ADD_NEW##" onclick="window.location.href='##@TABLE.strShortTableName h##_add.##@ext##'"></span>
+##if GroupSecurity## {/if} ##endif##
+##endif##	
+	   
+ 
+##if @TABLE.bInlineAdd##
+##if GroupSecurity## {if $allow_add} ##endif##
+<span id="inline_add" class=buttonborder><input class=button type=button value="##message INLINE_ADD##" onclick="return inlineAdd(newrecord_id++);"></span>
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+##if !@TABLE.bInlineAdd || GroupSecurity##
+{if $display_grid}
+##endif##
+
+<span name="record_controls">
+
+##if @TABLE.bListVerticalLayout##
+##if @TABLE.bDelete || @TABLE.arrKeyFields.len && (@TABLE.bExportTo || @TABLE.bPrinterFriendly) || @TABLE.bInlineEdit##
+##if GroupSecurity## {if $allow_delete || $allow_export ##if @TABLE.bInlineEdit## || $allow_edit ##endif##} ##endif##
+<span class=buttonborder><input class=button type=button value="##message SELECT##" onClick="var i; bSelected = !bSelected; for (i=0;i<frmAdmin.elements['selection[]'].length;++i) frmAdmin.elements['selection[]'][i].checked=bSelected;"></span>
+##if GroupSecurity## {/if}  ##endif##
+##endif##
+##endif##
+
+##if @TABLE.bInlineEdit || @TABLE.bInlineAdd##
+##if GroupSecurity##{if $allow_edit || $allow_add}##endif##
+##if @TABLE.bInlineEdit##
+##if GroupSecurity##{if $allow_edit || $allow_add}##endif##
+<span name="edit_selected" class=buttonborder><input name="edit_selected" class=button type=button value="##message EDIT_SELECTED##" onclick=""javascript:void(0);""></span>
+##if GroupSecurity##{/if}##endif##
+##endif##
+<span name="saveall_edited" style="display:none;" class=buttonborder><input class=button name="saveall_edited" type=button value="##message SAVE_ALL##" onclick=""javascript:void(0);""></span>
+<span name="revertall_edited" style="display:none;" class=buttonborder><input class=button name="revertall_edited" type=button value="##message CANCEL_ALL##" onclick=""javascript:void(0);""></span>
+##if GroupSecurity## {/if}  ##endif##
+##endif##
+	 
+##if @TABLE.bDelete##
+##if GroupSecurity## {if $allow_delete}  ##endif##
+<span class=buttonborder><input class=button type=button value="##message DELETE_SELECTED##" onClick="if (confirm('##message DELETE_CONFIRM##')) frmAdmin.submit(); return false;"></span>
+##if GroupSecurity## {/if}  ##endif##
+##endif##
+
+##if @TABLE.bExportTo && @TABLE.arrKeyFields.len##
+##if GroupSecurity## {if $allow_export} ##endif##
+<span class=buttonborder><input class=button type=button value="##message EXPORT_SELECTED##" onclick="var c=0; if(frmAdmin.elements['selection[]'].length==undefined && frmAdmin.elements['selection[]'].checked) c=1; else for (i=0;i<frmAdmin.elements['selection[]'].length;++i) if (frmAdmin.elements['selection[]'][i].checked) c=1;  if(c==0) return true; frmAdmin.action='##@TABLE.strShortTableName h##_export.##@ext##';frmAdmin.target='_blank';frmAdmin.submit(); frmAdmin.action='##@TABLE.strShortTableName h##_list.##@ext##'; frmAdmin.target='_self';"></span>
+##if GroupSecurity## {/if} ##endif##
+##endif##
+
+##if @TABLE.bPrinterFriendly && @TABLE.arrKeyFields.len##
+##if GroupSecurity## {if $allow_export} ##endif##
+<span class=buttonborder><input class=button type=button value="##message PRINT_SELECTED##" onclick="var c=0; if(frmAdmin.elements['selection[]'].length==undefined && frmAdmin.elements['selection[]'].checked) c=1; else for (i=0;i<frmAdmin.elements['selection[]'].length;++i) if (frmAdmin.elements['selection[]'][i].checked) c=1;  if(c==0) return true; frmAdmin.action='##@TABLE.strShortTableName h##_print.##@ext##';frmAdmin.target='_blank';frmAdmin.submit(); frmAdmin.action='##@TABLE.strShortTableName h##_list.##@ext##'; frmAdmin.target='_self';"></span>
+##if GroupSecurity## {/if} ##endif##
+##endif##
+</span>
+##if !@TABLE.bInlineAdd || GroupSecurity##
+{/if}
+##endif##
+</span>
+</td></tr>
+
+##if !@TABLE.bInlineAdd || GroupSecurity##
+{if $display_grid}
+##endif##
+
+<tr><td class=body2 colspan=2><div id="usermessage" class="message"></div></td></tr>
+<tr><td colspan=2>

@@ -1,0 +1,9 @@
+require('ImageManipulation.php');
+ 
+$src = 'harlandsanders.jpg';
+ 
+$objImage = new ImageManipulation($src);
+if ( $objImage->imageok ) {
+    $objImage->setPixelate(10);
+    $objImage->show();
+}

@@ -1,0 +1,19 @@
+b) numbers not clickable: on ie9: not yet. ---->>>> i can't in my pc sir, i have only ie8.. DONE.
+g) add new: Saves äüü not properly, and upon returing to the events, the pulldown is empty. (ie9), ---->>>> i can't in my pc sir, i have only ie8 and it is working properly.. DONE.
+h) sort dropdown leader alfabetically >> this is important, we will have many (hundreds) of entries here.. Its impossible to go thru them.. Then people will add the same leaders craeting a big mess.  LIKE %typed_letters% --->>> DONE
+j) optional start and *endtimes* - open, at least still with *  ---->>> DONE
+k) t_date in calendar details-view: the details are always 0 / 1.1.970 / seems, they are still drawn from the t_events. Pls show up to 3 events there, if its more, make it scrollable. Please do not allow to add more date-couples, when no startdate in the existing one is entered. also, when editing an event, the existing dates are not yet shon in detailview. also adjust them left/right, so it looks nice. set the enddate to be the same upon leaving the start-date, when entered a new value only. ---->>> can the encoder take care of this sir. he/she can update the dates on form.
+l) not yet seeing them on cal? --->>> DONE.
+q) colin tippin, flat picture: he disappeared completely??? --->> DONE. just update the image, i think it is an old image.
+OK - r) cal details: yes, very nice. I see, you aded the links below the map. Can we do without? My preferred way is, to show all events of that day with their quality-icons in the map, and to show the clicked (or only) event with a balloon. The balloon should not be bigger, than the information, and any quality-icon in the map should be clickable, it then would expand the respective event in the details view. ----->>> DONE. LINKS BELOW THE MAP IS NEEDED SIR BECAUSE IF WE HAVE MORE THAN 5 EVENTS AND IT IS NOT IN ONE PLACE THEN IT IS HARD TO FIND. THE ICONS I CAN CHANGE IT INTO A FLAG OR PIN BUT I CAN'T MAKE THE ICON BIGGER BECAUSE I USED THE GOOGLE MAPS PLUGIN AND I CUSTOMIZE IT. SOME OF THE FUNCTIONSTHERE CAN'T BECAUSE I ONLY CONNECT TO THEM.
+s) (was also named m-sorry, we have an m already): yes, de-duplication ;) --->>> DONE
+e) cal login: please drop "alle", switch colors, so the "greyed out" means deactivated, let each be clicked additional or declicked, so i can have a selection like "dance" + "meditate." - as in the word-doc described. ---->>> in the current set up sir, we can do only switching one at a time. we can't put together the two or more. DONE with the dropping "alle" and switch colors.
+
+m) "märz" in calendar-login as title to the right, above of the details shows "m?rz" ---->>> DONE
+
+n) no details in cal: still --- >> THE SAME WITH m) ---->>>> DONE
+
+o) in cal: detail: let leader and location be clickable, open popup with details. ---->>>DONE
+
+t) NEW  even det reminderfield: add a reminderfield on the form, the entry is saved in t_provider, and an email is sent on that date. The standard is: empty. ---->>> DONE sir. File to update for the email content sir. http://manimano.ch/wlw/components/reminder.php
+

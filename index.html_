@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+<head>
+<title>manimano.ch - Hosting und Webhosting by hostfactory.ch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="none" />
+<style type="text/css">
+<!--
+body {
+	background: #fff;
+	font: 14px "Lucida Grande", Arial, Helvetica, sans-serif;
+	color: #333;
+	padding: 0;
+	margin: 30px;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0;
+}
+
+a {
+	color: #b11e1d;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #C60;
+}
+
+p {
+	margin-top: 5px;
+	line-height: 1.5;
+	padding-bottom: 15px;
+}
+
+p.comment {
+	font-size: 12px;
+	color: #333;
+}
+
+#main {
+	background: url(http://system.hostfactory.ch/skeleton/logo_hostfactory.jpg) top no-repeat;
+	padding-top: 300px;
+	margin: 0 auto;
+	width: 600px;
+	text-align: center;
+}
+-->
+</style>
+</head>
+<body>
+<div id="main">
+  <h1>Willkommen auf manimano.ch</h1>
+  <p>Hier entsteht in Kürze eine neue interessante Website!</p>
+  <p class="comment"><a href="http://www.hostfactory.ch/" title="Hosting, Webhosting, ASP, Virtual Server, PHP, MySQL">Hosting, Webhosting, ASP, Virtual Server, PHP, MySQL by<br />
+  <strong>www.hostfactory.ch</strong></a></p>
+</div>
+</body>
+</html>

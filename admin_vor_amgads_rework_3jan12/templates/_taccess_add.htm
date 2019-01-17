@@ -1,0 +1,81 @@
+<html>
+<head><title>taccess</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+{$includes}
+</head>
+
+<body {$bodyonload}>
+{if !$onthefly}
+{include_if_exists file="include/header.php"}
+{/if}
+<form {$formname} encType="multipart/form-data" method="post" action="_taccess_add.php" {$onsubmit}>
+{if $onthefly}
+<input type=hidden name="editType" value="onthefly">
+<input type=hidden name="table" value="{$flytable}">
+<input type=hidden name="field" value="{$flyfield}">
+<input type=hidden name="category" value="{$flycategory}">
+{/if}
+
+
+{doevent name="AddOnLoad"}
+<TABLE CELLPADDING=4 CELLSPACING=0 {if !$onthefly} align=center {/if} border=0 class="main_table" >
+<tr><td class=upeditmenu width=100% valign=middle align=center height=35 colspan=2>
+taccess, Add new record
+</td></tr>
+
+<tr><td colspan=2 align=center class=downedit>{$message}</td></tr>
+
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">Country</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="Country" mode="add" value=$value_Country}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">Zip</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="Zip" mode="add" value=$value_Zip}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">Location</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="Location" mode="add" value=$value_Location}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">Start</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="Start" mode="add" value=$value_Start}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">End</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="End" mode="add" value=$value_End}
+      &nbsp;<img src="images/icon_required.gif">
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:15px;">Note</td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {build_edit_control field="Note" mode="add" value=$value_Note}
+    </td></tr>
+
+<tr><td colspan=2 align=left height=30 valign=middle class=blackshade2>
+   <img src="images/icon_required.gif"> - Required field
+   </td></tr>
+ <tr height=40><td colspan=2 align=center valign=top class=blackshade2>
+ <span class=buttonborder><input class=button type=submit value="Save"  name=submit1></span>
+ <span class=buttonborder><input class=button type=reset value="Reset"></span>
+{if $onthefly}
+ <span class=buttonborder><input class=button type=button value="Cancel" {$cancelonclick}></span>
+{else}
+ <span class=buttonborder><input class=button type=button value="Back to list" onclick="window.location.href='_taccess_list.php?a=return'"></span>
+{/if}
+    <input type=hidden name="a" value="added">
+ </td></tr>
+</form>
+</table>
+{if !$onthefly}
+{include_if_exists file="include/footer.php"}
+{/if}
+
+{$linkdata}
+<script>SetToFirstControl();</script>
+</body>
+</html>
+

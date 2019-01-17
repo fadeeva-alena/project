@@ -1,0 +1,284 @@
+<html>
+<head>
+<title>t_people</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+</head>
+<body style="background-color:white">
+<script type="text/javascript" src="include/jquery.js"></script>
+{literal}
+<style> 
+table {  border-collapse: collapse} 
+td { 
+ padding: 5px; 
+ margin: 0px; 
+ border-width: 1px; 
+ border-style: solid; 
+ border-color: #000000; 
+}
+@media print {a.pdf {display:none}}
+
+</style> 
+{/literal}
+{doevent name="PrintOnLoad"}
+<div name="page">
+
+{foreach from=$pages item=page}
+{if $page.idx>1}<div name="page">{/if}
+
+<h1>t_people</h1>
+<table align='center' width='95%' border='0' cellpadding=3 cellspacing=2>
+<tr>
+<!--{if $column1show}-->
+		<td><b>people_id</b></td>
+	<td><b>institution</b></td>
+	<td><b>prof_provider</b></td>
+	<td><b>firstname</b></td>
+	<td><b>lastname</b></td>
+	<td><b>image_path</b></td>
+	<td><b>street</b></td>
+	<td><b>house_nr</b></td>
+	<td><b>zip</b></td>
+	<td><b>location</b></td>
+	<td><b>locationarea</b></td>
+	<td><b>tel_p</b></td>
+	<td><b>tel_m</b></td>
+	<td><b>email</b></td>
+	<td><b>username</b></td>
+	<td><b>password</b></td>
+	<td><b>picture</b></td>
+	<td><b>picture_2</b></td>
+	<td><b>gender</b></td>
+	<td><b>adminstatus</b></td>
+	<td><b>birthdate</b></td>
+	<td><b>enabled</b></td>
+	<td><b>temp_sched_from</b></td>
+	<td><b>temp_sched_to</b></td>
+	<td><b>joiningdate</b></td>
+	<td><b>coord_accuracy</b></td>
+	<td><b>monday</b></td>
+	<td><b>tuesday</b></td>
+	<td><b>wednesday</b></td>
+	<td><b>thursday</b></td>
+	<td><b>friday</b></td>
+	<td><b>saturday</b></td>
+	<td><b>sunday</b></td>
+	<td><b>monday_t</b></td>
+	<td><b>tuesday_t</b></td>
+	<td><b>wednesday_t</b></td>
+	<td><b>thursday_t</b></td>
+	<td><b>friday_t</b></td>
+	<td><b>saturday_t</b></td>
+	<td><b>sunday_t</b></td>
+	<td><b>preferred_contact_by</b></td>
+	<td><b>date_last_adress_change</b></td>
+	<td><b>map_in</b></td>
+	<td><b>IconPath</b></td>
+	<td><b>Icon</b></td>
+	<td><b>note</b></td>
+	<td><b>price_per_hour</b></td>
+	<td><b>psych_time_loose_tight</b></td>
+	<td><b>psych_exact_creativ</b></td>
+	<td><b>psych_heart_thing</b></td>
+	<td><b>psych_easy_security</b></td>
+	<td><b>psych_conflict_take_leave</b></td>
+	<td><b>longitude</b></td>
+	<td><b>latitude</b></td>
+	<td><b>Agree</b></td>
+	<td><b>Sign_date</b></td>
+	<td><b>Active</b></td>
+	<td><b>Acode</b></td>
+<!--{/if}-->	
+</tr>
+{foreach from=$page.rowinfo item=row}
+<tr valign=top>
+
+
+
+
+<td>
+{$row.1people_id_value}
+</td>
+<td>
+{$row.1institution_value}
+</td>
+<td>
+{$row.1prof_provider_value}
+</td>
+<td>
+{$row.1firstname_value}
+</td>
+<td>
+{$row.1lastname_value}
+</td>
+<td>
+{$row.1image_path_value}
+</td>
+<td>
+{$row.1street_value}
+</td>
+<td>
+{$row.1house_nr_value}
+</td>
+<td>
+{$row.1zip_value}
+</td>
+<td>
+{$row.1location_value}
+</td>
+<td>
+{$row.1locationarea_value}
+</td>
+<td>
+{$row.1tel_p_value}
+</td>
+<td>
+{$row.1tel_m_value}
+</td>
+<td>
+{$row.1email_value}
+</td>
+<td>
+{$row.1username_value}
+</td>
+<td>
+{$row.1password_value}
+</td>
+<td>
+{$row.1picture_value}
+</td>
+<td>
+{$row.1picture_2_value}
+</td>
+<td>
+{$row.1gender_value}
+</td>
+<td>
+{$row.1adminstatus_value}
+</td>
+<td>
+{$row.1birthdate_value}
+</td>
+<td>
+{$row.1enabled_value}
+</td>
+<td>
+{$row.1temp_sched_from_value}
+</td>
+<td>
+{$row.1temp_sched_to_value}
+</td>
+<td>
+{$row.1joiningdate_value}
+</td>
+<td>
+{$row.1coord_accuracy_value}
+</td>
+<td>
+{$row.1monday_value}
+</td>
+<td>
+{$row.1tuesday_value}
+</td>
+<td>
+{$row.1wednesday_value}
+</td>
+<td>
+{$row.1thursday_value}
+</td>
+<td>
+{$row.1friday_value}
+</td>
+<td>
+{$row.1saturday_value}
+</td>
+<td>
+{$row.1sunday_value}
+</td>
+<td>
+{$row.1monday_t_value}
+</td>
+<td>
+{$row.1tuesday_t_value}
+</td>
+<td>
+{$row.1wednesday_t_value}
+</td>
+<td>
+{$row.1thursday_t_value}
+</td>
+<td>
+{$row.1friday_t_value}
+</td>
+<td>
+{$row.1saturday_t_value}
+</td>
+<td>
+{$row.1sunday_t_value}
+</td>
+<td>
+{$row.1preferred_contact_by_value}
+</td>
+<td>
+{$row.1date_last_adress_change_value}
+</td>
+<td>
+{$row.1map_in_value}
+</td>
+<td>
+{$row.1IconPath_value}
+</td>
+<td>
+{$row.1Icon_value}
+</td>
+<td>
+{$row.1note_value}
+</td>
+<td>
+{$row.1price_per_hour_value}
+</td>
+<td>
+{$row.1psych_time_loose_tight_value}
+</td>
+<td>
+{$row.1psych_exact_creativ_value}
+</td>
+<td>
+{$row.1psych_heart_thing_value}
+</td>
+<td>
+{$row.1psych_easy_security_value}
+</td>
+<td>
+{$row.1psych_conflict_take_leave_value}
+</td>
+<td>
+{$row.1longitude_value}
+</td>
+<td>
+{$row.1latitude_value}
+</td>
+<td>
+{$row.1Agree_value}
+</td>
+<td>
+{$row.1Sign_date_value}
+</td>
+<td>
+{$row.1Active_value}
+</td>
+<td>
+{$row.1Acode_value}
+</td>
+
+</tr>
+{/foreach}
+</table>
+</div>
+{if !$page.last}
+<p style="page-break-after: always"></p>
+{/if}
+{/foreach}
+
+</body>
+
+</html>

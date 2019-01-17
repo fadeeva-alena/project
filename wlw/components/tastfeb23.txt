@@ -1,0 +1,15 @@
+1)      Menu straightening in admin-section (unify 2, move other)
+
+2)      Login does not work in safari
+
+3)      Small glitch with this:  (see letter after pia marz…)
+
+4) add checkbox right of leader 1: not mentioned, drop the need for at least one leader.
+5) When entering multiple dates, offer the user in the new line the calendar with the last date selected, 
+so, for example, if they enter date 4, suggest date 3 in the calendar.
+
+reason: if they start in january, and enter one date a month, they have to scroll once one month first.
+Then twice on entering next date, then 3x for the next date and so forth.
+If this is implemented, they will always just scroll once.
+
+2..5 is worth 35$

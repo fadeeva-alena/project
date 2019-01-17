@@ -1,0 +1,13 @@
+NOT YET DONE:
+d maitn  some entries are displayed right (for example in the grid), ruth wäfler, for example, when editing, the ä is like this: WÃ¤fler, also harald wessbecher (leader) in shortdesc (i saved this already, but they remain)
+
+k maint  in addedit_event in french (mrdavid_f, mrdavid) i can not add a record. I press update/add, but nothing happens. Repeateld.y
+
+l maint  many locations have umlaut-trouble, please check. (the display, except in dropdowns is fine, though).
+
+CLARIFICATIONS/COMMENTS:
+o NEW  "for calendar-add-edit: instead of the dropdowns for leader1 and 2 and location: open a large element to the right (where helptexts usually stand), which has a long scrolllist of all items. Add on top of the list buttons to sort by different cols (leader for example: company, firstname, lastname. show these 3 lines. and the pic, if available, but only very small (1/4rd of normal), to have more elements on the list is more important. and offer in a nice way to add a new element --->>> can you please give me a screenshot for this. I don't really understand this. thanks.
+
+g NEW  add picture for location and eleader directly from popup. --->>> i don't know if it is possible in the current settings because we have a popup and uploading image is need to have another page to process. in our case we can't because we don't need to refresh because the parent form must retain what is the value there.
+
+a new  for every user, inside and outside calendar: remember his quality-settings and searchterms. Let them reappear next time --->>> need to have a tables for this in the database. it will require me to reprogram the calendar in the login and inside the system.

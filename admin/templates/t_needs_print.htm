@@ -1,0 +1,397 @@
+
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>T Needs</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN need_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN need_id_fieldheader}
+	<b>Need Id</b>
+	{END need_id_fieldheader}
+</th>
+{END need_id_fieldheadercolumn}
+	{BEGIN people_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN people_id_fieldheader}
+	<b>People Id</b>
+	{END people_id_fieldheader}
+</th>
+{END people_id_fieldheadercolumn}
+	{BEGIN need_type_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN need_type_id_fieldheader}
+	<b>Need Type Id</b>
+	{END need_type_id_fieldheader}
+</th>
+{END need_type_id_fieldheadercolumn}
+	{BEGIN need_subtype_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN need_subtype_id_fieldheader}
+	<b>Need Subtype Id</b>
+	{END need_subtype_id_fieldheader}
+</th>
+{END need_subtype_id_fieldheadercolumn}
+	{BEGIN need_note_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN need_note_fieldheader}
+	<b>Need Note</b>
+	{END need_note_fieldheader}
+</th>
+{END need_note_fieldheadercolumn}
+	{BEGIN need_hourly_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN need_hourly_fieldheader}
+	<b>Need Hourly</b>
+	{END need_hourly_fieldheader}
+</th>
+{END need_hourly_fieldheadercolumn}
+	{BEGIN prof_provider_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN prof_provider_fieldheader}
+	<b>Prof Provider</b>
+	{END prof_provider_fieldheader}
+</th>
+{END prof_provider_fieldheadercolumn}
+	{BEGIN firstname_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN firstname_fieldheader}
+	<b>Firstname</b>
+	{END firstname_fieldheader}
+</th>
+{END firstname_fieldheadercolumn}
+	{BEGIN lastname_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN lastname_fieldheader}
+	<b>Lastname</b>
+	{END lastname_fieldheader}
+</th>
+{END lastname_fieldheadercolumn}
+	{BEGIN image_path_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN image_path_fieldheader}
+	<b>Image Path</b>
+	{END image_path_fieldheader}
+</th>
+{END image_path_fieldheadercolumn}
+	{BEGIN street_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN street_fieldheader}
+	<b>Street</b>
+	{END street_fieldheader}
+</th>
+{END street_fieldheadercolumn}
+	{BEGIN house_nr_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN house_nr_fieldheader}
+	<b>House Nr</b>
+	{END house_nr_fieldheader}
+</th>
+{END house_nr_fieldheadercolumn}
+	{BEGIN zip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN zip_fieldheader}
+	<b>Zip</b>
+	{END zip_fieldheader}
+</th>
+{END zip_fieldheadercolumn}
+	{BEGIN location_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN location_fieldheader}
+	<b>Location</b>
+	{END location_fieldheader}
+</th>
+{END location_fieldheadercolumn}
+	{BEGIN locationarea_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN locationarea_fieldheader}
+	<b>Locationarea</b>
+	{END locationarea_fieldheader}
+</th>
+{END locationarea_fieldheadercolumn}
+	{BEGIN tel_p_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tel_p_fieldheader}
+	<b>Tel P</b>
+	{END tel_p_fieldheader}
+</th>
+{END tel_p_fieldheadercolumn}
+	{BEGIN tel_m_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tel_m_fieldheader}
+	<b>Tel M</b>
+	{END tel_m_fieldheader}
+</th>
+{END tel_m_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN email_fieldheader}
+	<b>Email</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN need_id_fieldcolumn}
+<td  class="runner-cc {$need_id_class}" {$need_id_style}>
+	{$need_id_value}
+</td>
+{END need_id_fieldcolumn}
+	{BEGIN people_id_fieldcolumn}
+<td  class="runner-cc {$people_id_class}" {$people_id_style}>
+	{$people_id_value}
+</td>
+{END people_id_fieldcolumn}
+	{BEGIN need_type_id_fieldcolumn}
+<td  class="runner-cc {$need_type_id_class}" {$need_type_id_style}>
+	{$need_type_id_value}
+</td>
+{END need_type_id_fieldcolumn}
+	{BEGIN need_subtype_id_fieldcolumn}
+<td  class="runner-cc {$need_subtype_id_class}" {$need_subtype_id_style}>
+	{$need_subtype_id_value}
+</td>
+{END need_subtype_id_fieldcolumn}
+	{BEGIN need_note_fieldcolumn}
+<td  class="runner-cc {$need_note_class}" {$need_note_style}>
+	{$need_note_value}
+</td>
+{END need_note_fieldcolumn}
+	{BEGIN need_hourly_fieldcolumn}
+<td  class="runner-cc {$need_hourly_class}" {$need_hourly_style}>
+	{$need_hourly_value}
+</td>
+{END need_hourly_fieldcolumn}
+	{BEGIN prof_provider_fieldcolumn}
+<td  class="runner-cc {$prof_provider_class}" {$prof_provider_style}>
+	{$prof_provider_value}
+</td>
+{END prof_provider_fieldcolumn}
+	{BEGIN firstname_fieldcolumn}
+<td  class="runner-cc {$firstname_class}" {$firstname_style}>
+	{$firstname_value}
+</td>
+{END firstname_fieldcolumn}
+	{BEGIN lastname_fieldcolumn}
+<td  class="runner-cc {$lastname_class}" {$lastname_style}>
+	{$lastname_value}
+</td>
+{END lastname_fieldcolumn}
+	{BEGIN image_path_fieldcolumn}
+<td  class="runner-cc {$image_path_class}" {$image_path_style}>
+	{$image_path_value}
+</td>
+{END image_path_fieldcolumn}
+	{BEGIN street_fieldcolumn}
+<td  class="runner-cc {$street_class}" {$street_style}>
+	{$street_value}
+</td>
+{END street_fieldcolumn}
+	{BEGIN house_nr_fieldcolumn}
+<td  class="runner-cc {$house_nr_class}" {$house_nr_style}>
+	{$house_nr_value}
+</td>
+{END house_nr_fieldcolumn}
+	{BEGIN zip_fieldcolumn}
+<td  class="runner-cc {$zip_class}" {$zip_style}>
+	{$zip_value}
+</td>
+{END zip_fieldcolumn}
+	{BEGIN location_fieldcolumn}
+<td  class="runner-cc {$location_class}" {$location_style}>
+	{$location_value}
+</td>
+{END location_fieldcolumn}
+	{BEGIN locationarea_fieldcolumn}
+<td  class="runner-cc {$locationarea_class}" {$locationarea_style}>
+	{$locationarea_value}
+</td>
+{END locationarea_fieldcolumn}
+	{BEGIN tel_p_fieldcolumn}
+<td  class="runner-cc {$tel_p_class}" {$tel_p_style}>
+	{$tel_p_value}
+</td>
+{END tel_p_fieldcolumn}
+	{BEGIN tel_m_fieldcolumn}
+<td  class="runner-cc {$tel_m_class}" {$tel_m_style}>
+	{$tel_m_value}
+</td>
+{END tel_m_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN need_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END need_id_fieldfootercolumn}
+{BEGIN people_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END people_id_fieldfootercolumn}
+{BEGIN need_type_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END need_type_id_fieldfootercolumn}
+{BEGIN need_subtype_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END need_subtype_id_fieldfootercolumn}
+{BEGIN need_note_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END need_note_fieldfootercolumn}
+{BEGIN need_hourly_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END need_hourly_fieldfootercolumn}
+{BEGIN prof_provider_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END prof_provider_fieldfootercolumn}
+{BEGIN firstname_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END firstname_fieldfootercolumn}
+{BEGIN lastname_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END lastname_fieldfootercolumn}
+{BEGIN image_path_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END image_path_fieldfootercolumn}
+{BEGIN street_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END street_fieldfootercolumn}
+{BEGIN house_nr_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END house_nr_fieldfootercolumn}
+{BEGIN zip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END zip_fieldfootercolumn}
+{BEGIN location_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END location_fieldfootercolumn}
+{BEGIN locationarea_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END locationarea_fieldfootercolumn}
+{BEGIN tel_p_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tel_p_fieldfootercolumn}
+{BEGIN tel_m_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tel_m_fieldfootercolumn}
+{BEGIN email_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END email_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

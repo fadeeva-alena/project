@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>t_needs</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+</head>
+<body style="background-color:white">
+<script type="text/javascript" src="include/jquery.js"></script>
+{literal}
+<style> 
+table {  border-collapse: collapse} 
+td { 
+ padding: 5px; 
+ margin: 0px; 
+ border-width: 1px; 
+ border-style: solid; 
+ border-color: #000000; 
+}
+@media print {a.pdf {display:none}}
+
+</style> 
+{/literal}
+{doevent name="PrintOnLoad"}
+<div name="page">
+
+{foreach from=$pages item=page}
+{if $page.idx>1}<div name="page">{/if}
+
+<h1>t_needs</h1>
+<table align='center' width='95%' border='0' cellpadding=3 cellspacing=2>
+<tr>
+<!--{if $column1show}-->
+		<td><b>need_id</b></td>
+	<td><b>people_id</b></td>
+	<td><b>need_type_id</b></td>
+	<td><b>need_subtype_id</b></td>
+	<td><b>need_note</b></td>
+	<td><b>need_hourly</b></td>
+	<td><b>prof_provider</b></td>
+	<td><b>firstname</b></td>
+	<td><b>lastname</b></td>
+	<td><b>image_path</b></td>
+	<td><b>street</b></td>
+	<td><b>house_nr</b></td>
+	<td><b>zip</b></td>
+	<td><b>location</b></td>
+	<td><b>locationarea</b></td>
+	<td><b>tel_p</b></td>
+	<td><b>tel_m</b></td>
+	<td><b>email</b></td>
+<!--{/if}-->	
+</tr>
+{foreach from=$page.rowinfo item=row}
+<tr valign=top>
+
+
+
+
+<td>
+{$row.1need_id_value}
+</td>
+<td>
+{$row.1people_id_value}
+</td>
+<td>
+{$row.1need_type_id_value}
+</td>
+<td>
+{$row.1need_subtype_id_value}
+</td>
+<td>
+{$row.1need_note_value}
+</td>
+<td>
+{$row.1need_hourly_value}
+</td>
+<td>
+{$row.1prof_provider_value}
+</td>
+<td>
+{$row.1firstname_value}
+</td>
+<td>
+{$row.1lastname_value}
+</td>
+<td>
+{$row.1image_path_value}
+</td>
+<td>
+{$row.1street_value}
+</td>
+<td>
+{$row.1house_nr_value}
+</td>
+<td>
+{$row.1zip_value}
+</td>
+<td>
+{$row.1location_value}
+</td>
+<td>
+{$row.1locationarea_value}
+</td>
+<td>
+{$row.1tel_p_value}
+</td>
+<td>
+{$row.1tel_m_value}
+</td>
+<td>
+{$row.1email_value}
+</td>
+
+</tr>
+{/foreach}
+</table>
+</div>
+{if !$page.last}
+<p style="page-break-after: always"></p>
+{/if}
+{/foreach}
+
+</body>
+
+</html>

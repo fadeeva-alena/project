@@ -1,0 +1,59 @@
+﻿<?php
+include "include/session.php";
+
+include "include/z_db.php";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Settings5</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen, projection" href="slider.css" />
+<SCRIPT SRC="libdetect.js"></SCRIPT>
+<SCRIPT SRC="libslider.js"></SCRIPT>
+ <SCRIPT SRC="slider.js"></SCRIPT>
+</head>
+
+<body class="all" onload="MM_preloadImages('images/hammer_and_screwdriver_red.gif')">
+
+<div id="container">
+  <div class="header">
+    <h1><font color="#FF0000">Mani</font><font color="#0000FF">Mano</font></h1>
+			<?php
+if ($_SESSION['auth'] == "yes")
+{
+
+echo"<h4>Willkommen, {$_SESSION['first_name']} {$_SESSION['last_name']}</h4>";
+$sql="SELECT * FROM t_people WHERE people_id ={$_SESSION['people_id']}";
+$result=mysql_query($sql);
+$row=mysql_fetch_array($result);
+}else
+{
+header("location:index.php");	
+}
+?>
+	<input type="button" value="Logout" onclick=location.href="index.php" id="logoutbtn">
+	<input type="button" value="Meine Daten" id="maindatbtn">
+	<input type="button" value="Suche" onclick=location.href="search.php" id="maindatbtn">
+	<input type="button" value="Hilfe" onclick=location.href="help.php" id="helpbtn2">
+  </div>
+  <div class="mainContent">
+	<div class="content">
+		<span id="title">5) Über meine Person: </span>
+		<p id="maintext">Jetzt haben Sie es fast geschafft: Die Angaben über ihre Person ist das letzte, was wir von lhnen wollen. Und vielleicht das wichtigste. Beziehungen jeglicher Art (Arbeit, Privat..) scheitern meist an der Kommunikation. Damit ein paar grundlegende Dinge schon vor der Begegnung klar sind, haben wir dieses Profil geschafen - sprechen Sie darüber - man muss nicht gleich sein, aber wenn man sich über seine Eigenheiten bewusst wird und weiss, wen man vor sich hat, hat man schon halb gewonnen.</p>
+	  <p></p>
+
+    <div id="slider"><div id="slidertext1">Ich bin pünktlich,<br />sons rufe ich an.</div><div id="sliderframe"><IFRAME src="slider/slider1.php?SCALE=<?php echo"{$row['psych_time_loose_tight']}"; ?> " height="70px" width="280px" frameborder=0></IFRAME></div><div id="slidertext2">Bei mir kann es auh mal ein paar<br />Minuten später werden.</div></div>
+    <div id="slider"><div id="slidertext1">Ich führe meine Auftrage<br />exakt nach Vorgabe aus.</div><div id="sliderframe"><IFRAME src="slider/slider1.php?SCALE=<?php echo"{$row['psych_exact_creativ']}"; ?>" height="70px" width="280px" frameborder=0></IFRAME></div><div id="slidertext2">Ich denke mir Losungen in Deinem<br />Sinn aus, wenn es notig ist.</div></div>
+    <div id="slider"><div id="slidertext1">Ich habe ein grosses<br />Herz.</div><div id="sliderframe"><IFRAME src="slider/slider1.php?SCALE=<?php echo"{$row['psych_heart_thing']}"; ?>" height="70px" width="280px" frameborder=0></IFRAME></div><div id="slidertext2">Ich bin eher Sach-und<br />Lösungsorientiert.</div></div>
+    <div id="slider"><div id="slidertext1">Ich finde mich in jeder<br />Situation zurecht.</div><div id="sliderframe"><IFRAME src="slider/slider1.php?SCALE=<?php echo"{$row['psych_easy_security']}"; ?>" height="70px" width="280px" frameborder=0></IFRAME></div><div id="slidertext2">Klare, sichere Rahmen-<br />bedingungen sind mir wichtig.</div></div>
+    <div id="slider"><div id="slidertext1">Konflikte spreche und<br />trage ich aus.</div><div id="sliderframe"><IFRAME src="slider/slider1.php?SCALE=<?php echo"{$row['psych_conflict_take_leave']}"; ?>" height="70px" width="280px" frameborder=0></IFRAME></div><div id="slidertext2">Ich vermeide Konflikte nach<br />Möglichkeit.</div></div>
+
+		
+      <input name="Speichern" type="button" id="finishbtn" value="Speichern"/>
+    </div>
+  </div>
+</div>
+</body>
+</html>

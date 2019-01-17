@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<DavidProject>
+<MaintitleLine1>Dürfen wir uns vorstellen?</MaintitleLine1>
+<MaintitleLine2>Unsere Mitarbeiter:</MaintitleLine2>
+<Logo>Logo/Logo.png</Logo>
+<photos>
+<photo>
+    <thumb src="images/s_maurer.gif"/>
+    <caption text="S. Maurer"/>
+    <desc><![CDATA[<br><br><b>S. Maurer</b><br>Übersetzer, Datenakquise<br><br><i>Kontakt:</i></br></br><a href="event:mailto:s.maurer@spiritwings.ch"><br>S.Maurer@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/l_hirt.gif"/>
+    <caption text="L. Hirt"/>
+    <desc><![CDATA[<br><br><b>L. Hirt</b><br>Tests, Daten<br><br><i>Kontakt:</i></br></br><a href="event:mailto:l.hirt@limeco.ch"><br>L.Hirt@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/d_schlaepfer.gif"/>
+    <caption text="D. Schläpfer"/>
+    <desc><![CDATA[<br><br><b>D. Schläpfer</b><br>Inhaber und Geschäftsführer, Projektleiter<br><br><i>Kontakt:</i></br></br><a href="event:mailto:d.schlaepfer@spiritwings.ch"><br>D.Schlaepfer@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/S_zimmermann.gif"/>
+    <caption text="S. Zimmermann"/>
+    <desc><![CDATA[<br><br><b>S. Zimmermann</b><br><br>Datenaquise<br><i><br>Kontakt:</i></br></br><a href="event:mailto:s.zimmermann@SpiritWings.ch"><br>S.Zimmermann@spiritwings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/eh_protestas.gif"/>
+    <caption text="E.H. Protestas"/>
+    <desc><![CDATA[<br><br><b>E.H. Protestas</b> <br>Grafik, Design und Logo<br><br><i>Kontakt:</i></br></br><a href="event:mailto:e.h.protestas@SpiritWings.ch"><br>E.H.Protestas@WpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/b_nosra.gif"/>
+    <caption text="B. Nosra"/>
+    <desc><![CDATA[<br><br><b>B. Nosra</b><br>Übersetzung, französisch<br><br><i>Kontakt:</i></br></br><a href="event:mailto:b.nosra@SpiritWings.ch"><br>B.Nosra@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/s_uncini.gif"/>
+    <caption text="S. Uncini"/>
+    <desc><![CDATA[<br><br><b>Silvano Uncini<br></b>Übersetzung, italienisch<br><br><i>Kontakt:</i></br></br><a href="event:mailto:s.uncini@SpiritWings.ch"><br>S.Uncini@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/k_reutimann.gif"/>
+    <caption text="K. Reutimann"/>
+    <desc><![CDATA[<br><br><b>K. Reutimann</b><br>Idee, Inspiration<br><br><br><i>Kontakt:</i></br></br><a href="event:mailto:k.reutimann@SpiritWings.ch"><br>K.Reutimann@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+<photo>
+    <thumb src="images/k_de_guzman.gif"/>
+    <caption text="K. de Guzman"/>
+    <desc><![CDATA[<br><br><b>K. de Guzman</b><br>Programmierung<br><br><i>Kontakt:</i></br></br><a href="event:mailto:k.de_guzman@SpiritWings.ch"><br>K.De_Guzman@SpiritWings.ch</br></a> ]]> </desc>
+   </photo>
+
+
+</photos>
+	
+</DavidProject>

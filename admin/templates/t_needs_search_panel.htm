@@ -1,0 +1,103 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_need_id}
+			<a href="#" id="addSearchControl_need_id" class="addSearchControl" {$addSearchControl_need_id_attrs}>Need Id</a><br>
+		{END addSearch_need_id}
+		{BEGIN addSearch_people_id}
+			<a href="#" id="addSearchControl_people_id" class="addSearchControl" {$addSearchControl_people_id_attrs}>People Id</a><br>
+		{END addSearch_people_id}
+		{BEGIN addSearch_need_type_id}
+			<a href="#" id="addSearchControl_need_type_id" class="addSearchControl" {$addSearchControl_need_type_id_attrs}>Need Type Id</a><br>
+		{END addSearch_need_type_id}
+		{BEGIN addSearch_need_subtype_id}
+			<a href="#" id="addSearchControl_need_subtype_id" class="addSearchControl" {$addSearchControl_need_subtype_id_attrs}>Need Subtype Id</a><br>
+		{END addSearch_need_subtype_id}
+		{BEGIN addSearch_need_note}
+			<a href="#" id="addSearchControl_need_note" class="addSearchControl" {$addSearchControl_need_note_attrs}>Need Note</a><br>
+		{END addSearch_need_note}
+		{BEGIN addSearch_need_hourly}
+			<a href="#" id="addSearchControl_need_hourly" class="addSearchControl" {$addSearchControl_need_hourly_attrs}>Need Hourly</a><br>
+		{END addSearch_need_hourly}
+		{BEGIN addSearch_prof_provider}
+			<a href="#" id="addSearchControl_prof_provider" class="addSearchControl" {$addSearchControl_prof_provider_attrs}>Prof Provider</a><br>
+		{END addSearch_prof_provider}
+		{BEGIN addSearch_firstname}
+			<a href="#" id="addSearchControl_firstname" class="addSearchControl" {$addSearchControl_firstname_attrs}>Firstname</a><br>
+		{END addSearch_firstname}
+		{BEGIN addSearch_lastname}
+			<a href="#" id="addSearchControl_lastname" class="addSearchControl" {$addSearchControl_lastname_attrs}>Lastname</a><br>
+		{END addSearch_lastname}
+		{BEGIN addSearch_image_path}
+			<a href="#" id="addSearchControl_image_path" class="addSearchControl" {$addSearchControl_image_path_attrs}>Image Path</a><br>
+		{END addSearch_image_path}
+		{BEGIN addSearch_street}
+			<a href="#" id="addSearchControl_street" class="addSearchControl" {$addSearchControl_street_attrs}>Street</a><br>
+		{END addSearch_street}
+		{BEGIN addSearch_house_nr}
+			<a href="#" id="addSearchControl_house_nr" class="addSearchControl" {$addSearchControl_house_nr_attrs}>House Nr</a><br>
+		{END addSearch_house_nr}
+		{BEGIN addSearch_zip}
+			<a href="#" id="addSearchControl_zip" class="addSearchControl" {$addSearchControl_zip_attrs}>Zip</a><br>
+		{END addSearch_zip}
+		{BEGIN addSearch_location}
+			<a href="#" id="addSearchControl_location" class="addSearchControl" {$addSearchControl_location_attrs}>Location</a><br>
+		{END addSearch_location}
+		{BEGIN addSearch_locationarea}
+			<a href="#" id="addSearchControl_locationarea" class="addSearchControl" {$addSearchControl_locationarea_attrs}>Locationarea</a><br>
+		{END addSearch_locationarea}
+		{BEGIN addSearch_tel_p}
+			<a href="#" id="addSearchControl_tel_p" class="addSearchControl" {$addSearchControl_tel_p_attrs}>Tel P</a><br>
+		{END addSearch_tel_p}
+		{BEGIN addSearch_tel_m}
+			<a href="#" id="addSearchControl_tel_m" class="addSearchControl" {$addSearchControl_tel_m_attrs}>Tel M</a><br>
+		{END addSearch_tel_m}
+		{BEGIN addSearch_email}
+			<a href="#" id="addSearchControl_email" class="addSearchControl" {$addSearchControl_email_attrs}>Email</a><br>
+		{END addSearch_email}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

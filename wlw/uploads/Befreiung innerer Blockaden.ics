@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20120412T064857Z
+DESCRIPTION:Sie haben diesen Termin bei SpritWings.ch angefordert, hier ist er.
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px" colspan=2><b>Vortrag - 2012</b></td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>Die Quelle - Ort der Begegnung - Siddharta Caveter <br>Museumstr. 10<br>3005 Bern</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>25 CHF
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Ursula Maria Auktor<br/>  </td>
+ </tr></td></tr></table> 
+
+Vielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.Wichtig:  SpiritWings.ch ist nicht für die Ri
+TZID:CET
+TZNAME:CET
+DTEND;TZID=CET:20120419T193000
+DTSTART;TZID=CET:20120419T193000
+DTSTAMP;TZID=CET:20111114T000000
+LAST-MODIFIED;TZID=CET:19700101T010000
+LOCATION:Die Quelle - Ort der Begegnung - Siddharta Caveter , Museumstr. 10, , 3005 Bern
+SUMMARY;LANGUAGE=De:Befreiung innerer Blockaden
+ORGANIZER;CN="Spiritwings Team":mailto:kontakt@spiritwings.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20120412T064857uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\nSie haben diesen Termin bei SpritWings.ch angefordert, hier ist er.\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px" colspan=2><b>Vortrag - 2012</b></td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>Die Quelle - Ort der Begegnung - Siddharta Caveter <br>Museumstr. 10<br>3005 Bern</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>25 CHF
+ </td>                                                                                         
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Ursula Maria Auktor<br/>  </td>
+ </tr></td></tr></table>\n\nVielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.Wichtig:  SpiritWings.ch ist nicht für die Ri\n\n</BODY>\n</HTML>\n

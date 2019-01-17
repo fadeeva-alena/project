@@ -1,0 +1,15 @@
+b) in reservationsystem, addedit-form: let cancellation-days and fees be optional. -->> DONE
+c) and please add  the currency, that was chosen above (chf, eur) right of the 2 fee-fields. --->> DONE
+d) addedit: please make the 6 new fields much less wide (each of them for a max of 4 numbers). --->> DONE
+e) in the excel, you create, please add this: in column g: please add the fee.
+the fee upon reservation is: full fee. upon cancelling betw. cancell_1 and cancel_2-date: the lower, and if even closer: the higher fee. please let the column title be "Gebühr (" & currency & ")"
+for example: Gebühr (CHF) --->> DONE
+i logged in as kc/kc, booked the event 3x. then i logged in as myself, and booked the event another 3x - the last (6th, no cancellations) should be screennotified: Der Event ist schon voll belegt - Wenn Sie Ja klicken erhalten Sie einen Platz auf der Warteliste. (event full, if you click yes, you are on the waitinglist) - the email-confirmation is correct., the excel as well.
+g) in the cancel-confirmation, i was sloppy stating if, if, if. its if, elseif, elseif.
+(otherwise.. just happened.. more than one msgs can apply.)
+and this: i booked for today, so if i cancel today, i should be applied the max amount (fee 2). however, the 2 first conditions apply.. can you check the formula?)
+h) please disallow cancellations for events, that already started (yesterday), a cancellation for an event, that starts today should still be possible. --->> DONE
+i) in case of waitinglist, let the "R"-icon be a "W"-icon, and hoover it "Eintrag auf Warteliste" (book on waitinglist) --> DONE
+j) upon deleting an event,  i get the question: really delete the event and then datefrom..dateto in %% in the title. In this case, the date is irrelevant, we dont need it in the title. --->> DONE
+k) in the moment, from events-grid, when opening an event for viewing, i get only a small (10x10mm) empty nothing in the middle of the screen, which i can close using escape (ie9) --->> DONE
+l) "delete"-button in events-grid (to delete the search-term) is not functional -->> DONE

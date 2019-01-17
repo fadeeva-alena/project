@@ -1,0 +1,28 @@
+Hi ken
+
+ 
+
+Here is my feedback:
+
+a1) please put the two button side by side (abbrechen / update– now the room should be sufficient). -->> DONE
+
+A2) And please only one link / button button for all settings regarding lunchbrake and workingtimes. --> DONE, the only different from other is the add event/session function sir.
+a3) for the lunchbrake: please move the time-fields a little to the left, so “uhr” still matches on the same line (still leftaligned with each other) -->> DONE
+and
+a4) and please for lunchbrake start and lunchbrake end: use the title “Mittagspause” (which is the expand-link now) -->> DONE, i put the wording after the label already in the form yesterday.
+a5) and please for the first/last-workingdays, use title “Arbeitstage” -->> where to implement this sir?
+b) multiple lunchbrakes on mrdavid-schedule: whenever I change lunchbrake-settings, new lunchbrakes are created. Please keep note of what was in there. And compare it to all lunchbrakes in the database. And upgrade all the ones, that where matching the old values. Like this, you set the standard-ones new, but you leave the manually changed ones intact. -->> DONE
+e) is pending I guess? -->> need further instruction with this sir. i don't know what to do yet here. thanks.
+g) Zip/location for provider: did you work on this? -->> DONE, already switch the location and zip field in the form.
+
+h) Just for completeness: add delete-button for images on edit-forms, when image is presetn --->> Done with the delete image button in editing the events, locations and leaders. The browse button will still retain so that the user has an option to update the image. I just add the delete function to the image if there is existing image.
+
+----i) color of blocks / text: here is a guide, how to convert a color to greyscale. The greyscale value indicates if its dark or light. If its dark, white text is good (as we have), if its too light, black color for text is better. http://www.mattsbits.co.uk/item-156.html -->> DONE, i didn't use the codes there. I created my own script to determine if the background is lighter/darker so that the text will be darker/lighter respectively.
+
+j) Please color the permanent and onetime-blocks a little darker than the background! -->> DONE
+
+-----k) Please in providers-m@mode=edit: please let this be only a title, and now on/off. Always show the area. It takes too long to create it.. -->> DONE, I changed this to yes or no, not checkbox.
+
+Thanks, ken!!
+
+d

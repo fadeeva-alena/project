@@ -1,0 +1,62 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_log_id}
+			<a href="#" id="addSearchControl_log_id" class="addSearchControl" {$addSearchControl_log_id_attrs}>Log Id</a><br>
+		{END addSearch_log_id}
+		{BEGIN addSearch_person_id}
+			<a href="#" id="addSearchControl_person_id" class="addSearchControl" {$addSearchControl_person_id_attrs}>Person Id</a><br>
+		{END addSearch_person_id}
+		{BEGIN addSearch_User_Name}
+			<a href="#" id="addSearchControl_User_Name" class="addSearchControl" {$addSearchControl_User_Name_attrs}>User Name</a><br>
+		{END addSearch_User_Name}
+		{BEGIN addSearch_login_date}
+			<a href="#" id="addSearchControl_login_date" class="addSearchControl" {$addSearchControl_login_date_attrs}>Login Date</a><br>
+		{END addSearch_login_date}
+		{BEGIN addSearch_logout_date}
+			<a href="#" id="addSearchControl_logout_date" class="addSearchControl" {$addSearchControl_logout_date_attrs}>Logout Date</a><br>
+		{END addSearch_logout_date}
+		{BEGIN addSearch_login_from}
+			<a href="#" id="addSearchControl_login_from" class="addSearchControl" {$addSearchControl_login_from_attrs}>Login From</a><br>
+		{END addSearch_login_from}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

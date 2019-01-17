@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+
+    <style>
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            background: red;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 178px;
+            height: 250px;
+            margin-top: 100px;
+        }
+
+        .swiper-slide .text {
+            margin-top: -100px;
+            margin-left: -50%;
+            width: 200%;
+            text-align: center;
+            display: none;
+        }
+
+        .swiper-scrollbar {
+            height: 10px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb1.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano führ die Hunde in Ihren Ferien aus.. <br/> ..und kümmert sich um daheimgebliebene.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb2.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano hilft dem Junior beim Rechnen..<br/> ..und dem Senior bei Skype und Email.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb3.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano kennt den richtigen Beat..<br/> ..und bringt sie sicher nach Hause.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb4.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano kümmert sich um Tier und Pflanzen..<br/> ..und um Kleinkinder übrigens auch.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb5.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano massiert die Mama..<br/> ..und passt in der Zwischenzeit aufs Grosskind auf.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb6.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano schneidet die Haare..<br/> ..und den Rasen übrigens auch.</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image:url(asset/photos/thumb7.jpg)">
+                <div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+                    <p>ManiMano schützt vor zuviel Arbeit..<br/> ..und vor Langeweile übrigens auch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="swiper/js/swiper.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflow: {
+                rotate: 20,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true
+            },
+            slideToClickedSlide: true,
+            onInit: onInit,
+            onSlideChangeStart: onSlideChangeStart,
+            onTouchStart: onSlideChangeStart,
+            onSlideChangeEnd: onSlideChangeEnd,
+            onProgress: onProgress,
+            // onClick: onClick,
+            onReachEnd: onReachEnd,
+            onTouchEnd: onTouchEnd
+        });
+
+        var SLIDES_TOTAL = 7;
+        var _currentSlideCalc = 0;
+        var _intId = null;
+        var $texts;
+
+        function onInit() {
+            $texts = $(".swiper-slide .text");
+            $texts.hide();
+
+            $($texts[0]).fadeIn(500);
+        }
+
+        // function onClick(swiper, event) {
+        //     console.log('CLICK  @ ' + _currentSlideCalc);
+        //     runFix();
+        // }
+        function onProgress(swiper, progress) {
+            if (progress > 1) progress = .95;
+            if (progress < 0) progress = .05;
+            // console.log('PR  @ ' + progress);
+
+            _currentSlideCalc = Math.floor(progress * SLIDES_TOTAL);
+            if (_currentSlideCalc == SLIDES_TOTAL) _currentSlideCalc = SLIDES_TOTAL - 1;
+
+            // runFix();
+        }
+        function runFix() {
+            if (_intId) clearTimeout(_intId);
+            _intId = setTimeout(fixSlide, 100);
+        }
+        function fixSlide() {
+            // console.log("~~ fixing slide: " + _currentSlideCalc + " ?? " + swiper.activeIndex);
+            if (!$($texts[_currentSlideCalc]).is(':animated')) {
+                $texts.hide();
+                $($texts[_currentSlideCalc]).fadeIn(500);
+            }
+        }
+
+        function onTouchEnd(swiper, event) {
+            // console.log("Touch ENDD: "+_currentSlideCalc);
+            runFix();
+        }
+
+        function onSlideChangeStart(swiper) {
+            // console.log('HIDE  @ ' + swiper.previousIndex + " // " + Math.random());
+            // $($texts[swiper.previousIndex]).hide();
+            $texts.hide();
+        }
+
+        function onSlideChangeEnd(swiper) {
+            // console.log('SHOW  @ ' + swiper.activeIndex + " // " + Math.random());
+            // $($texts[swiper.activeIndex]).fadeIn(500);
+            runFix();
+        }
+
+        function onReachEnd(swiper) {
+            // console.log('R-SHOW  @ ' + swiper.activeIndex + " // " + Math.random());
+            // $($texts[swiper.activeIndex]).fadeIn(500);
+            runFix();
+        }
+    </script>
+</body>
+
+</html>

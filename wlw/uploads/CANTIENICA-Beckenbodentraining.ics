@@ -1,0 +1,83 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20111220T233557Z
+DESCRIPTION:Sie haben diesen Termin bei SpritWings.ch angefordert, hier ist er.
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Training</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>Heilen</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Heilen</td></tr><tr>
+ <td width="150px"><label for="short_desc"><b>Kurzbeschreibung:</b></td><td>Das Powerbecken wecken</td></tr><tr>
+ <td width="150px"><b>Beschreibung:</b></td><td>CANTIENICA-Beckenbodentraining vernetzt die drei Lagen des Beckenbodens mit der Muskulatur des gesamten Beckens, des Rückens, des Bauches, der Hüften und der Oberschenkel. Das Becken selbst wird optimal aufgerichtet. So entsteht ein Muskelkorsett, ein Powerbecken, das die ganze Haltung optimiert, die Wirbelkörper und Gelenke schützt und Verschleisserscheinungen aller Art erfolgreich vorbeugt.
+
+Es hilft schnell und nachhaltig bei:
+
+Blasenschwäche, Inkontinenz, Menstruationsbeschwerden, Hämorrhoiden, Organsenkungen, Leistenbrüchen, Beckenschiefstand, Rückenschmerzen, Lymphstau, Erschlaffung der Po- und Bauchmuskulatur, Arthrose oder Deformation der Hüftgelenke, Fehlhaltungen aller Art.</td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>Bewegungsraum Cantienica, 2.OG  Reichsgasse 25  7000 Chur</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>0 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_time"><b>Bemerkung zu den Zeiten :</b> </label></td>
+ <td>Montag:17.00 - 18.00/Donnerstag:10.00 - 11.00</td>                                                                                                
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Monica Rota<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>Verantwortliche/r: Telefon:</b> </label></td><td>079 458 16 31</td></tr><tr>
+ <td width="150px"><label for="eve_contact_email"><b></b> </label></td>
+ <td>info@cantienica-chur.ch</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.cantienica-chur.ch</td>                                                                                                   
+ </tr></table> 
+
+Vielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.Wichtig:  SpiritWings.ch ist nicht für die Ri
+DTEND;TZID=Europe/Zurich:20120628T180000Z
+DTSTART;TZID=Europe/Zurich:20111207T100000Z
+DTSTAMP;TZID=Europe/Zurich:20111206T120151Z
+LAST-MODIFIED;TZID=Europe/Zurich:19700101T010000Z
+LOCATION:Bewegungsraum Cantienica, 2.OG , Reichsgasse 25, , 7000 Chur
+SUMMARY;LANGUAGE=De:CANTIENICA-Beckenbodentraining
+ORGANIZER;CN="David Schläepfer":mailto:dsc@d-s-c.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20111220T233557uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\nSie haben diesen Termin bei SpritWings.ch angefordert, hier ist er.\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Training</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>Heilen</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Heilen</td></tr><tr>
+ <td width="150px"><label for="short_desc"><b>Kurzbeschreibung:</b></td><td>Das Powerbecken wecken</td></tr><tr>
+ <td width="150px"><b>Beschreibung:</b></td><td>CANTIENICA-Beckenbodentraining vernetzt die drei Lagen des Beckenbodens mit der Muskulatur des gesamten Beckens, des Rückens, des Bauches, der Hüften und der Oberschenkel. Das Becken selbst wird optimal aufgerichtet. So entsteht ein Muskelkorsett, ein Powerbecken, das die ganze Haltung optimiert, die Wirbelkörper und Gelenke schützt und Verschleisserscheinungen aller Art erfolgreich vorbeugt.
+
+Es hilft schnell und nachhaltig bei:
+
+Blasenschwäche, Inkontinenz, Menstruationsbeschwerden, Hämorrhoiden, Organsenkungen, Leistenbrüchen, Beckenschiefstand, Rückenschmerzen, Lymphstau, Erschlaffung der Po- und Bauchmuskulatur, Arthrose oder Deformation der Hüftgelenke, Fehlhaltungen aller Art.</td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>Bewegungsraum Cantienica, 2.OG  Reichsgasse 25  7000 Chur</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>0 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_time"><b>Bemerkung zu den Zeiten :</b> </label></td>
+ <td>Montag:17.00 - 18.00/Donnerstag:10.00 - 11.00</td>                                                                                                
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Monica Rota<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>Verantwortliche/r: Telefon:</b> </label></td><td>079 458 16 31</td></tr><tr>
+ <td width="150px"><label for="eve_contact_email"><b></b> </label></td>
+ <td>info@cantienica-chur.ch</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.cantienica-chur.ch</td>                                                                                                   
+ </tr></table>\n\nVielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.Wichtig:  SpiritWings.ch ist nicht für die Ri\n\n</BODY>\n</HTML>\n

@@ -1,0 +1,982 @@
+
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>T People</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN people_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN people_id_fieldheader}
+	<b>People Id</b>
+	{END people_id_fieldheader}
+</th>
+{END people_id_fieldheadercolumn}
+	{BEGIN institution_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN institution_fieldheader}
+	<b>Institution</b>
+	{END institution_fieldheader}
+</th>
+{END institution_fieldheadercolumn}
+	{BEGIN prof_provider_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN prof_provider_fieldheader}
+	<b>Prof Provider</b>
+	{END prof_provider_fieldheader}
+</th>
+{END prof_provider_fieldheadercolumn}
+	{BEGIN firstname_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN firstname_fieldheader}
+	<b>Firstname</b>
+	{END firstname_fieldheader}
+</th>
+{END firstname_fieldheadercolumn}
+	{BEGIN lastname_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN lastname_fieldheader}
+	<b>Lastname</b>
+	{END lastname_fieldheader}
+</th>
+{END lastname_fieldheadercolumn}
+	{BEGIN image_path_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN image_path_fieldheader}
+	<b>Image Path</b>
+	{END image_path_fieldheader}
+</th>
+{END image_path_fieldheadercolumn}
+	{BEGIN street_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN street_fieldheader}
+	<b>Street</b>
+	{END street_fieldheader}
+</th>
+{END street_fieldheadercolumn}
+	{BEGIN house_nr_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN house_nr_fieldheader}
+	<b>House Nr</b>
+	{END house_nr_fieldheader}
+</th>
+{END house_nr_fieldheadercolumn}
+	{BEGIN zip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN zip_fieldheader}
+	<b>Zip</b>
+	{END zip_fieldheader}
+</th>
+{END zip_fieldheadercolumn}
+	{BEGIN location_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN location_fieldheader}
+	<b>Location</b>
+	{END location_fieldheader}
+</th>
+{END location_fieldheadercolumn}
+	{BEGIN locationarea_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN locationarea_fieldheader}
+	<b>Locationarea</b>
+	{END locationarea_fieldheader}
+</th>
+{END locationarea_fieldheadercolumn}
+	{BEGIN tel_p_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tel_p_fieldheader}
+	<b>Tel P</b>
+	{END tel_p_fieldheader}
+</th>
+{END tel_p_fieldheadercolumn}
+	{BEGIN tel_m_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tel_m_fieldheader}
+	<b>Tel M</b>
+	{END tel_m_fieldheader}
+</th>
+{END tel_m_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN email_fieldheader}
+	<b>Email</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+	{BEGIN username_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN username_fieldheader}
+	<b>Username</b>
+	{END username_fieldheader}
+</th>
+{END username_fieldheadercolumn}
+	{BEGIN password_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN password_fieldheader}
+	<b>Password</b>
+	{END password_fieldheader}
+</th>
+{END password_fieldheadercolumn}
+	{BEGIN picture_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN picture_fieldheader}
+	<b>Picture</b>
+	{END picture_fieldheader}
+</th>
+{END picture_fieldheadercolumn}
+	{BEGIN picture_2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN picture_2_fieldheader}
+	<b>Picture 2</b>
+	{END picture_2_fieldheader}
+</th>
+{END picture_2_fieldheadercolumn}
+	{BEGIN gender_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN gender_fieldheader}
+	<b>Gender</b>
+	{END gender_fieldheader}
+</th>
+{END gender_fieldheadercolumn}
+	{BEGIN birthdate_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN birthdate_fieldheader}
+	<b>Birthdate</b>
+	{END birthdate_fieldheader}
+</th>
+{END birthdate_fieldheadercolumn}
+	{BEGIN enabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled_fieldheader}
+	<b>Enabled</b>
+	{END enabled_fieldheader}
+</th>
+{END enabled_fieldheadercolumn}
+	{BEGIN temp_sched_from_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN temp_sched_from_fieldheader}
+	<b>Temp Sched From</b>
+	{END temp_sched_from_fieldheader}
+</th>
+{END temp_sched_from_fieldheadercolumn}
+	{BEGIN temp_sched_to_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN temp_sched_to_fieldheader}
+	<b>Temp Sched To</b>
+	{END temp_sched_to_fieldheader}
+</th>
+{END temp_sched_to_fieldheadercolumn}
+	{BEGIN joiningdate_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN joiningdate_fieldheader}
+	<b>Joiningdate</b>
+	{END joiningdate_fieldheader}
+</th>
+{END joiningdate_fieldheadercolumn}
+	{BEGIN coord_accuracy_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN coord_accuracy_fieldheader}
+	<b>Coord Accuracy</b>
+	{END coord_accuracy_fieldheader}
+</th>
+{END coord_accuracy_fieldheadercolumn}
+	{BEGIN monday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN monday_fieldheader}
+	<b>Monday</b>
+	{END monday_fieldheader}
+</th>
+{END monday_fieldheadercolumn}
+	{BEGIN tuesday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tuesday_fieldheader}
+	<b>Tuesday</b>
+	{END tuesday_fieldheader}
+</th>
+{END tuesday_fieldheadercolumn}
+	{BEGIN wednesday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wednesday_fieldheader}
+	<b>Wednesday</b>
+	{END wednesday_fieldheader}
+</th>
+{END wednesday_fieldheadercolumn}
+	{BEGIN thursday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN thursday_fieldheader}
+	<b>Thursday</b>
+	{END thursday_fieldheader}
+</th>
+{END thursday_fieldheadercolumn}
+	{BEGIN friday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN friday_fieldheader}
+	<b>Friday</b>
+	{END friday_fieldheader}
+</th>
+{END friday_fieldheadercolumn}
+	{BEGIN saturday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN saturday_fieldheader}
+	<b>Saturday</b>
+	{END saturday_fieldheader}
+</th>
+{END saturday_fieldheadercolumn}
+	{BEGIN sunday_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sunday_fieldheader}
+	<b>Sunday</b>
+	{END sunday_fieldheader}
+</th>
+{END sunday_fieldheadercolumn}
+	{BEGIN monday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN monday_t_fieldheader}
+	<b>Monday T</b>
+	{END monday_t_fieldheader}
+</th>
+{END monday_t_fieldheadercolumn}
+	{BEGIN tuesday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tuesday_t_fieldheader}
+	<b>Tuesday T</b>
+	{END tuesday_t_fieldheader}
+</th>
+{END tuesday_t_fieldheadercolumn}
+	{BEGIN wednesday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wednesday_t_fieldheader}
+	<b>Wednesday T</b>
+	{END wednesday_t_fieldheader}
+</th>
+{END wednesday_t_fieldheadercolumn}
+	{BEGIN thursday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN thursday_t_fieldheader}
+	<b>Thursday T</b>
+	{END thursday_t_fieldheader}
+</th>
+{END thursday_t_fieldheadercolumn}
+	{BEGIN friday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN friday_t_fieldheader}
+	<b>Friday T</b>
+	{END friday_t_fieldheader}
+</th>
+{END friday_t_fieldheadercolumn}
+	{BEGIN saturday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN saturday_t_fieldheader}
+	<b>Saturday T</b>
+	{END saturday_t_fieldheader}
+</th>
+{END saturday_t_fieldheadercolumn}
+	{BEGIN sunday_t_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sunday_t_fieldheader}
+	<b>Sunday T</b>
+	{END sunday_t_fieldheader}
+</th>
+{END sunday_t_fieldheadercolumn}
+	{BEGIN preferred_contact_by_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN preferred_contact_by_fieldheader}
+	<b>Preferred Contact By</b>
+	{END preferred_contact_by_fieldheader}
+</th>
+{END preferred_contact_by_fieldheadercolumn}
+	{BEGIN date_last_adress_change_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN date_last_adress_change_fieldheader}
+	<b>Date Last Adress Change</b>
+	{END date_last_adress_change_fieldheader}
+</th>
+{END date_last_adress_change_fieldheadercolumn}
+	{BEGIN map_in_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN map_in_fieldheader}
+	<b>Map In</b>
+	{END map_in_fieldheader}
+</th>
+{END map_in_fieldheadercolumn}
+	{BEGIN IconPath_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN IconPath_fieldheader}
+	<b>Icon Path</b>
+	{END IconPath_fieldheader}
+</th>
+{END IconPath_fieldheadercolumn}
+	{BEGIN Icon_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Icon_fieldheader}
+	<b>Icon</b>
+	{END Icon_fieldheader}
+</th>
+{END Icon_fieldheadercolumn}
+	{BEGIN note_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN note_fieldheader}
+	<b>Note</b>
+	{END note_fieldheader}
+</th>
+{END note_fieldheadercolumn}
+	{BEGIN price_per_hour_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN price_per_hour_fieldheader}
+	<b>Price Per Hour</b>
+	{END price_per_hour_fieldheader}
+</th>
+{END price_per_hour_fieldheadercolumn}
+	{BEGIN psych_time_loose_tight_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN psych_time_loose_tight_fieldheader}
+	<b>Psych Time Loose Tight</b>
+	{END psych_time_loose_tight_fieldheader}
+</th>
+{END psych_time_loose_tight_fieldheadercolumn}
+	{BEGIN psych_exact_creativ_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN psych_exact_creativ_fieldheader}
+	<b>Psych Exact Creativ</b>
+	{END psych_exact_creativ_fieldheader}
+</th>
+{END psych_exact_creativ_fieldheadercolumn}
+	{BEGIN psych_heart_thing_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN psych_heart_thing_fieldheader}
+	<b>Psych Heart Thing</b>
+	{END psych_heart_thing_fieldheader}
+</th>
+{END psych_heart_thing_fieldheadercolumn}
+	{BEGIN psych_easy_security_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN psych_easy_security_fieldheader}
+	<b>Psych Easy Security</b>
+	{END psych_easy_security_fieldheader}
+</th>
+{END psych_easy_security_fieldheadercolumn}
+	{BEGIN psych_conflict_take_leave_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN psych_conflict_take_leave_fieldheader}
+	<b>Psych Conflict Take Leave</b>
+	{END psych_conflict_take_leave_fieldheader}
+</th>
+{END psych_conflict_take_leave_fieldheadercolumn}
+	{BEGIN longitude_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN longitude_fieldheader}
+	<b>Longitude</b>
+	{END longitude_fieldheader}
+</th>
+{END longitude_fieldheadercolumn}
+	{BEGIN latitude_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN latitude_fieldheader}
+	<b>Latitude</b>
+	{END latitude_fieldheader}
+</th>
+{END latitude_fieldheadercolumn}
+	{BEGIN Agree_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Agree_fieldheader}
+	<b>Agree</b>
+	{END Agree_fieldheader}
+</th>
+{END Agree_fieldheadercolumn}
+	{BEGIN Sign_date_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Sign_date_fieldheader}
+	<b>Sign Date</b>
+	{END Sign_date_fieldheader}
+</th>
+{END Sign_date_fieldheadercolumn}
+	{BEGIN Active_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Active_fieldheader}
+	<b>Active</b>
+	{END Active_fieldheader}
+</th>
+{END Active_fieldheadercolumn}
+	{BEGIN Acode_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN Acode_fieldheader}
+	<b>Acode</b>
+	{END Acode_fieldheader}
+</th>
+{END Acode_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN people_id_fieldcolumn}
+<td  class="runner-cc {$people_id_class}" {$people_id_style}>
+	{$people_id_value}
+</td>
+{END people_id_fieldcolumn}
+	{BEGIN institution_fieldcolumn}
+<td  class="runner-cc {$institution_class}" {$institution_style}>
+	{$institution_value}
+</td>
+{END institution_fieldcolumn}
+	{BEGIN prof_provider_fieldcolumn}
+<td  class="runner-cc {$prof_provider_class}" {$prof_provider_style}>
+	{$prof_provider_value}
+</td>
+{END prof_provider_fieldcolumn}
+	{BEGIN firstname_fieldcolumn}
+<td  class="runner-cc {$firstname_class}" {$firstname_style}>
+	{$firstname_value}
+</td>
+{END firstname_fieldcolumn}
+	{BEGIN lastname_fieldcolumn}
+<td  class="runner-cc {$lastname_class}" {$lastname_style}>
+	{$lastname_value}
+</td>
+{END lastname_fieldcolumn}
+	{BEGIN image_path_fieldcolumn}
+<td  class="runner-cc {$image_path_class}" {$image_path_style}>
+	{$image_path_value}
+</td>
+{END image_path_fieldcolumn}
+	{BEGIN street_fieldcolumn}
+<td  class="runner-cc {$street_class}" {$street_style}>
+	{$street_value}
+</td>
+{END street_fieldcolumn}
+	{BEGIN house_nr_fieldcolumn}
+<td  class="runner-cc {$house_nr_class}" {$house_nr_style}>
+	{$house_nr_value}
+</td>
+{END house_nr_fieldcolumn}
+	{BEGIN zip_fieldcolumn}
+<td  class="runner-cc {$zip_class}" {$zip_style}>
+	{$zip_value}
+</td>
+{END zip_fieldcolumn}
+	{BEGIN location_fieldcolumn}
+<td  class="runner-cc {$location_class}" {$location_style}>
+	{$location_value}
+</td>
+{END location_fieldcolumn}
+	{BEGIN locationarea_fieldcolumn}
+<td  class="runner-cc {$locationarea_class}" {$locationarea_style}>
+	{$locationarea_value}
+</td>
+{END locationarea_fieldcolumn}
+	{BEGIN tel_p_fieldcolumn}
+<td  class="runner-cc {$tel_p_class}" {$tel_p_style}>
+	{$tel_p_value}
+</td>
+{END tel_p_fieldcolumn}
+	{BEGIN tel_m_fieldcolumn}
+<td  class="runner-cc {$tel_m_class}" {$tel_m_style}>
+	{$tel_m_value}
+</td>
+{END tel_m_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+	{BEGIN username_fieldcolumn}
+<td  class="runner-cc {$username_class}" {$username_style}>
+	{$username_value}
+</td>
+{END username_fieldcolumn}
+	{BEGIN password_fieldcolumn}
+<td  class="runner-cc {$password_class}" {$password_style}>
+	{$password_value}
+</td>
+{END password_fieldcolumn}
+	{BEGIN picture_fieldcolumn}
+<td  class="runner-cc {$picture_class}" {$picture_style}>
+	{$picture_value}
+</td>
+{END picture_fieldcolumn}
+	{BEGIN picture_2_fieldcolumn}
+<td  class="runner-cc {$picture_2_class}" {$picture_2_style}>
+	{$picture_2_value}
+</td>
+{END picture_2_fieldcolumn}
+	{BEGIN gender_fieldcolumn}
+<td  class="runner-cc {$gender_class}" {$gender_style}>
+	{$gender_value}
+</td>
+{END gender_fieldcolumn}
+	{BEGIN birthdate_fieldcolumn}
+<td  class="runner-cc {$birthdate_class}" {$birthdate_style}>
+	{$birthdate_value}
+</td>
+{END birthdate_fieldcolumn}
+	{BEGIN enabled_fieldcolumn}
+<td  class="runner-cc {$enabled_class}" {$enabled_style}>
+	{$enabled_value}
+</td>
+{END enabled_fieldcolumn}
+	{BEGIN temp_sched_from_fieldcolumn}
+<td  class="runner-cc {$temp_sched_from_class}" {$temp_sched_from_style}>
+	{$temp_sched_from_value}
+</td>
+{END temp_sched_from_fieldcolumn}
+	{BEGIN temp_sched_to_fieldcolumn}
+<td  class="runner-cc {$temp_sched_to_class}" {$temp_sched_to_style}>
+	{$temp_sched_to_value}
+</td>
+{END temp_sched_to_fieldcolumn}
+	{BEGIN joiningdate_fieldcolumn}
+<td  class="runner-cc {$joiningdate_class}" {$joiningdate_style}>
+	{$joiningdate_value}
+</td>
+{END joiningdate_fieldcolumn}
+	{BEGIN coord_accuracy_fieldcolumn}
+<td  class="runner-cc {$coord_accuracy_class}" {$coord_accuracy_style}>
+	{$coord_accuracy_value}
+</td>
+{END coord_accuracy_fieldcolumn}
+	{BEGIN monday_fieldcolumn}
+<td  class="runner-cc {$monday_class}" {$monday_style}>
+	{$monday_value}
+</td>
+{END monday_fieldcolumn}
+	{BEGIN tuesday_fieldcolumn}
+<td  class="runner-cc {$tuesday_class}" {$tuesday_style}>
+	{$tuesday_value}
+</td>
+{END tuesday_fieldcolumn}
+	{BEGIN wednesday_fieldcolumn}
+<td  class="runner-cc {$wednesday_class}" {$wednesday_style}>
+	{$wednesday_value}
+</td>
+{END wednesday_fieldcolumn}
+	{BEGIN thursday_fieldcolumn}
+<td  class="runner-cc {$thursday_class}" {$thursday_style}>
+	{$thursday_value}
+</td>
+{END thursday_fieldcolumn}
+	{BEGIN friday_fieldcolumn}
+<td  class="runner-cc {$friday_class}" {$friday_style}>
+	{$friday_value}
+</td>
+{END friday_fieldcolumn}
+	{BEGIN saturday_fieldcolumn}
+<td  class="runner-cc {$saturday_class}" {$saturday_style}>
+	{$saturday_value}
+</td>
+{END saturday_fieldcolumn}
+	{BEGIN sunday_fieldcolumn}
+<td  class="runner-cc {$sunday_class}" {$sunday_style}>
+	{$sunday_value}
+</td>
+{END sunday_fieldcolumn}
+	{BEGIN monday_t_fieldcolumn}
+<td  class="runner-cc {$monday_t_class}" {$monday_t_style}>
+	{$monday_t_value}
+</td>
+{END monday_t_fieldcolumn}
+	{BEGIN tuesday_t_fieldcolumn}
+<td  class="runner-cc {$tuesday_t_class}" {$tuesday_t_style}>
+	{$tuesday_t_value}
+</td>
+{END tuesday_t_fieldcolumn}
+	{BEGIN wednesday_t_fieldcolumn}
+<td  class="runner-cc {$wednesday_t_class}" {$wednesday_t_style}>
+	{$wednesday_t_value}
+</td>
+{END wednesday_t_fieldcolumn}
+	{BEGIN thursday_t_fieldcolumn}
+<td  class="runner-cc {$thursday_t_class}" {$thursday_t_style}>
+	{$thursday_t_value}
+</td>
+{END thursday_t_fieldcolumn}
+	{BEGIN friday_t_fieldcolumn}
+<td  class="runner-cc {$friday_t_class}" {$friday_t_style}>
+	{$friday_t_value}
+</td>
+{END friday_t_fieldcolumn}
+	{BEGIN saturday_t_fieldcolumn}
+<td  class="runner-cc {$saturday_t_class}" {$saturday_t_style}>
+	{$saturday_t_value}
+</td>
+{END saturday_t_fieldcolumn}
+	{BEGIN sunday_t_fieldcolumn}
+<td  class="runner-cc {$sunday_t_class}" {$sunday_t_style}>
+	{$sunday_t_value}
+</td>
+{END sunday_t_fieldcolumn}
+	{BEGIN preferred_contact_by_fieldcolumn}
+<td  class="runner-cc {$preferred_contact_by_class}" {$preferred_contact_by_style}>
+	{$preferred_contact_by_value}
+</td>
+{END preferred_contact_by_fieldcolumn}
+	{BEGIN date_last_adress_change_fieldcolumn}
+<td  class="runner-cc {$date_last_adress_change_class}" {$date_last_adress_change_style}>
+	{$date_last_adress_change_value}
+</td>
+{END date_last_adress_change_fieldcolumn}
+	{BEGIN map_in_fieldcolumn}
+<td  class="runner-cc {$map_in_class}" {$map_in_style}>
+	{$map_in_value}
+</td>
+{END map_in_fieldcolumn}
+	{BEGIN IconPath_fieldcolumn}
+<td  class="runner-cc {$IconPath_class}" {$IconPath_style}>
+	{$IconPath_value}
+</td>
+{END IconPath_fieldcolumn}
+	{BEGIN Icon_fieldcolumn}
+<td  class="runner-cc {$Icon_class}" {$Icon_style}>
+	{$Icon_value}
+</td>
+{END Icon_fieldcolumn}
+	{BEGIN note_fieldcolumn}
+<td  class="runner-cc {$note_class}" {$note_style}>
+	{$note_value}
+</td>
+{END note_fieldcolumn}
+	{BEGIN price_per_hour_fieldcolumn}
+<td  class="runner-cc {$price_per_hour_class}" {$price_per_hour_style}>
+	{$price_per_hour_value}
+</td>
+{END price_per_hour_fieldcolumn}
+	{BEGIN psych_time_loose_tight_fieldcolumn}
+<td  class="runner-cc {$psych_time_loose_tight_class}" {$psych_time_loose_tight_style}>
+	{$psych_time_loose_tight_value}
+</td>
+{END psych_time_loose_tight_fieldcolumn}
+	{BEGIN psych_exact_creativ_fieldcolumn}
+<td  class="runner-cc {$psych_exact_creativ_class}" {$psych_exact_creativ_style}>
+	{$psych_exact_creativ_value}
+</td>
+{END psych_exact_creativ_fieldcolumn}
+	{BEGIN psych_heart_thing_fieldcolumn}
+<td  class="runner-cc {$psych_heart_thing_class}" {$psych_heart_thing_style}>
+	{$psych_heart_thing_value}
+</td>
+{END psych_heart_thing_fieldcolumn}
+	{BEGIN psych_easy_security_fieldcolumn}
+<td  class="runner-cc {$psych_easy_security_class}" {$psych_easy_security_style}>
+	{$psych_easy_security_value}
+</td>
+{END psych_easy_security_fieldcolumn}
+	{BEGIN psych_conflict_take_leave_fieldcolumn}
+<td  class="runner-cc {$psych_conflict_take_leave_class}" {$psych_conflict_take_leave_style}>
+	{$psych_conflict_take_leave_value}
+</td>
+{END psych_conflict_take_leave_fieldcolumn}
+	{BEGIN longitude_fieldcolumn}
+<td  class="runner-cc {$longitude_class}" {$longitude_style}>
+	{$longitude_value}
+</td>
+{END longitude_fieldcolumn}
+	{BEGIN latitude_fieldcolumn}
+<td  class="runner-cc {$latitude_class}" {$latitude_style}>
+	{$latitude_value}
+</td>
+{END latitude_fieldcolumn}
+	{BEGIN Agree_fieldcolumn}
+<td  class="runner-cc {$Agree_class}" {$Agree_style}>
+	{$Agree_value}
+</td>
+{END Agree_fieldcolumn}
+	{BEGIN Sign_date_fieldcolumn}
+<td  class="runner-cc {$Sign_date_class}" {$Sign_date_style}>
+	{$Sign_date_value}
+</td>
+{END Sign_date_fieldcolumn}
+	{BEGIN Active_fieldcolumn}
+<td  class="runner-cc {$Active_class}" {$Active_style}>
+	{$Active_value}
+</td>
+{END Active_fieldcolumn}
+	{BEGIN Acode_fieldcolumn}
+<td  class="runner-cc {$Acode_class}" {$Acode_style}>
+	{$Acode_value}
+</td>
+{END Acode_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN people_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END people_id_fieldfootercolumn}
+{BEGIN institution_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END institution_fieldfootercolumn}
+{BEGIN prof_provider_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END prof_provider_fieldfootercolumn}
+{BEGIN firstname_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END firstname_fieldfootercolumn}
+{BEGIN lastname_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END lastname_fieldfootercolumn}
+{BEGIN image_path_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END image_path_fieldfootercolumn}
+{BEGIN street_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END street_fieldfootercolumn}
+{BEGIN house_nr_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END house_nr_fieldfootercolumn}
+{BEGIN zip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END zip_fieldfootercolumn}
+{BEGIN location_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END location_fieldfootercolumn}
+{BEGIN locationarea_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END locationarea_fieldfootercolumn}
+{BEGIN tel_p_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tel_p_fieldfootercolumn}
+{BEGIN tel_m_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tel_m_fieldfootercolumn}
+{BEGIN email_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END email_fieldfootercolumn}
+{BEGIN username_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END username_fieldfootercolumn}
+{BEGIN password_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END password_fieldfootercolumn}
+{BEGIN picture_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END picture_fieldfootercolumn}
+{BEGIN picture_2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END picture_2_fieldfootercolumn}
+{BEGIN gender_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END gender_fieldfootercolumn}
+{BEGIN birthdate_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END birthdate_fieldfootercolumn}
+{BEGIN enabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldfootercolumn}
+{BEGIN temp_sched_from_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END temp_sched_from_fieldfootercolumn}
+{BEGIN temp_sched_to_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END temp_sched_to_fieldfootercolumn}
+{BEGIN joiningdate_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END joiningdate_fieldfootercolumn}
+{BEGIN coord_accuracy_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END coord_accuracy_fieldfootercolumn}
+{BEGIN monday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END monday_fieldfootercolumn}
+{BEGIN tuesday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tuesday_fieldfootercolumn}
+{BEGIN wednesday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wednesday_fieldfootercolumn}
+{BEGIN thursday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END thursday_fieldfootercolumn}
+{BEGIN friday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END friday_fieldfootercolumn}
+{BEGIN saturday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END saturday_fieldfootercolumn}
+{BEGIN sunday_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sunday_fieldfootercolumn}
+{BEGIN monday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END monday_t_fieldfootercolumn}
+{BEGIN tuesday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tuesday_t_fieldfootercolumn}
+{BEGIN wednesday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wednesday_t_fieldfootercolumn}
+{BEGIN thursday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END thursday_t_fieldfootercolumn}
+{BEGIN friday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END friday_t_fieldfootercolumn}
+{BEGIN saturday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END saturday_t_fieldfootercolumn}
+{BEGIN sunday_t_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sunday_t_fieldfootercolumn}
+{BEGIN preferred_contact_by_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END preferred_contact_by_fieldfootercolumn}
+{BEGIN date_last_adress_change_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END date_last_adress_change_fieldfootercolumn}
+{BEGIN map_in_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END map_in_fieldfootercolumn}
+{BEGIN IconPath_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END IconPath_fieldfootercolumn}
+{BEGIN Icon_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Icon_fieldfootercolumn}
+{BEGIN note_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END note_fieldfootercolumn}
+{BEGIN price_per_hour_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END price_per_hour_fieldfootercolumn}
+{BEGIN psych_time_loose_tight_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END psych_time_loose_tight_fieldfootercolumn}
+{BEGIN psych_exact_creativ_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END psych_exact_creativ_fieldfootercolumn}
+{BEGIN psych_heart_thing_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END psych_heart_thing_fieldfootercolumn}
+{BEGIN psych_easy_security_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END psych_easy_security_fieldfootercolumn}
+{BEGIN psych_conflict_take_leave_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END psych_conflict_take_leave_fieldfootercolumn}
+{BEGIN longitude_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END longitude_fieldfootercolumn}
+{BEGIN latitude_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END latitude_fieldfootercolumn}
+{BEGIN Agree_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Agree_fieldfootercolumn}
+{BEGIN Sign_date_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Sign_date_fieldfootercolumn}
+{BEGIN Active_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END Active_fieldfootercolumn}
+{BEGIN Acode_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END Acode_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

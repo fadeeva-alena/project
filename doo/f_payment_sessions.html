@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body { font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+#regform tr.white{ background-color:#ffffff;}
+#regform tr.grey{ background-color:#CCCCCC;}
+#regform tr.yellow{ background-color:#FFFF00;}
+#regform tr.blue{ background-color:#3399FF;}
+
+input { float:left; vertical-align:bottom;;}
+.STYLE3 {font-size: 12px}
+</style>
+
+</head>
+<body>
+
+<div style=" padding:1em; border:2px solid #666; width:990px; height:inherit; float:left; margin:20px; margin-right:0px; border:2px solid #E5E5E5; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; background-color:#bdd8f4;" >
+<form>
+<h2 style="font-weight:normal;  font-size:24px; padding:20px;">Verbuchen und prüfen von Zahlungen für Sitzungen/Behandlungen<br />
+  und ändern der effektiven Sitzungs/Behandlungsdauer.</h2> 
+<h5 style="color:#666;float:left;width:670px;padding:20px; padding-top:0px;">Hier kannst Du die Zahlungseingänge prüfen - ganz rechts kannst Du einstellen, was Du unten sehen willst - meist werden Dich die "verrechneten" interessieren, weil Du dann schnell die Zahlungseingänge eintragen kannst.
+Seltener wirst Du die "gemahnten" ansehen. 
+Und vielleicht freust Du Dich ab und zu über die lange Liste der bezahlten Rechnungen.
+
+Das Stornier-Datum ist nur von Interesse, wenn die Sitzung  abgesagt wurde. Du kannst auf diesem Formular nur den Zahlungsstatus ändern - die anderen Felder sind gesperrt. Das Zahlungsdatum wird automatisch eingetragen.
+
+Nach einer Weile wirst Du zuviele Einträge haben - dann kannst Du den Datumsbereich einschränken.
+Du kannst hier auch die effektive Sitzungs-/Behandlungsdauer anpassen. </h5> 
+<div style="float:right;  font-size:18px; color:#666">
+  <br />
+  <br />
+  <br /><p>
+  </p>
+  <table width="230" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="49%"><span class="STYLE3">Datumsbereich von:</span></td>
+    <td width="51%"><input name="textfield" type="text" size="8" /></td>
+  </tr>
+  <tr>
+    <td><span class="STYLE3">Datumsbereich bis:</span></td>
+    <td><input name="textfield3" type="text" size="8" /></td>
+  </tr>
+  <tr>
+    <td><span class="STYLE3">Anzeige:</span></td>
+    <td><select name="select">
+      <option>-Anzeige:-</option>
+    </select>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+<div style="height:0px; clear:both"></div>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="94" height="25" align="center">Kunde</td>
+    <td width="72" align="center">Datum</td>
+    <td width="118" align="center">Behandlung</td>
+    <td width="74" align="center">Stornier-Datum</td>
+    <td width="65" align="center">gebuchte Zeit</td>
+    <td width="97" align="center">eff.Behandlungs-<br />
+      dauer</td>
+    <td width="80" align="center">Preis</td>
+    <td width="80" align="center">Zahlungseingang</td>
+    <td width="80" align="center">Status</td>
+    <td width="80" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25"><select name="select2">
+      <option>booker_id</option>
+      </select>      </td>
+    <td><input name="textfield2" type="text" size="10" /></td>
+    <td><select name="select3">
+      <option>booked_session_id</option>
+        </select></td>
+    <td><input name="textfield22" type="text" size="10" /></td>
+    <td><input name="textfield4" type="text" size="5" />
+    min</td>
+    <td><input name="textfield42" type="text" size="5" />
+      min</td>
+    <td><input name="textfield43" type="text" size="5" />
+      Fr.</td>
+    <td><input name="textfield222" type="text" size="10" /></td>
+    <td><select name="select4">
+      <option>billing_state</option>
+    </select></td>
+    <td><input type="submit" name="Submit3" value="Speichern" /></td>
+  </tr>
+</table>
+<br />
+<br />
+<p>&nbsp;</p>
+</form>
+</div>
+</body>
+</html>

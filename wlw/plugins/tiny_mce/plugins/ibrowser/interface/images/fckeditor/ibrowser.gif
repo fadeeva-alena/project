@@ -1,0 +1,16 @@
+<?php
+$req_fld = REQ_FIELD;
+$page_option = "reservations-process3";
+$time = time();
+$current_year = date("Y", $time);
+$next_year = date("Y", mktime(0,0,0,1,1,$current_year+10));
+$tablename = DB_TABLE_PREFIX.'reservations';
+
+//->check post data
+$_SESSION['arrival'] = $helper->readable_daydate($_POST['arrival']);
+$_SESSION['arrival_date'] = $helper->readable_daydate($_POST['arrival_date']);
+$_SESSION['arrival_hour'] = $_POST['arrival_hour'];
+$_SESSION['arrival_minute'] = $_POST['arrival_minute'];
+$_SESSION['arrival_time'] = $_POST['arrival_hour'].":".$_POST['arrival_minute'];
+$_SESSION['arrival_by_plane'] = trim($_POST['arrival_by_plane']);
+$_SESSION['arrival_others'] = 

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Settings1</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+function maindaten()
+{
+document.getElementById("Vorname").value="david";
+document.getElementById("Nachname").value="schlaepfer";
+document.getElementById("Geb-datum").value="31.05.1970";
+document.getElementById("strasse").value="laengistr.";
+document.getElementById("Nr").value="12";
+document.getElementById("plz").value="8132";
+document.getElementById("ort").value="Egg";
+document.getElementById("Tel").value="044 994 73 74";
+document.getElementById("handy").value="079 423 26 60";
+document.getElementById("email").value="ds@d-s-c.ch";
+document.getElementById("benutzername").value="david";
+document.getElementById("passwort").value="david";
+document.getElementById("stundenlohn").value="15";
+document.getElementById("mannlich").selected=true; 
+}
+ //-->
+</script>
+</head>
+
+<body class="all">
+
+<div id="container">
+  <div class="header">
+    <h1><font color="#FF0000">Mani</font><font color="#0000FF">Mano</font></h1>
+	<h4>Willkommen, David Schlaepfer</h4>
+	<input type=button value="Logout" onclick=location.href="index.html" id="logoutbtn">
+	<input type=button value="Meine Daten" onclick=javascript:maindaten() id="maindatbtn">
+	<input type=button value="Suche" onclick=location.href="search.html" id="maindatbtn">
+	<input type=button value="Hilfe" onclick=location.href="help.html" id="helpbtn2">
+  </div>
+  <div class="mainContent">
+	<div class="content">
+		<span id="title">1) Persönliche Daten </span>
+		<p>
+			<label>Firma:
+		      <input type="text" name="Firma" id="Firma" size="30" />
+	        </label>
+		</p>
+	    <p>
+		    <label>Vorname:
+		      <input type="text" name="Vorname" id="Vorname" />
+	      </label>
+          <label>Nachname:
+	          <input type="text" name="Nachname" id="Nachname" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Geschlecht:
+	        <select name="Gechleht" id="Gechleht">
+	          <option id="mannlich">mannlich</option>
+			  <option>weiblich</option>
+            </select>
+          </label>
+	      <label>Geb-datum:
+	        <input type="text" name="Geb-datum" id="Geb-datum" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Bild:
+	        <input type="image" name="Bild" id="Bild" src="images/no_picture_he.gif" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Strasse/Nr.
+	        <input type="text" name="strasse" id="strasse" size="26" />
+          </label>
+	      <label>
+	        <input type="text" name="Nr" id="Nr" size="10" />
+	      </label>
+	    </p>
+	    <p>
+	      <label>PLZ/Ort:
+	        <input type="text" name="plz" id="plz" size="11" />
+          </label>
+	      <label>
+	        <input type="text" name="ort" id="ort" size="25" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Tel. P:
+	        <input type="text" name="Tel" id="Tel" />
+          </label>
+	      <label>Handy:
+	        <input type="text" name="handy" id="handy" />
+          </label>
+	    </p>
+	    <p>
+	      <label>E-mail:
+	        <input type="text" name="email" id="email" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Vorzugs-<br />Kontaktart:
+	        <select name="vorzugs" id="vorzugs">
+	          <option>Handy</option>
+            </select>
+          </label>
+	    </p>
+	    <p>
+	      <label>Benutzer-<br />name:
+	        <input type="text" name="benutzername" id="benutzername" />
+          </label>
+	      <label>Passwort:
+	        <input type="text" name="passwort" id="passwort" />
+          </label>
+	    </p>
+	    <p>
+	      <label>Stunden-<br />lohn:
+	        <input type="text" name="stundenlohn" id="stundenlohn" size="11" />
+          Fr.</label>
+        </p>
+	    <p>
+	      <label>Bemerkung:
+	        <textarea name="bemerkung" cols="45" id="bemerkung"></textarea>
+	      </label>
+	    </p>
+	    <p>
+	      <label>
+	        <input type="button" name="nextbtn" id="nextbtn" value="Weiter zur zeitlichen Verfügbarkeit (2 von 5)" onclick=location.href="settings2.html" />
+          </label>
+	    </p>
+		<p>&nbsp;</p>
+	</div>
+  </div>
+</div>
+</body>
+</html>

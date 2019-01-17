@@ -1,0 +1,101 @@
+<html>
+<title>t_needs</title>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+<body>
+<script type="text/javascript" src="include/jquery.js"></script>
+{include_if_exists file="include/header.php"}
+
+
+{doevent name="ViewOnLoad"}
+
+<!--startPDFcut-->
+<table cellpadding=4 cellspacing=0 class="main_table" border=0 align=center>
+<tr><td class=upeditmenu width=100% valign=middle align=center height=35 colspan=2>
+t_needs, View record [
+need_id: {$show_key1}
+]
+</td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>need_id</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_need_id}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>people_id</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_people_id}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>need_type_id</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_need_type_id}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>need_subtype_id</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_need_subtype_id}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>need_note</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_need_note}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>need_hourly</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_need_hourly}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>prof_provider</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_prof_provider}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>firstname</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_firstname}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>lastname</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_lastname}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>image_path</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_image_path}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>street</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_street}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>house_nr</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_house_nr}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>zip</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_zip}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>location</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_location}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>locationarea</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_locationarea}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>tel_p</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_tel_p}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>tel_m</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_tel_m}&nbsp;
+  </td></tr>
+  <tr><td class=editshade_b width=150 style="padding-left:20px;"><b>email</b></td>
+  <td width=250 class=editshade_lb style="padding-left:10px;">
+    {$show_email}&nbsp;
+  </td></tr>
+
+<tr height=40><td colspan=2 align=center valign=middle class=blackshade2>
+ <span class=buttonborder><input class=button type=reset value="Back to list" onclick="window.location.href='t_needs_list.php?a=return'"></span>
+ </td></tr>
+
+</table>
+<!--endPDFcut-->
+
+{include_if_exists file="include/footer.php"}
+
+</body>
+</html>

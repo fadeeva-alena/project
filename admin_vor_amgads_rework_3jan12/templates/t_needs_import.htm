@@ -1,0 +1,49 @@
+
+<HTML><HEAD><TITLE>Import</TITLE>
+
+<LINK href="include/style.css" type=text/css rel=stylesheet>
+<script language="JavaScript" src="include/jquery.js"></script>
+<script language="JavaScript" src="include/ajaxsuggest.js"></script>
+<script language="JavaScript" src="include/jsfunctions.js"></script>
+
+</HEAD>
+
+<body onLoad="javascript:if (document.frmimport.btnSubmit != null) document.frmimport.btnSubmit.focus();">
+{include_if_exists file="include/header.php"}
+{doevent name="ImportOnLoad"}
+
+<BODY bgColor=white >
+<FORM name=frmimport id=frmimport action="t_needs_import.php" method=post encType=multipart/form-data > 
+<H1>Import</H1> 
+<font size=2>
+Browse to the comma-separated (.csv) or to the Excel (.xls) file that you wish to import.<br>
+The first line in the file should contain the field names.
+</font>
+<DIV align=left>
+<HR width=400 noShade SIZE=1>
+</DIV>
+<TABLE cellPadding=2 border=0>
+  <TBODY>
+  <TR>
+    <TD align=right width=150 valign=bottom><b>Select file with data</b></TD>
+    <TD width=250 ><input type="hidden" name="type_ImportFileName" value="upload2"><br>
+	<input type="File" id="file_ImportFileName" name="file_ImportFileName" 
+	onChange="var path=this.form.file_ImportFileName.value; var wpos=path.lastIndexOf('\\'); var upos=path.lastIndexOf('/'); 
+				var pos=wpos; if(upos>wpos) pos=upos; this.form.value_ImportFileName.value=path.substr(pos+1);">
+	<br><b></b>
+	<input type=hidden name="value_ImportFileName" size="30" maxlength="100"> 
+</TD></TR>
+  <TR height=50>
+    <TD align=middle colSpan=2><INPUT class=button id=submit1 type=submit value=Import name=submit1> 
+<input class=button type=button value="Back to list" onclick="javascript: window.location='t_needs_list.php?a=return';">
+<input type=hidden name="a" value="added"></TD></TR></FORM>
+  <TR>
+    <TD align=left colSpan=2>
+      <HR width=400 noShade SIZE=1>
+	  <div>{$error_message}
+	  </div>
+    </TD></TR></TBODY></TABLE> 
+	
+{include_if_exists file="include/footer.php"}
+	
+<script>SetToFirstControl();</script></BODY></HTML>

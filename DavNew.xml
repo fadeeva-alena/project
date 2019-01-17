@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<DavNew>
+	
+	<bgcolor>0xCC0000</bgcolor>
+	
+	<textcolor>0x000000</textcolor>
+	
+	<items>
+			<item>
+				<thumbnail src="asset/photos/thumb1.jpg" />
+				<caption text="ManiMano führ die Hunde in Ihren Ferien aus.. 
+..und kümmert sich um daheimgebliebene." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb2.jpg" />
+				<caption text="ManiMano hilft dem Junior beim Rechnen..
+..und dem Senior bei Skype und Email." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb3.jpg" />
+				<caption text="ManiMano kennt den richtigen Beat..
+..und bringt sie sicher nach Hause." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb4.jpg" />
+				<caption text="ManiMano kümmert sich um Tier und Pflanzen..
+..und um Kleinkinder übrigens auch." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb5.jpg" />
+				<caption text="ManiMano massiert die Mama..
+..und passt in der Zwischenzeit aufs Grosskind auf." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb6.jpg" />
+				<caption text="ManiMano schneidet die Haare..
+..und den Rasen übrigens auch." />
+			</item>
+			
+			<item>
+				<thumbnail src="asset/photos/thumb7.jpg" />
+				<caption text="ManiMano schützt vor zuviel Arbeit..
+..und vor Langeweile übrigens auch." />
+			</item>
+			
+	</items>
+	
+</DavNew>

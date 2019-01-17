@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body { font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+#myform tr.even{ background-color:#b2c3d5;}
+#myform tr.odd{}
+input { float:left; vertical-align:bottom;;}
+.tooltip {
+	background-color:#999;
+	// border:1px solid #fff;
+	padding:10px 15px;
+	width:200px;
+	display:none;
+	color:#000;
+	text-align:left;
+	font-size:12px;
+
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}
+</style>
+
+<script src="jquery.tools.min.js" > </script>
+
+</head>
+<body>
+
+<div style=" padding:1em; border:2px solid #666; width:640px; height:inherit; float:left; margin:20px; margin-right:0px; border:2px solid #E5E5E5; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; background-color:#bdd8f4;" >
+<h2 style="font-weight:normal; float:left; font-size:24px; padding:20px;">2) AGB / Geschäftsbedingungen</h2> <div style="float:right; padding:1em; font-size:18px; color:#666"><table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25"><div style=" width:22px; height:22px;">&nbsp;1</div></td>
+    <td width="13" align="center">&raquo;</td>
+    <td width="25"><div style=" width:22px; height:22px; background-image:url(nummark.png);">&nbsp;2</div></td>
+  </tr>
+  </table>  </div>
+<hr width="600" style="clear:both;" />
+<h5 style="color:#666;">&nbsp;</h5>
+<br />
+<form id="myform" name="Deine_Grunddaten" action="" enctype="application/x-www-form-urlencoded" method="post">
+  <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr class="even">
+      <td height="25" style="padding-left:10px;"> &nbsp;&nbsp;
+        <div align="left">Neugierig gemacht oder Interesse geweckt? Sie wollen Ihre Verantwortung wahrnehmen,sich schützen und Genaueres über die Versicherungen und das Vorgehen wissen?<br /></div>
+          <br />
+       <div  align="center" ><table width="100" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30"><input name="button" type="button" value="Ausdrucken"  align="middle"/></td>
+  </tr>
+</table>
+</div></td>
+    </tr>
+    <tr class="even">
+      <td height="25" style="padding-left:10px;"><input type="checkbox" name="checkbox" value="checkbox" />
+        Gelesen,verstanden und akzeptiert: 08.11 2010, 8132 Egg, David   Schlapfer</td>
+    </tr>
+    <tr class="even">
+      <td height="25">&nbsp;</td>
+    </tr>
+    <tr class="even">
+      <td height="45" style="padding-left:10px;"><input type="submit" name="Submit" value="Speichern und Anmeldevorgang abschliessen" /></td>
+    </tr>
+  </table>
+</form>
+
+
+</div>
+<script>
+// execute your scripts when the DOM is ready. this is a good habit
+$(function() {
+
+
+
+// select all desired input fields and attach tooltips to them
+$("#myform :input").tooltip({
+
+	// place tooltip on the right edge
+	position: "center right",
+
+	// a little tweaking of the position
+	offset: [-2, 10],
+
+	// use the built-in fadeIn/fadeOut effect
+	effect: "fade",
+
+	// custom opacity setting
+	opacity:.9
+
+});
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+</td>
+</tr>	
+
+{if $maxpages>1}
+<tr>
+<td height=30px colspan=2 align="center">{$pagination}</td>
+</tr>
+{/if} 
+##if !@TABLE.bInlineAdd || GroupSecurity##
+{/if} <!-- display_grid -->
+##endif##
+{if $message!=""}
+<tr name=notfound_message>
+<td height=30px colspan=2 align="center">
+<b>{$message}</b>
+</td>
+</tr>
+{/if} 
+
+</table>
+
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+{doevent name="ListOnLoad"}
+
+{include_if_exists file="include/footer.##@ext##"}
+{$linkdata}
+</body>
+</html>

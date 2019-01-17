@@ -1,0 +1,75 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20111221T170811Z
+DESCRIPTION:
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>:</b> </td><td></td></tr><tr>
+ <td width="150px"><label for="type"><b>:</b> </td>
+ <td></td></tr>
+ <tr>
+ <td width="150px"><b>:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;"></td></tr><tr>
+ <td width="150px"><b>:</b></td><td>Das romantisch beleuchtete Eisfeld vor dem Quaderschulhaus ist DER winterliche Treffpunkt. Täglich 1/3 der Eisfläche für Eishockey mit Softpuck.</td></tr><tr>
+ <td width="150px"><b><label for="location">: </label></b></td><td>Eisfeld Quaderwiese  Masanserstrasse  7000 Chur</td></tr><tr>
+ <td width="150px"><label for="price"><b>:</b> </label></td><td>0 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_time"><b> :</b> </label></td>
+ <td>24.12. und 31.12. von 10 - 16 Uhr 25.12. und 1.1. </td>                                                                                                
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>:</b> </label></td>
+ <td> unbekannt unbekannt<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_name"><b>:</b> </label></td>
+ <td>Obere Au Sport</td>                                                                                                 
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>:</b> </label></td><td>081 254 42 99</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.chur.ch/de/kulturundfreizeit/veranstaltungskalender/?action=showevent&event_id=390702</td>                                                                                                   
+ </tr></table> 
+
+
+DTEND;TZID=1:20120304T200000Z
+DTSTART;TZID=1:20111215T100000Z
+DTSTAMP;TZID=Europe/Zurich:20111214T193035Z
+LAST-MODIFIED;TZID=Europe/Zurich:19700101T000000Z
+LOCATION:Eisfeld Quaderwiese , Masanserstrasse, , 7000 Chur
+SUMMARY;LANGUAGE=:Eisfeld Quaderwiese
+ORGANIZER;CN="David Schläepfer":mailto:dsc@d-s-c.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20111221T160811uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>:</b> </td><td></td></tr><tr>
+ <td width="150px"><label for="type"><b>:</b> </td>
+ <td></td></tr>
+ <tr>
+ <td width="150px"><b>:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;"></td></tr><tr>
+ <td width="150px"><b>:</b></td><td>Das romantisch beleuchtete Eisfeld vor dem Quaderschulhaus ist DER winterliche Treffpunkt. Täglich 1/3 der Eisfläche für Eishockey mit Softpuck.</td></tr><tr>
+ <td width="150px"><b><label for="location">: </label></b></td><td>Eisfeld Quaderwiese  Masanserstrasse  7000 Chur</td></tr><tr>
+ <td width="150px"><label for="price"><b>:</b> </label></td><td>0 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_time"><b> :</b> </label></td>
+ <td>24.12. und 31.12. von 10 - 16 Uhr 25.12. und 1.1. </td>                                                                                                
+ </tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>:</b> </label></td>
+ <td> unbekannt unbekannt<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_name"><b>:</b> </label></td>
+ <td>Obere Au Sport</td>                                                                                                 
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>:</b> </label></td><td>081 254 42 99</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.chur.ch/de/kulturundfreizeit/veranstaltungskalender/?action=showevent&event_id=390702</td>                                                                                                   
+ </tr></table>\n\n\n\n</BODY>\n</HTML>\n

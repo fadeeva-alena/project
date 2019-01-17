@@ -1,0 +1,27 @@
+-------e) then, please write these items bold:
+
+last line before footer: Ihr Spiritwings-Team --->> DONE now the 2nd last line is bold: „wir wünschen ihnen..“. please leave this on normal, but make „ihr spiritwings-team“ bold / not yet in the booking-confirmation email. -->> DONE
+
+-------n) i cant cancel one of the events in caledar-reservation – when i move the mouse onto the popup, it disappears. --> DONE
+
+q) block times are not so different from normal bookings.
+add 2 new blocks: a permanent one (which means this block will be repeated in every week.
+and a one-shot one: this is for a free afternoon with the kids or so: one time.
+they have titles like „Permanente Sperrzeit“ (permanent) and „Einmalige Sperrzeit“.
+they have handles to change their sizes, onlike the session-ones.
+they are always grey for the booker.
+they are grey with title „Permanent“ or „Einmalig“ for the provider.
+provide as standard permanent blocks, that are already in place for one hour lunch, every day, and for the night: 18oo until 08oo.
+provide as standard permanent blocks sat and Sunday, completely. 
+
+s) blocks upon moving: immediate showing in the calendar: yes
+   blocks upon creating: takes 7s until they are visible, thats confusing: can you change? -->> letter r is the same with this. will remove the letter r on the list.
+   blocks size when moving, and also on the right side: make size proportional as in calendar.
+
+-------t) popup-location: when we have seesions on the right side of the screen (week) it works to have the popups left of them. (showing left of the box).
+when the sessions is to the left (begin of the week in week view or in the days view, please find better position of the popup.
+also, when a popup is open, and i switch the view, it remains. --->> DONE
+
+-------u) when i login as "lh, lh", and open "my-caldnedar reservation" - i see the view, that mrdavid should have, she has no bookings as  aprovider. --->> DONE
+
+v) ken, pls have a look at Event "Feldenkrais" ID"5350". the leader should be "Doris Bleike", bur this seems not to be possible, can you pls check? --

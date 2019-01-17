@@ -1,0 +1,16 @@
+<edit_controls>
+	<jscode>{$linkdata}</jscode>
+	<control 
+	field="Status">
+		{build_edit_control field="Status" value=$value_Status mode="inline_add" id=$id}
+		</control>
+	<control 
+	field="Message">
+		{build_edit_control field="Message" value=$value_Message mode="inline_add" id=$id}
+		</control>
+	<control 
+	field="Mode">
+		{build_edit_control field="Mode" value=$value_Mode mode="inline_add" id=$id}
+		</control>
+	<message status="{$status}">{$message}</message>
+</edit_controls>

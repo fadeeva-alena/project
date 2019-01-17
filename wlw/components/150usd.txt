@@ -1,0 +1,25 @@
+A) 
+>> i dont see that it logs addes/edits/deletes in the location-events and leaders-table.  can you check?
+B) where did you put that? i cant find it.
+
+
+
+- i just saw, that in ie9 in the locationgrid, the pictures are 2pixels high again. can you check?
+- and öäü in calendar-deatils is misbehaving.. check for a good example: 31oct, "einführungsabend tantra" - the db is fine, the text in details is not.
+- and in ie9, when i open the events-grid, it keeps me waiting. endlessly. in opera, it shows the events pretty quick. (0.5s).
+
+
+[10/22/2011 11:44:15 PM] David Schlaepfer: FTP / FrontPage https://rigi.webhostings.ch:8443 user: schlaepferd
+pa w:  jjei==3837Zlk
+
+
+------------------------------------
+
+
+
+C) link: good, that works. can you pls keep the header of the loginpage, so we dont have to use back. maybe you add a link on the aboutus-page and on the login/cal-page: "Search", so its just another tab. --->>> DONE
+
+on map-ballons: please switch zip and location >> zip + " " + location. --->>> DONE
+
+D) cal-popups: yes, much better. please put zip+ " " + location on one line. for both. and make them way less wide.
+Helptexts in addedit-event for start/enddate: i see, you show only the enddate-text.. thats ok, it was my idea too.. i changed the text.. pls make sure, that the calendar does not collide with the text - in the moment, as soon as the calendar for any of the both shows, the helptext is not readable anymore.

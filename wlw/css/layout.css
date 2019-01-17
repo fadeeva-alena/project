@@ -1,0 +1,120 @@
+/* Page Layout */
+
+#container { 
+width: 997px;
+margin: 0 auto;
+background-color:transparent;
+border: #eeeeee solid 0px;
+border-top:0;
+}
+#header { background: transparent url(../images/admin-header.jpg) top left no-repeat; height:102px; padding:0px 20px 0px 20px; }
+#logo-area { float:left; display:inline; font-size:24px; padding:0 10px 10px 10px; font-weight:bold; }
+#logo-area .logo { vertical-align:middle; }
+#logged-user { float:right; display:inline; padding:80px 0 0 1px; }
+#navigation { padding:0 0 0 2px; font-size:12px; background-color:#6A9B01; }
+#content { clear:both; padding:10px 20px 0px 20px; color:#000; background-color:#fff; }
+* html #content { padding-top:1px; }
+#content .content-main { margin:0 auto; }
+#footer-separator { height:20px; background-color:#fff  }
+#footer { clear: both; height:30px; text-align:center; padding:8px 0 10px 0 }
+#credit { padding: 6px 0 6px 1px; }
+#content-home { }
+/* Flexigrid - Overide Style */
+table#photos tbody td { vertical-align:middle !important; }
+
+/* availability calendar table */
+#tbl_availability, #tbl_availability th, #tbl_availability td {border:1px solid #999999; border-collapse: collapse; padding: 5px;}
+.thTitle { font-size: 14px; }
+.tdLeft {text-align: left;}
+.unavailable { background:#CCCCCC; }
+
+/* -- -- */
+#avail_left {
+	float: left;
+	width: 160px;
+}
+#avail_right {
+	float: left;
+	width: 660px;
+}
+/*-> calendar <-*/
+#tblCalendar {
+	border-collapse: separate;
+	border: 1px solid #9DABCE;
+	border-width: 0px 0px 1px 1px;
+	margin: 10px auto;
+	font-size: 16px;
+}
+#tblCalendar td, #tblCalendar th {
+	width: 40px;
+	height: 30px;
+	text-align: center;
+	vertical-align: middle;
+	background: url(../images/cells.png);
+	color: #444;
+	/*position: relative;*/
+}
+#tblCalendar th {
+	height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+}
+#tblCalendar td:hover, #tblCalendar th:hover {
+	background-position: 0px -81px;
+	color: #222;
+}
+#tblCalendar td.date_has_event {
+	background-position: 162px 0px;
+	color: white;
+}
+#tblCalendar td.date_has_event:hover {
+	background-position: 162px -81px;
+}
+#tblCalendar td.padding {
+	background: url(../images/calpad.jpg);
+}
+#tblCalendar td.today {
+	background-position: 81px 0px;
+	color: white;
+}
+#tblCalendar td.today:hover {
+	background-position: 81px -81px;
+}
+
+.tdCenter {
+	text-align: center;
+}
+.tdBold {
+	font-weight: bold;
+}
+.tdRight {
+	text-align: right;
+}
+.pbigger { font-size:14px; padding-bottom: 10px; }
+tblConfirmation { border-collapse: collapse; border: 2px solid #9e855c; width: 623px; padding: 5px; }
+.tblConfirmation th { background: #836636; color: #FFF; width: 150px; text-align: left; padding: 15px; border: 2px solid #9e855c; }
+.tblConfirmation td { padding: 5px; border: 2px solid #9e855c; }
+.tbl_spacer { border-bottom: 2px solid #999999; }
+.tblNoBorder, .tblNoBorder th, .tblNoBorder td { border:none; }
+.tdCntBold { text-align: center; font-weight: bold; }
+.tblCommon {
+	border-collapse: collapse;
+	border: 1px solid #8D8574;
+	width: 260px;
+	padding: 5px;
+}
+.tblwidth {
+	width: 300px;
+}
+.tblCommon th {
+	background: #8D8574;
+	color: #FFF;
+}
+.tblCommon th, .tblCommon td {
+	border: 1px solid #8D8574;
+	padding: 5px;
+}
+.tblCommon .tdright {
+	text-align: right;
+}
+#room_photo_conf { overflow: hidden; width:260px; height:195px; border:#8D8574 solid 1px; float:left; background:url(../images/indicator-big-white.gif) no-repeat center;  }

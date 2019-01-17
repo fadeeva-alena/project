@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>site_mode: Advanced search page</title>
+</head>
+<link REL="stylesheet" href="include/style.css" type="text/css">
+{$includes}
+<body bgcolor=white {$onload}>
+{include_if_exists file="include/header.php"}
+<!-- search form -->
+<form method="POST" 
+action="_site_mode_list.php" 
+name="editform" {if $noAJAX} onkeydown="OnKeyDown(event);" {/if} >
+	<input type="hidden" id="a" name="a" value="advsearch">
+
+{doevent name="SearchOnLoad"}
+	
+<table CELLPADDING=4 CELLSPACING=1 align='center' width='750'>
+<tr valign=center class=blackshade>
+<td colspan=5 class=tableheader>
+
+<table width=100% CELLSPACING=0 CELLPADDING=3><tr>
+<td width=200 class=tableheader>site_mode</td>
+<td align=center class=tableheader>
+Advanced search</td>
+<td width=200 class=tableheader>&nbsp;</td>
+</tr></table>
+
+</td></tr>
+
+<tr><td colspan=5 align=center valign=middle class=header2>
+<span class=fieldname>Search for: </span>
+<input type="radio" name="type" value="and" {$all_checked}>All conditions
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="type" value="or" {$any_checked}>Any condition
+</div>
+</td></tr>
+<tr valign=center class=blackshade>
+<td align=center valign=middle>&nbsp;</td><td width=30 align=center valign=middle class=fieldname>NOT</td>
+<td colspan=3 align=center valign=middle>&nbsp; </td></tr>
+
+		
+<tr class=shade>
+	<td class=editshade_b>Status
+	<input type="Hidden" name="asearchfield[]" value="Status"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Status" {$not_Status}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Status}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Status" value=$value_Status mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Status">
+	{build_edit_control field="Status" second=true value=$value1_Status mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Message
+	<input type="Hidden" name="asearchfield[]" value="Message"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Message" {$not_Message}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Message}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Message" value=$value_Message mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Message">
+	{build_edit_control field="Message" second=true value=$value1_Message mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>Mode
+	<input type="Hidden" name="asearchfield[]" value="Mode"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_Mode" {$not_Mode}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_Mode}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="Mode" value=$value_Mode mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_Mode">
+	{build_edit_control field="Mode" second=true value=$value1_Mode mode="search"}
+	</span></td>
+	
+	
+</tr>
+		
+<tr class=shade>
+	<td class=editshade_b>ID
+	<input type="Hidden" name="asearchfield[]" value="ID"></td>
+	<td align=center class=editshade_lb><input type=CheckBox name="not_ID" {$not_ID}></td>
+	
+	<td class=editshade_lb>
+	{$searchtype_ID}
+	</td>
+	
+	<td width=270 class=editshade_lb>{build_edit_control field="ID" value=$value_ID mode="search"}</td>
+
+	<td width=270 class=editshade_lb><span id="second_ID">
+	{build_edit_control field="ID" second=true value=$value1_ID mode="search"}
+	</span></td>
+	
+	
+</tr>
+
+<tr class=tableheader><td colspan=5 align=center>
+<span class=buttonborder><input type=button class=button name="SearchButton" value="Search"
+onClick="javascript:document.forms.editform.submit();"></span>
+<span class=buttonborder><input class=button type=button value="Reset" onclick="return ResetControls();"></span>
+<span class=buttonborder><input type=button class=button value="Back to list" onClick="javascript: document.forms.editform.a.value='return'; document.forms.editform.submit();"></span>
+</td></tr>
+</table>
+
+</form>
+{include_if_exists file="include/footer.php"}
+{$linkdata}
+
+</body>
+</html>

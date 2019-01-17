@@ -1,0 +1,83 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body { font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0;}
+#searchform tr.even{ background-color:#b2c3d5;}
+#searchform tr.odd{}
+input { float:left; vertical-align:bottom;;}
+.tooltip {
+	background-color:#999;
+	// border:1px solid #fff;
+	padding:10px 15px;
+	width:200px;
+	display:none;
+	color:#000;
+	text-align:left;
+	font-size:12px;
+
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}
+</style>
+
+</head>
+<body>
+
+<div style=" padding:1em; border:2px solid #666; width:660px; height:inherit; float:left; margin:20px; margin-right:0px; border:2px solid #E5E5E5; -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px; background-color:#bdd8f4;" >
+<h2 style="font-weight:normal; float:left; font-size:24px; padding:20px;">2) Deine Arbeitszeiten</h2> <div style="float:right; padding:1em; font-size:18px; color:#666"><table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="21" align="center">1</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center"><div style=" width:21px; height:21px;background-image:url(nummark.png);">2</div></td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">3</td>
+    <td width="10" align="center" valign="middle">&raquo;</td>
+    <td width="21" align="center">4</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">5</td>
+    <td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">6</td>
+	<td width="10" align="center">&raquo;</td>
+    <td width="21" align="center">7</td>
+  </tr>
+  </table>  </div>
+<hr width="620" style="clear:both;" />
+<h5 style="color:#666; padding-left:20px; padding-right:20px;"><span style="font-size:16px" >Arbeitszeiten</span>&nbsp;morgen - mittag - abend<br />
+Hier kannst Du einstellen, wie Dein Tagesablauf ist.
+Wann Du morgen anfängst, wie lange Deine Mittagspause ist, und wann. Und wann Du Feierabend machst.
+Wenn das nicht jeden Tag gleich ist - kannst du für jedes Tagesmuster eine eigene Zeile hinterlegen - und ganz vorne markieren, für welche Tage es gültig ist.
+Innerhalb der Arbeitszeiten können Deine Kunden Termine buchen.
+Die Mittagspause ist optional - die anderen Angaben sind notwendig. Die Mittagspause kannst Du flexibel gestalten - vielleicht willst Du offen sein für Kunden, die nur über den Mittag verfügbar sind. Aber Du willst auch sicher sein, dass Du selbst eine Mittagspause hast - deshalb kannst Du angeben, von wann sie frühenstens beginnen und wann spätenstens sie enden soll.</h5>
+<br />
+<form id="myform" name="Deine_Arbeitszeiten" action="" enctype="application/x-www-form-urlencoded" method="post">
+<table width="620" border="0" align="center" cellpadding="5" cellspacing="0" id="searchform">
+<tr class="even"><td><strong>Diese Einstellungen</strong></td>
+<td><strong>Arbeitsbeginn*:</strong></td>
+<td><strong>Arbeitsende*:</strong></td>
+<td><strong>Mittagspause:</strong></td>
+<td><strong>Mittagspause:</strong></td>
+<td><strong>Mittagspause:</strong></td>
+</tr>
+<tr><td width="153">gelten für 
+folgende Tage*:<br />
+&nbsp;Mo&nbsp;&nbsp;Di&nbsp;&nbsp;Mi&nbsp;&nbsp;Do&nbsp;&nbsp;Fr&nbsp;&nbsp;Sa&nbsp;&nbsp;So </td><td>(z.B. 09:00)</td><td>(z.B. 17:00)</td><td>Mindenstdauer<br />(z.B. 60min.)</td><td>nicht vor..<br />(z.B. 11:00)</td><td>
+nicht länger als..<br />(z.B. 14:00)</td></tr>
+<tr><td><input type="checkbox"/><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td></tr>
+<tr><td><input type="checkbox"/><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td></tr>
+<tr><td><input type="checkbox"/><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /><input type="checkbox"  /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td><td><input type="text" size="8" /></td></tr>
+<tr><td colspan="6" align="center"><input type="submit" value="Speichern und weiter zum Hinterlegen Deiner Ferien" style=" height:35px;"/></td></tr>
+</table>
+</form>
+
+
+</div>
+
+
+</body>
+</html>

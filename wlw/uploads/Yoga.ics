@@ -1,0 +1,85 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20111214T143737Z
+DESCRIPTION:Sie haben diesen Termin bei <b>SpritWings.ch</b> angefordert, hier ist er.
+
+Sie können ihn doppelklicken, um ihn in Ihren Kalender zu übernehmen.
+
+<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Training</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>Yoga</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Meditation</td></tr><tr>
+ <td width="150px"><b>Beschreibung:</b></td><td>Die Yogalektionen bestehen aus den drei Elementen Bewegung- Atmung-Konzentration. In bequemer Kleidung und in einer entspannten Atmosphäre dehnen und kräftigen Sie Ihre Muskeln mit verschiedenen Körperbewegungen. Ein Gefühl der Leichtigkeit und des Fliessens stellt sich ein, wenn der Körper von einer Position in die nächste wechselt. Mit gezieltem Einsatz von Atemtechniken erleben Sie Augenblicke der Stille. Konzentrationsübungen bündeln Ihre Gedanken und verschaffen Ihnen einen klaren Kopf.</td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>yogabewegt  Vadianstrasse 24  9000 St. Gallen</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>35 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_price"><b>Bemerkung zum Preis:</b> </label></td>
+ <td>Zehnerabo 260.-</td></tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Gisela Heise<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>Verantwortliche/r: Telefon:</b> </label></td><td>071 222 8802</td></tr><tr>
+ <td width="150px"><label for="eve_contact_email"><b></b> </label></td>
+ <td>yoga@yogabewegt.ch</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.yogabewegt.ch</td>                                                                                                   
+ </tr><tr>
+ <td width="150px"><label for="design_photo">
+ : </label></td>
+ <td><img src="http://manimano.ch/wlw/uploads/132173053581741100.jpg" border="0" width=150></td>
+ </tr></table> 
+
+Vielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.
+<b>Wichtig: </b> SpiritWings.ch ist nicht für die Ri
+DTEND:20111207T191500Z
+DTSTART:20111207T180000Z
+DTSTAMP:20111119T202215Z
+LAST-MODIFIED:20111119T210056Z
+LOCATION:yogabewegt , Vadianstrasse 24, , 9000 St. Gallen
+SUMMARY;LANGUAGE=De:Yoga
+ORGANIZER;CN="David Schläepfer":mailto:dsc@d-s-c.ch\nSEQUENCE:0
+TRANSP:OPAQUE
+UID:20111214T143737uid1@example.com
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server version 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\nSie haben diesen Termin bei <b>SpritWings.ch</b> angefordert, hier ist er.
+
+Sie können ihn doppelklicken, um ihn in Ihren Kalender zu übernehmen.\n\n<table class="form-table" style="width:370px;"><tr>
+ <td width="300px"><label for="kind"><b>Kategorie:</b> </td><td>Training</td></tr><tr>
+ <td width="150px"><label for="type"><b>Sparte:</b> </td>
+ <td>Yoga</td></tr>
+ <tr>
+ <td width="150px"><b>Hauptqualität der Veranstaltung:</b> </td>
+  <td>
+ <div style="float:left;margin-top:6px;">Meditation</td></tr><tr>
+ <td width="150px"><b>Beschreibung:</b></td><td>Die Yogalektionen bestehen aus den drei Elementen Bewegung- Atmung-Konzentration. In bequemer Kleidung und in einer entspannten Atmosphäre dehnen und kräftigen Sie Ihre Muskeln mit verschiedenen Körperbewegungen. Ein Gefühl der Leichtigkeit und des Fliessens stellt sich ein, wenn der Körper von einer Position in die nächste wechselt. Mit gezieltem Einsatz von Atemtechniken erleben Sie Augenblicke der Stille. Konzentrationsübungen bündeln Ihre Gedanken und verschaffen Ihnen einen klaren Kopf.</td></tr><tr>
+ <td width="150px"><b><label for="location">Ort: </label></b></td><td>yogabewegt  Vadianstrasse 24  9000 St. Gallen</td></tr><tr>
+ <td width="150px"><label for="price"><b>Preis:</b> </label></td><td>35 CHF
+ </td>                                                                                         
+ </tr><tr>
+ <td width="150px"><label for="remark_price"><b>Bemerkung zum Preis:</b> </label></td>
+ <td>Zehnerabo 260.-</td></tr>
+ <tr>
+ <td width="150px"><label for="leader"><b>Leitung:</b> </label></td>
+ <td> Gisela Heise<br/>  </td>
+ </tr><tr>
+ <td width="150px"><label for="eve_contact_phone"><b>Verantwortliche/r: Telefon:</b> </label></td><td>071 222 8802</td></tr><tr>
+ <td width="150px"><label for="eve_contact_email"><b></b> </label></td>
+ <td>yoga@yogabewegt.ch</td></tr><tr>
+ <td width="150px"><label for="eve_contact_url"><b> </b></label></td>
+ <td>http://www.yogabewegt.ch</td>                                                                                                   
+ </tr><tr>
+ <td width="150px"><label for="design_photo">
+ : </label></td>
+ <td><img src="http://manimano.ch/wlw/uploads/132173053581741100.jpg" border="0" width=150></td>
+ </tr></table>\n\nVielen Dank, dass Sie mit www.SpiritWings.ch arbeiten. Wenn Sie eine Veranstaltung nicht in SpiritWings.ch gefunden haben, geben Sie uns Bescheid.
+<b>Wichtig: </b> SpiritWings.ch ist nicht für die Ri\n\n</BODY>\n</HTML>\n

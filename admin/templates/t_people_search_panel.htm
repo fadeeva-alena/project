@@ -1,0 +1,214 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_people_id}
+			<a href="#" id="addSearchControl_people_id" class="addSearchControl" {$addSearchControl_people_id_attrs}>People Id</a><br>
+		{END addSearch_people_id}
+		{BEGIN addSearch_institution}
+			<a href="#" id="addSearchControl_institution" class="addSearchControl" {$addSearchControl_institution_attrs}>Institution</a><br>
+		{END addSearch_institution}
+		{BEGIN addSearch_prof_provider}
+			<a href="#" id="addSearchControl_prof_provider" class="addSearchControl" {$addSearchControl_prof_provider_attrs}>Prof Provider</a><br>
+		{END addSearch_prof_provider}
+		{BEGIN addSearch_firstname}
+			<a href="#" id="addSearchControl_firstname" class="addSearchControl" {$addSearchControl_firstname_attrs}>Firstname</a><br>
+		{END addSearch_firstname}
+		{BEGIN addSearch_lastname}
+			<a href="#" id="addSearchControl_lastname" class="addSearchControl" {$addSearchControl_lastname_attrs}>Lastname</a><br>
+		{END addSearch_lastname}
+		{BEGIN addSearch_image_path}
+			<a href="#" id="addSearchControl_image_path" class="addSearchControl" {$addSearchControl_image_path_attrs}>Image Path</a><br>
+		{END addSearch_image_path}
+		{BEGIN addSearch_street}
+			<a href="#" id="addSearchControl_street" class="addSearchControl" {$addSearchControl_street_attrs}>Street</a><br>
+		{END addSearch_street}
+		{BEGIN addSearch_house_nr}
+			<a href="#" id="addSearchControl_house_nr" class="addSearchControl" {$addSearchControl_house_nr_attrs}>House Nr</a><br>
+		{END addSearch_house_nr}
+		{BEGIN addSearch_zip}
+			<a href="#" id="addSearchControl_zip" class="addSearchControl" {$addSearchControl_zip_attrs}>Zip</a><br>
+		{END addSearch_zip}
+		{BEGIN addSearch_location}
+			<a href="#" id="addSearchControl_location" class="addSearchControl" {$addSearchControl_location_attrs}>Location</a><br>
+		{END addSearch_location}
+		{BEGIN addSearch_locationarea}
+			<a href="#" id="addSearchControl_locationarea" class="addSearchControl" {$addSearchControl_locationarea_attrs}>Locationarea</a><br>
+		{END addSearch_locationarea}
+		{BEGIN addSearch_tel_p}
+			<a href="#" id="addSearchControl_tel_p" class="addSearchControl" {$addSearchControl_tel_p_attrs}>Tel P</a><br>
+		{END addSearch_tel_p}
+		{BEGIN addSearch_tel_m}
+			<a href="#" id="addSearchControl_tel_m" class="addSearchControl" {$addSearchControl_tel_m_attrs}>Tel M</a><br>
+		{END addSearch_tel_m}
+		{BEGIN addSearch_email}
+			<a href="#" id="addSearchControl_email" class="addSearchControl" {$addSearchControl_email_attrs}>Email</a><br>
+		{END addSearch_email}
+		{BEGIN addSearch_username}
+			<a href="#" id="addSearchControl_username" class="addSearchControl" {$addSearchControl_username_attrs}>Username</a><br>
+		{END addSearch_username}
+		{BEGIN addSearch_password}
+			<a href="#" id="addSearchControl_password" class="addSearchControl" {$addSearchControl_password_attrs}>Password</a><br>
+		{END addSearch_password}
+		{BEGIN addSearch_picture}
+			<a href="#" id="addSearchControl_picture" class="addSearchControl" {$addSearchControl_picture_attrs}>Picture</a><br>
+		{END addSearch_picture}
+		{BEGIN addSearch_gender}
+			<a href="#" id="addSearchControl_gender" class="addSearchControl" {$addSearchControl_gender_attrs}>Gender</a><br>
+		{END addSearch_gender}
+		{BEGIN addSearch_birthdate}
+			<a href="#" id="addSearchControl_birthdate" class="addSearchControl" {$addSearchControl_birthdate_attrs}>Birthdate</a><br>
+		{END addSearch_birthdate}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_temp_sched_from}
+			<a href="#" id="addSearchControl_temp_sched_from" class="addSearchControl" {$addSearchControl_temp_sched_from_attrs}>Temp Sched From</a><br>
+		{END addSearch_temp_sched_from}
+		{BEGIN addSearch_temp_sched_to}
+			<a href="#" id="addSearchControl_temp_sched_to" class="addSearchControl" {$addSearchControl_temp_sched_to_attrs}>Temp Sched To</a><br>
+		{END addSearch_temp_sched_to}
+		{BEGIN addSearch_joiningdate}
+			<a href="#" id="addSearchControl_joiningdate" class="addSearchControl" {$addSearchControl_joiningdate_attrs}>Joiningdate</a><br>
+		{END addSearch_joiningdate}
+		{BEGIN addSearch_coord_accuracy}
+			<a href="#" id="addSearchControl_coord_accuracy" class="addSearchControl" {$addSearchControl_coord_accuracy_attrs}>Coord Accuracy</a><br>
+		{END addSearch_coord_accuracy}
+		{BEGIN addSearch_monday}
+			<a href="#" id="addSearchControl_monday" class="addSearchControl" {$addSearchControl_monday_attrs}>Monday</a><br>
+		{END addSearch_monday}
+		{BEGIN addSearch_tuesday}
+			<a href="#" id="addSearchControl_tuesday" class="addSearchControl" {$addSearchControl_tuesday_attrs}>Tuesday</a><br>
+		{END addSearch_tuesday}
+		{BEGIN addSearch_wednesday}
+			<a href="#" id="addSearchControl_wednesday" class="addSearchControl" {$addSearchControl_wednesday_attrs}>Wednesday</a><br>
+		{END addSearch_wednesday}
+		{BEGIN addSearch_thursday}
+			<a href="#" id="addSearchControl_thursday" class="addSearchControl" {$addSearchControl_thursday_attrs}>Thursday</a><br>
+		{END addSearch_thursday}
+		{BEGIN addSearch_friday}
+			<a href="#" id="addSearchControl_friday" class="addSearchControl" {$addSearchControl_friday_attrs}>Friday</a><br>
+		{END addSearch_friday}
+		{BEGIN addSearch_saturday}
+			<a href="#" id="addSearchControl_saturday" class="addSearchControl" {$addSearchControl_saturday_attrs}>Saturday</a><br>
+		{END addSearch_saturday}
+		{BEGIN addSearch_sunday}
+			<a href="#" id="addSearchControl_sunday" class="addSearchControl" {$addSearchControl_sunday_attrs}>Sunday</a><br>
+		{END addSearch_sunday}
+		{BEGIN addSearch_monday_t}
+			<a href="#" id="addSearchControl_monday_t" class="addSearchControl" {$addSearchControl_monday_t_attrs}>Monday T</a><br>
+		{END addSearch_monday_t}
+		{BEGIN addSearch_tuesday_t}
+			<a href="#" id="addSearchControl_tuesday_t" class="addSearchControl" {$addSearchControl_tuesday_t_attrs}>Tuesday T</a><br>
+		{END addSearch_tuesday_t}
+		{BEGIN addSearch_wednesday_t}
+			<a href="#" id="addSearchControl_wednesday_t" class="addSearchControl" {$addSearchControl_wednesday_t_attrs}>Wednesday T</a><br>
+		{END addSearch_wednesday_t}
+		{BEGIN addSearch_thursday_t}
+			<a href="#" id="addSearchControl_thursday_t" class="addSearchControl" {$addSearchControl_thursday_t_attrs}>Thursday T</a><br>
+		{END addSearch_thursday_t}
+		{BEGIN addSearch_friday_t}
+			<a href="#" id="addSearchControl_friday_t" class="addSearchControl" {$addSearchControl_friday_t_attrs}>Friday T</a><br>
+		{END addSearch_friday_t}
+		{BEGIN addSearch_saturday_t}
+			<a href="#" id="addSearchControl_saturday_t" class="addSearchControl" {$addSearchControl_saturday_t_attrs}>Saturday T</a><br>
+		{END addSearch_saturday_t}
+		{BEGIN addSearch_sunday_t}
+			<a href="#" id="addSearchControl_sunday_t" class="addSearchControl" {$addSearchControl_sunday_t_attrs}>Sunday T</a><br>
+		{END addSearch_sunday_t}
+		{BEGIN addSearch_preferred_contact_by}
+			<a href="#" id="addSearchControl_preferred_contact_by" class="addSearchControl" {$addSearchControl_preferred_contact_by_attrs}>Preferred Contact By</a><br>
+		{END addSearch_preferred_contact_by}
+		{BEGIN addSearch_date_last_adress_change}
+			<a href="#" id="addSearchControl_date_last_adress_change" class="addSearchControl" {$addSearchControl_date_last_adress_change_attrs}>Date Last Adress Change</a><br>
+		{END addSearch_date_last_adress_change}
+		{BEGIN addSearch_map_in}
+			<a href="#" id="addSearchControl_map_in" class="addSearchControl" {$addSearchControl_map_in_attrs}>Map In</a><br>
+		{END addSearch_map_in}
+		{BEGIN addSearch_IconPath}
+			<a href="#" id="addSearchControl_IconPath" class="addSearchControl" {$addSearchControl_IconPath_attrs}>Icon Path</a><br>
+		{END addSearch_IconPath}
+		{BEGIN addSearch_note}
+			<a href="#" id="addSearchControl_note" class="addSearchControl" {$addSearchControl_note_attrs}>Note</a><br>
+		{END addSearch_note}
+		{BEGIN addSearch_price_per_hour}
+			<a href="#" id="addSearchControl_price_per_hour" class="addSearchControl" {$addSearchControl_price_per_hour_attrs}>Price Per Hour</a><br>
+		{END addSearch_price_per_hour}
+		{BEGIN addSearch_psych_time_loose_tight}
+			<a href="#" id="addSearchControl_psych_time_loose_tight" class="addSearchControl" {$addSearchControl_psych_time_loose_tight_attrs}>Psych Time Loose Tight</a><br>
+		{END addSearch_psych_time_loose_tight}
+		{BEGIN addSearch_psych_exact_creativ}
+			<a href="#" id="addSearchControl_psych_exact_creativ" class="addSearchControl" {$addSearchControl_psych_exact_creativ_attrs}>Psych Exact Creativ</a><br>
+		{END addSearch_psych_exact_creativ}
+		{BEGIN addSearch_psych_heart_thing}
+			<a href="#" id="addSearchControl_psych_heart_thing" class="addSearchControl" {$addSearchControl_psych_heart_thing_attrs}>Psych Heart Thing</a><br>
+		{END addSearch_psych_heart_thing}
+		{BEGIN addSearch_psych_easy_security}
+			<a href="#" id="addSearchControl_psych_easy_security" class="addSearchControl" {$addSearchControl_psych_easy_security_attrs}>Psych Easy Security</a><br>
+		{END addSearch_psych_easy_security}
+		{BEGIN addSearch_psych_conflict_take_leave}
+			<a href="#" id="addSearchControl_psych_conflict_take_leave" class="addSearchControl" {$addSearchControl_psych_conflict_take_leave_attrs}>Psych Conflict Take Leave</a><br>
+		{END addSearch_psych_conflict_take_leave}
+		{BEGIN addSearch_longitude}
+			<a href="#" id="addSearchControl_longitude" class="addSearchControl" {$addSearchControl_longitude_attrs}>Longitude</a><br>
+		{END addSearch_longitude}
+		{BEGIN addSearch_latitude}
+			<a href="#" id="addSearchControl_latitude" class="addSearchControl" {$addSearchControl_latitude_attrs}>Latitude</a><br>
+		{END addSearch_latitude}
+		{BEGIN addSearch_Agree}
+			<a href="#" id="addSearchControl_Agree" class="addSearchControl" {$addSearchControl_Agree_attrs}>Agree</a><br>
+		{END addSearch_Agree}
+		{BEGIN addSearch_Sign_date}
+			<a href="#" id="addSearchControl_Sign_date" class="addSearchControl" {$addSearchControl_Sign_date_attrs}>Sign Date</a><br>
+		{END addSearch_Sign_date}
+		{BEGIN addSearch_Active}
+			<a href="#" id="addSearchControl_Active" class="addSearchControl" {$addSearchControl_Active_attrs}>Active</a><br>
+		{END addSearch_Active}
+		{BEGIN addSearch_Acode}
+			<a href="#" id="addSearchControl_Acode" class="addSearchControl" {$addSearchControl_Acode_attrs}>Acode</a><br>
+		{END addSearch_Acode}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

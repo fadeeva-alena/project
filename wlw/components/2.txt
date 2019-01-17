@@ -1,0 +1,11 @@
+There are a few changes to be done:
+a) please add the text “Uhr” (languages!) behind the daystart and dayend:
+
+and please leftalign both fields.
+also please set their standard to 0700 to 19oo.--->> DONE
+
+b) for lunchbrakes: dont popup changes and movements, and also don’t email them. ---> DONE
+c) add 2 varialbes below min and max (daystart, dayend) for standard lunch start and standard lunch end. Then use these variables for the standardlunchtimes (use the new setting for all that have not been changed) -->> DONE
+d) sizes of blocks: please change sizes of offerings in the right upper area as well as while moving, its more easy to understand, if it fits in the dropzone or not. --> DONE
+e) we have 4 userlevels now, 1,2,3,4. They will not be sufficient for the future, we need to make it more granular. I prepared more fields in t_userlevel. This scheme is not final, it will be extended. And it will be bound to financial plans. I guess, it is more smart to add the new fields (user_r, uswer_w, admin, events_reservations, events_bookholding, sessions_reservations, sessions_bookholding) into t_provider, what do you think?
+f) please for the moment, add for the admin the new dropdowns for sessions: a) my sessions and b) sessions of anyprovider, to choose from.
